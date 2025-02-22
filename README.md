@@ -1,2 +1,0 @@
-# AgroMx-FrontReact
-Ecommerce AgroMX 
