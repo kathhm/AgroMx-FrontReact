@@ -46,9 +46,9 @@ footer {
 	font-family: 'Mako', serif;
 }
 
-/* a {
-	color: white !important;
-} */
+#linkToPage{
+	color: white;
+}
 
 /* Para el hover también */
 a:hover {
@@ -100,8 +100,9 @@ a:hover {
 	color: black;
 }
 
-#lupa {
-	border-width: 0px;
+.bi{
+    font-size: 35px;
+    color: violet;
 }
 
 .icono {
@@ -110,12 +111,7 @@ a:hover {
 	margin: 0 10px; /* */
 }
 
-.col-4.col-md-4.d-flex {
-	justify-content: flex-end; /* Asegura que los íconos estén alineados a la derecha */
-	align-items: center; /* Alinea verticalmente */
-	gap: 15px; /* Espaciado horizontal entre los iconos */
-	flex-direction: row; /* Asegura que estén en una línea horizontal */
-}
+
 
 .barra-busqueda {
 	border-color: black !important;

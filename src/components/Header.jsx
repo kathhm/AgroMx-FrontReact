@@ -40,8 +40,8 @@ function Header() {
 					</div>
 
 					{/* <!-- Carrito y Avatar --> */}
-					<div className="col-4 col-md-4 d-flex justify-content-center align-items-center mt-2 mt-md-0">
-						<i className="bi bi-basket2">
+					<div className="col-4 col-md-4 d-flex justify-content-end align-items-end mt-2 p-4 mt-md-0">
+						<i className="bi bi-basket2 mx-5">
 						<a
 							className="nav-link active"
 							aria-current="page"
@@ -49,14 +49,14 @@ function Header() {
 						>
 						</a>
 						</i>
-						<i className="bi bi-person-circle"></i>
+						<i className="bi bi-person-circle me-4"></i>
 					</div>
 				</div>
 			</div>
 
 			<nav className="navbar navbar-expand-lg navbar-light">
 				<div className="container-fluid">
-					<a className="navbar-brand" href="/index.html">
+					<a className="navbar-brand" id="linkToPage" href="/index.html">
 						Inicio
 					</a>
 					<button
@@ -78,6 +78,7 @@ function Header() {
 							<li className="nav-item">
 								<a
 									className="nav-link active"
+									id="linkToPage"
 									aria-current="page"
 									href="/public/sources/pages/catalogo/catalogo.html"
 								>
@@ -87,6 +88,7 @@ function Header() {
 							<li className="nav-item">
 								<a
 									className="nav-link"
+									id="linkToPage"
 									href="/public/sources/pages/sobreNosotrosAgroMX/sobreNosotrosAgroMX.html"
 								>
 									Sobre Nosotros
@@ -95,6 +97,7 @@ function Header() {
 							<li className="nav-item dropdown">
 								<a
 									className="nav-link dropdown-toggle"
+									id = "linkToPage"
 									href="#"
 									role="button"
 									data-bs-toggle="dropdown"
@@ -106,6 +109,7 @@ function Header() {
 									<li>
 										<a
 											className="dropdown-item text-dark"
+											id="linkToPage"
 											href="#"
 										>
 											Recetas
@@ -117,6 +121,7 @@ function Header() {
 									<li>
 										<a
 											className="dropdown-item text-dark"
+											id="linkToPage"
 											href="/public/sources/pages/comunidad/comunidad.html"
 										>
 											Comunidad
@@ -127,9 +132,10 @@ function Header() {
 							<li className="nav-item">
 								<a
 									className="nav-link"
+									id="linkToPage"
 									href="/public/sources/pages/contacto/contacto.html"
 								>
-									Contacto
+									Regístrate
 								</a>
 							</li>
 						</ul>
