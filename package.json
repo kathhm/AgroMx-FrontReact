@@ -10,6 +10,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@fontsource/gabriela": "^5.1.1",
+    "@fontsource/mako": "^5.1.1",
     "@popperjs/core": "^2.11.8",
     "agromx-frontreact": "file:",
     "bootstrap": "^5.3.3",
