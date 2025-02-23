@@ -8,7 +8,7 @@ function Header() {
 					<div className="col-3 col-md-2 d-flex justify-content-start">
 						<img
 							className="logo img-fluid p-1"
-							src="/public/images/image.png"
+							src="/images/logo.png"
 							alt="Logo AgroMX"
 						/>
 					</div>
@@ -22,7 +22,7 @@ function Header() {
 								className="btn btn-outline-success btn-lupa d-none d-sm-block"
 								type="submit"
 							>
-								<i className="fa-solid fa-magnifying-glass fa-2xl icono-lupa"></i>
+								<i className="bi bi-search"></i>
 							</button>
 						</div>
 
@@ -41,14 +41,15 @@ function Header() {
 
 					{/* <!-- Carrito y Avatar --> */}
 					<div className="col-4 col-md-4 d-flex justify-content-center align-items-center mt-2 mt-md-0">
+						<i className="bi bi-basket2">
 						<a
 							className="nav-link active"
 							aria-current="page"
 							href="/public/sources/pages/carrito/carrito.html"
 						>
-							<i className="fa-solid fa-cart-shopping fa-2xl icono cart"></i>
 						</a>
-						<i className="fa-solid fa-user fa-2xl icono"></i>
+						</i>
+						<i className="bi bi-person-circle"></i>
 					</div>
 				</div>
 			</div>
