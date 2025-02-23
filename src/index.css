@@ -1,68 +1,149 @@
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-}
-
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
-
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
+.mako-regular {
+    font-family: "Mako", serif;
+    font-weight: 400;
+    font-style: normal;
   }
+  
+  .gabriela-regular {
+    font-family: "Gabriela", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  :root{
+    --greenPrimary: #007D3C;
+  }
+  
+  /*body::-webkit-scrollbar{
+    width: 0px;
+    height: 0px;
+  }*/
+  
+  header{
+    font-family: 'Mako', serif;
+  }
+  
+  #sobre-nosotros {
+    font-family: 'Gabriela', serif;
+    font-weight: bold;
+  
+  }
+  
+  h1, h2, h3{
+    font-family: 'Gabriela', serif;
+  }
+  
+  .navbar{
+    background-color: var(--greenPrimary);
+    font-family: "Mako", serif;
+    /* Color de fondo */
+  }
+  
+  footer{
+    background-color: var(--greenPrimary);
+    /* Color de fondo */
+    font-family: 'Mako', serif;
+  }
+  
+  a {
+    color: white !important;
+  }
+  
+  /* Para el hover también */
   a:hover {
-    color: #747bff;
+    color: gray;
   }
-  button {
-    background-color: #f9f9f9;
+  
+  
+  
+  .logo{
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+    margin: 15px 45px 15px 45px;
+    padding-right: 100px;
   }
-}
+  
+  .navbar-nav .nav-item {
+    padding-left: 20px; 
+    padding-right: 20px; 
+    font-size: 20px;
+  }
+  
+  .navbar-brand{
+    margin-left: 20px;
+    font-size: 20px;
+  }
+  
+  .cart{
+    font-size: 50px;
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .cart:hover{
+    transform: skewX(-10deg) scale(1.1);
+  }
+  
+  .greenLine{
+    background-color: var(--greenPrimary);
+    height: 1.5rem;
+  }
+  
+  .btn-lupa{
+    /* padding: 5px 10px; */
+    font-size: 15px;
+    width: 45px;
+    height: 30px;
+  }
+  
+  .icono-lupa{
+    font-size: 1.5em; 
+    color: black;    
+  }
+  
+  #lupa{
+    border-width: 0px;
+  }
+  
+  .icono {
+    width: 40px;  
+    height: auto;
+    margin: 0 10px; /* */
+  }
+  
+  .col-4.col-md-4.d-flex {
+    justify-content: flex-end;  /* Asegura que los íconos estén alineados a la derecha */
+    align-items: center;  /* Alinea verticalmente */
+    gap: 15px;  /* Espaciado horizontal entre los iconos */
+    flex-direction: row; /* Asegura que estén en una línea horizontal */
+  }
+  
+  
+  .barra-busqueda{
+    border-color: black !important;
+    border-width: 0px !important;
+    border-radius: 0px 0px 0px 0px !important;
+    background-color: rgb(128, 128, 128, 0.10) !important;
+  }
+  
+  .inicio-footer{
+    background-color: white;
+  
+  }
+  
+  footer p{
+    font-family: 'Mako', serif;
+    font-size: 70%;  
+  }
+  
+  #slogan-footer{
+    font-family: 'Mako', serif;
+    font-size: 3vw;
+    color: #768300;
+  }
+  
+  .fa-cart-shopping { /* Ajusta el tamaño */
+    color: #000;     /* Cambia el color del icono para verlo claramente */
+  }
+  
+  

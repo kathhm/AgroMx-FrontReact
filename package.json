@@ -10,6 +10,10 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@popperjs/core": "^2.11.8",
+    "agromx-frontreact": "file:",
+    "bootstrap": "^5.3.3",
+    "bootstrap-icons": "^1.11.3",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
   },
