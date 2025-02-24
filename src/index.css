@@ -1,17 +1,17 @@
 .mako-regular {
-	font-family: 'Mako', serif;
-	font-weight: 400;
-	font-style: normal;
+  font-family: 'Mako', serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .gabriela-regular {
-	font-family: 'Gabriela', serif;
-	font-weight: 400;
-	font-style: normal;
+  font-family: 'Gabriela', serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 :root {
-	--greenPrimary: #007d3c;
+  --greenPrimary: #007d3c;
 }
 
 /*body::-webkit-scrollbar{
@@ -20,122 +20,137 @@
   }*/
 
 header {
-	font-family: 'Mako', serif;
+  font-family: 'Mako', serif;
 }
 
 #sobre-nosotros {
-	font-family: 'Gabriela', serif;
-	font-weight: bold;
+  font-family: 'Gabriela', serif;
+  font-weight: bold;
 }
 
 h1,
 h2,
 h3 {
-	font-family: 'Gabriela', serif;
+  font-family: 'Gabriela', serif;
 }
 
 .navbar {
-	background-color: var(--greenPrimary);
-	font-family: 'Mako', serif;
-	/* Color de fondo */
+  background-color: var(--greenPrimary);
+  font-family: 'Mako', serif;
+  /* Color de fondo */
 }
 
 footer {
-	background-color: var(--greenPrimary);
-	/* Color de fondo */
-	font-family: 'Mako', serif;
+  background-color: var(--greenPrimary);
+  /* Color de fondo */
+  font-family: 'Mako', serif;
 }
 
-#linkToPage{
-	color: white;
+#linkToPage {
+  color: white;
 }
 
 /* Para el hover también */
 a:hover {
-	color: gray;
+  color: gray;
 }
 
 .logo {
-	justify-content: center;
-	width: 80px;
-	height: 80px;
-	margin: 15px 45px 15px 45px;
-	padding-right: 100px;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  margin: 15px 45px 15px 45px;
+  padding-right: 100px;
 }
 
 .navbar-nav .nav-item {
-	padding-left: 20px;
-	padding-right: 20px;
-	font-size: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-size: 20px;
 }
 
 .navbar-brand {
-	margin-left: 20px;
-	font-size: 20px;
+  margin-left: 20px;
+  font-size: 20px;
 }
 
 .cart {
-	font-size: 50px;
-	transition: transform 0.2s ease-in-out;
+  font-size: 50px;
+  transition: transform 0.2s ease-in-out;
 }
 
 .cart:hover {
-	transform: skewX(-10deg) scale(1.1);
+  transform: skewX(-10deg) scale(1.1);
 }
 
 .greenLine {
-	background-color: var(--greenPrimary);
-	height: 1.5rem;
+  background-color: var(--greenPrimary);
+  height: 1.5rem;
 }
 
 .btn-lupa {
-	/* padding: 5px 10px; */
-	font-size: 15px;
-	width: 45px;
-	height: 30px;
+  /* padding: 5px 10px; */
+  font-size: 15px;
+  width: 45px;
+  height: 30px;
 }
 
 .icono-lupa {
-	font-size: 1.5em;
-	color: black;
+  font-size: 1.5em;
+  color: black;
 }
 
-.bi{
-    font-size: 35px;
-    color: violet;
+.bi {
+  font-size: 35px;
+  color: rgb(0, 0, 0);
+
 }
+
+.bi-instagram,
+.bi-facebook,
+.bi-whatsapp {
+  color: rgb(253, 191, 83);
+}
+
 
 .icono {
-	width: 40px;
-	height: auto;
-	margin: 0 10px; /* */
+  width: 40px;
+  height: auto;
+  margin: 0 10px;
+  /* */
 }
 
 
 
 .barra-busqueda {
-	border-color: black !important;
-	border-width: 0px !important;
-	border-radius: 0px 0px 0px 0px !important;
-	background-color: rgb(128, 128, 128, 0.1) !important;
+  border-color: black !important;
+  border-width: 0px !important;
+  border-radius: 0px 0px 0px 0px !important;
+  background-color: rgb(128, 128, 128, 0.1) !important;
 }
 
 .inicio-footer {
-	background-color: white;
+  background-color: rgb(255, 255, 255);
+}
+
+.final-footer {
+  background-color: #007d3c;
 }
 
 footer p {
-	font-family: 'Mako', serif;
-	font-size: 70%;
+  font-family: 'Mako', serif;
+  font-size: 70%;
+  color: white;
 }
 
 #slogan-footer {
-	font-family: 'Mako', serif;
-	font-size: 3vw;
-	color: #768300;
+  font-family: 'Mako', serif;
+  font-size: 3vw;
+  color: #768300;
 }
 
 .fa-cart-shopping {
-	/* Ajusta el tamaño */
-	color: #000; /* Cambia el color del icono para verlo claramente */
+  /* Ajusta el tamaño */
+  color: #000;
+  /* Cambia el color del icono para verlo claramente */
 }
