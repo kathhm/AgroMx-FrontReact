@@ -6,7 +6,7 @@ import 'bootstrap/dist/js/bootstrap.bundle.min'
 import './App.css'
 import Footer from './components/Footer'
 import Header from './components/Header'
-import Inicio from './pages/inicio'
+import Inicio from './pages/Inicio'
 
 function App() {
 
