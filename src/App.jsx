@@ -6,15 +6,22 @@ import 'bootstrap/dist/js/bootstrap.bundle.min'
 import './App.css'
 import Footer from './components/Footer'
 import Header from './components/Header'
+import { SobreNosotros } from './pages/SobreNosotros/SobreNosotros'
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 
 function App() {
 
   return (
     <>
-      <Header></Header>
+      <BrowserRouter>
+        <Header></Header>
+        <Routes>
+          <Route path="/SobreNosotros" element = {<SobreNosotros/>} />
+        </Routes>
 
-      <Footer></Footer>
+        <Footer></Footer>
+        </BrowserRouter>
     </>
   )
 }
