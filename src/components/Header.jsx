@@ -1,13 +1,14 @@
 function Header() {
 	return (
-		<>
+		<header>
 			<div className="container-fluid">
 				{/* <!-- Barra superior con el logo, búsqueda y los iconos --> */}
 				<div className="row align-items-center">
 					{/* <!-- Logo --> */}
 					<div className="col-3 col-md-2 d-flex justify-content-start">
 						<img
-							className="logo img-fluid p-1"
+							className="img-fluid p-1"
+							id="logo"
 							src="/images/logo.png"
 							alt="Logo AgroMX"
 						/>
@@ -142,7 +143,7 @@ function Header() {
 					</div>
 				</div>
 			</nav>
-		</>
+		</header>
 	);
 }
 
