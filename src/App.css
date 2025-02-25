@@ -30,6 +30,10 @@ main{
 	color: var(--subTitleColor2);
 }
 
+.filterText{
+	font-size: 2vw;
+}
+
 .categoryImage {
 	border-radius: 30px;
 	width: 300px;

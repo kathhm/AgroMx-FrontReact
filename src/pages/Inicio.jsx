@@ -15,28 +15,28 @@ function Inicio() {
 
                 <div className="d-flex row col-12 col-lg-12 p-2 m-2">
                         <div className="categories col-3 col-lg-3">
-                            <h3 className="subTitle2 text-center">Frutas y verduras</h3>
+                            <h3 className="subTitle2 text-center filterText">Frutas y verduras</h3>
                             <img className="categoryImage" src="/images/frutas-verduras.png" alt="fruit and vegetables image" />
                         </div>
 
                         <div className="categories col-3 col-lg-3">
-                            <h3 className="subTitle2 text-center">Legumbres</h3>
+                            <h3 className="subTitle2 text-center filterText">Legumbres</h3>
                             <img className="categoryImage" src="/images/legumbres.jpeg" alt="fruit and vegetables image" />
                         </div>
 
                         <div className="categories col-3 col-lg-3">
-                            <h3 className="subTitle2 text-center">Conservas</h3>
+                            <h3 className="subTitle2 text-center filterText">Conservas</h3>
                             <img className="categoryImage" src="/images/conservas.jpg" alt="fruit and vegetables image" />
                         </div>
 
                         <div className="categories col-3 col-lg-3">
-                            <h3 className="subTitle2 text-center">Composta</h3>
+                            <h3 className="subTitle2 text-center filterText">Composta</h3>
                             <img className="categoryImage" src="/images/composta.png" alt="fruit and vegetables image" />
                         </div>
                 </div>
 
                 <div className="d-flex row col-12 col-lg-12 p-2 my-2">
-                        <h2 className="text-center subTitle">Productos Destacados</h2>
+                        <h2 className="text-center subTitle ">Productos Destacados</h2>
                 </div>
 
                 <div className="d-flex row col-12 col-lg-12 p-2 m-2">

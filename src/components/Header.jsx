@@ -1,6 +1,6 @@
 function Header() {
 	return (
-		<header>
+		<>
 			<div className="container-fluid">
 				{/* <!-- Barra superior con el logo, búsqueda y los iconos --> */}
 				<div className="row align-items-center">
@@ -143,7 +143,7 @@ function Header() {
 					</div>
 				</div>
 			</nav>
-		</header>
+		</>
 	);
 }
 
