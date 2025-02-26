@@ -1,41 +1,47 @@
-
-.titulo-sobre-nosotros{
-    color: #00745F;
+.titulo-sobre-nosotros {
+	color: #00745f;
 }
 
-.parrafo-verde{
-    color: #368210;
-    padding: 0 2rem 0 2rem;
+.parrafo-verde {
+	color: #368210;
+	padding: 0 2rem 0 2rem;
+	font-family: 'mako', 'sans-serif';
 }
 
-.parrafo-mostaza{
-    color: #768300;
-    padding: 0 2rem 0 2rem;
+.parrafo-mostaza {
+	color: #768300;
+	padding: 0 2rem 0 2rem;
+	font-family: 'mako', 'sans-serif';
 }
 
-.imagen-ods{
-    width: 80%;
-    height: 95%;
-    padding: 5px;
+.imagen-ods {
+	width: 80%;
+	height: 95%;
+	padding: 5px;
 }
 
-.bloque-azul{
-    background-color: rgba(25, 194, 129, 0.26);
-    
-    
+.bloque-azul {
+	background-color: rgba(25, 194, 129, 0.26);
+	font-family: 'mako', 'sans-serif';
 }
 
-.mision, .vision{
-    width: 20em;
-    height: 20em;
-    /* object-fit: contain; */
+.mision,
+.vision {
+	width: 80%;
+	height: 80%;
+	aspect-ratio: 1/1;
+	/* object-fit: contain; */
 }
 
-.titulo-h2{
-    color: #00745F;
+.titulo-h2 {
+	color: #00745f;
 }
 
-.imagen-valores{
-    width: 80%;
-    height: 95%;
+.imagen-valores {
+	width: 80%;
+	aspect-ratio: 2/1;
+}
+
+section > p {
+	font-family: 'mako', 'sans-serif';
 }
