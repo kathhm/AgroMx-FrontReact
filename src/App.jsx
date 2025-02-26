@@ -9,6 +9,7 @@ import Header from './components/Header'
 import { SobreNosotros } from './pages/SobreNosotros/SobreNosotros'
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
+import Inicio from './pages/Inicio'
 
 function App() {
 
@@ -16,6 +17,7 @@ function App() {
     <>
       <BrowserRouter>
         <Header></Header>
+        <Inicio></Inicio>
         <Routes>
           <Route path="/SobreNosotros" element = {<SobreNosotros/>} />
         </Routes>
