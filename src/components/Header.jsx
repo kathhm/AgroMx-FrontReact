@@ -5,7 +5,7 @@ function Header() {
 				{/* <!-- Barra superior con el logo, búsqueda y los iconos --> */}
 				<div className="row align-items-center">
 					{/* <!-- Logo --> */}
-					<div className="col-3 col-md-2 d-flex justify-content-start">
+					<div className="col-3 col-md-2 d-flex justify-content-center">
 						<img
 							className="img-fluid p-1"
 							id="logo"

@@ -56,7 +56,6 @@ a:hover {
 }
 
 #logo {
-  justify-content: center;
   width: 80px;
   height: 80px;
   margin: 15px 45px 15px 45px;
@@ -100,15 +99,15 @@ a:hover {
   color: black;
 }
 
-.bi {
-  font-size: 35px;
-  color: rgb(0, 0, 0);
-
+.bi-person-circle,
+.bi-basket2{
+  font-size: calc(1.5em + 1vw);
 }
 
 .bi-instagram,
 .bi-facebook,
 .bi-whatsapp {
+  font-size: 35px;
   color: rgb(253, 191, 83);
 }
 
