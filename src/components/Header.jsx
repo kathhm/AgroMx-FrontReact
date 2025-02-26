@@ -1,3 +1,5 @@
+import { NavLink } from "react-router-dom";
+
 function Header() {
 	return (
 		<>
@@ -43,12 +45,12 @@ function Header() {
 					{/* <!-- Carrito y Avatar --> */}
 					<div className="col-4 col-md-4 d-flex justify-content-end align-items-end mt-2 p-4 mt-md-0">
 						<i className="bi bi-basket2 mx-5">
-						<a
+						<NavLink
 							className="nav-link active"
 							aria-current="page"
-							href="/public/sources/pages/carrito/carrito.html"
+							to={"/Carrito"}
 						>
-						</a>
+						</NavLink>
 						</i>
 						<i className="bi bi-person-circle me-4"></i>
 					</div>
@@ -57,9 +59,9 @@ function Header() {
 
 			<nav className="navbar navbar-expand-lg navbar-light">
 				<div className="container-fluid">
-					<a className="navbar-brand" id="linkToPage" href="/index.html">
+					<NavLink className="navbar-brand" id="linkToPage" to={"/Inicio"}>
 						Inicio
-					</a>
+					</NavLink>
 					<button
 						className="navbar-toggler"
 						type="button"
@@ -77,67 +79,67 @@ function Header() {
 					>
 						<ul className="navbar-nav me-auto mb-2 mb-lg-0">
 							<li className="nav-item">
-								<a
+								<NavLink
 									className="nav-link active"
 									id="linkToPage"
 									aria-current="page"
-									href="/public/sources/pages/catalogo/catalogo.html"
+									to={"/Catalogo"}
 								>
 									Catálogo
-								</a>
+								</NavLink>
 							</li>
 							<li className="nav-item">
-								<a
+								<NavLink
 									className="nav-link"
 									id="linkToPage"
-									href="/public/sources/pages/sobreNosotrosAgroMX/sobreNosotrosAgroMX.html"
+									to={"/SobreNosotros"}
 								>
 									Sobre Nosotros
-								</a>
+								</NavLink>
 							</li>
 							<li className="nav-item dropdown">
-								<a
+								<NavLink
 									className="nav-link dropdown-toggle"
 									id = "linkToPage"
-									href="#"
+									to={"/Comunidad"}
 									role="button"
 									data-bs-toggle="dropdown"
 									aria-expanded="false"
 								>
 									Comunidad
-								</a>
+								</NavLink>
 								<ul className="dropdown-menu">
 									<li>
-										<a
+										<NavLink
 											className="dropdown-item text-dark"
 											id="linkToPage"
-											href="#"
+											to={"/Comunidad"}
 										>
 											Recetas
-										</a>
+										</NavLink>
 									</li>
 									<li>
 										<hr className="dropdown-divider" />
 									</li>
 									<li>
-										<a
+										<NavLink
 											className="dropdown-item text-dark"
 											id="linkToPage"
-											href="/public/sources/pages/comunidad/comunidad.html"
+											to={"/Comunidad"}
 										>
 											Comunidad
-										</a>
+										</NavLink>
 									</li>
 								</ul>
 							</li>
 							<li className="nav-item">
-								<a
+								<NavLink
 									className="nav-link"
 									id="linkToPage"
-									href="/public/sources/pages/contacto/contacto.html"
+									to={"/Registro"}	
 								>
 									Regístrate
-								</a>
+								</NavLink>
 							</li>
 						</ul>
 					</div>

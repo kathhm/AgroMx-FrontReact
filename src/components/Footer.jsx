@@ -9,10 +9,10 @@ function Footer() {
         <div className="row">
 
           {/* {Necesitas Ayuda} */}
-          <div className="col-4 col-md-3 col-lg-3 text-center">
+          <div className="col-4 col-md-3 col-lg-3 text-center px-1">
             <h5>¿Necesitas ayuda?</h5>
             <p className="mb-1">Tel. 555 324 6353</p>
-            <p className="mb-1 none-sm">agromx.soporte@gmail.com</p>
+            <p className="mb-1 none">agromx.soporte@gmail.com</p>
             <p className="mb-0">Horarios de atención:</p>
             <p className="mb-0">9:00 a 18:00 h</p>
           </div>
