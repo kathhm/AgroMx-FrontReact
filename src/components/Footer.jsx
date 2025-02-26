@@ -6,7 +6,7 @@ function Footer() {
 			<div className="col-12 text-center inicio-footer">
 				<img
 					className="logo img-fluid p-1"
-					src="/images/logo.png"
+					src="/images/logVectorizado2.svg"
 					alt="Logo AgroMX"
 				/>
 				<p id="slogan-footer">
@@ -36,7 +36,7 @@ function Footer() {
 						</NavLink>
 						<NavLink
 							to={"/NuevoProducto"}
-              style={{ color: "white", textDecoration: "none" }}
+							style={{ color: "white", textDecoration: "none" }}
 						>
 							<h5>Nuevos Productos</h5>
 						</NavLink>
@@ -46,7 +46,7 @@ function Footer() {
 					<div className="col-4 col-md-3 col-lg-3 text-center">
 						<NavLink
 							to={"/Registro"}
-              style={{ color: "white", textDecoration: "none" }}
+							style={{ color: "white", textDecoration: "none" }}
 						>
 							<h5>Regístrate</h5>
 						</NavLink>
@@ -59,8 +59,8 @@ function Footer() {
 						<div className="d-flex justify-content-center align-items-center">
 							<div className="text-center mx-3 my-4">
 								<NavLink
-									to = "https://www.facebook.com/"
-                  className="text-white text-decoration-none"
+									to="https://www.facebook.com/"
+									className="text-white text-decoration-none"
 								>
 									<i className="bi bi-facebook"></i>
 									<p className="mb-0 small mt-2">AgroMx</p>
@@ -68,7 +68,7 @@ function Footer() {
 							</div>
 							<div className="text-center mx-3">
 								<NavLink
-									to = "https://www.instagram.com/"
+									to="https://www.instagram.com/"
 									className="text-white text-decoration-none"
 								>
 									<i className="bi bi-instagram"></i>
@@ -77,7 +77,7 @@ function Footer() {
 							</div>
 							<div className="text-center mx-3">
 								<NavLink
-                  to = "https://wa.me/+529511738814?text=Hola%2C%20quiero%20mas%20informaci%C3%B3n"
+									to="https://wa.me/+529511738814?text=Hola%2C%20quiero%20mas%20informaci%C3%B3n"
 									className="text-white text-decoration-none"
 								>
 									<i className="bi bi-whatsapp"></i>

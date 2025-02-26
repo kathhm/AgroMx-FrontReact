@@ -11,7 +11,7 @@ function Header() {
 						<img
 							className="img-fluid p-1"
 							id="logo"
-							src="/images/logo.png"
+							src="/images/logVectorizado2.svg"
 							alt="Logo AgroMX"
 						/>
 					</div>
