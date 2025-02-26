@@ -14,6 +14,16 @@
 }
 
 .imagen-ods{
-    width: 100px;
-    height: 100px;
+    width: 80%;
+    height: 95%;
+    padding: 5px;
+}
+
+.bloque-azul{
+    background-color: cadetblue;
+}
+
+.mision, .vision{
+    width: 10rem;
+    height: 10rem;
 }
