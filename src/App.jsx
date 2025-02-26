@@ -17,9 +17,10 @@ function App() {
     <>
       <BrowserRouter>
         <Header></Header>
-        <Inicio></Inicio>
+        {/* <Inicio></Inicio> */}
         <Routes>
           <Route path="/SobreNosotros" element = {<SobreNosotros/>} />
+          <Route path="/Inicio" element = {<Inicio></Inicio>}></Route>
         </Routes>
 
         <Footer></Footer>
