@@ -40,26 +40,28 @@ function SobreNosotros () {
                 <div className='bloque-azul'>
                     <div className='container-fluid'>
                         <div className='row'>
-                            <div className='col-6 border text-center'>
-                                <h2>Misión</h2>
+                            <div className='col-7 border text-center'>
+                                <h2 className='titulo-h2'>Misión</h2>
                                 <div className='row'>
-                                    <div className='col-12 border'>
+                                    <div className='col-2'></div>
+                                    <div className='col-10 border text-start pt-4'>
+                                        {/* <h2 className='titulo-h2'>Misión</h2> */}
                                         <p>Conectar productos agroecológicos con consumidores interesados en mejorar su alimentación, fomentar el comercio y economía locales y cuidar el medio ambiente.</p>
                                         </div>
                                 </div>
                             </div>
-                            <div className='col-6 border text-center'>
-                                <img className='mision' src="public/images/mision.jpg" alt="" />
+                            <div className='col-5 border text-center py-4'>
+                                <img className='mision img-fluid' src="public/images/mision.png" alt="" />
                             </div>
                         </div>
                         <div className='row'>
-                            <div className='col-6  text-center'>
-                                <img className='vision' src="/public/images/vision.png" alt="" />
+                            <div className='col-5  text-center py-4'>
+                                <img className='vision img-fluid' src="/public/images/vision.png" alt="" />
                             </div>
-                            <div className='col-6 border text-center'>
-                                <h2>Visión</h2>
+                            <div className='col-7 border text-center'>
+                                <h2 className='titulo-h2'>Visión</h2>
                                 <div className='row'>
-                                    <div className='col-12 border text-end'>
+                                    <div className='col-10 border text-end pt-4'>
                                         <p>Ser líderes en la distribución de alimentos agroecológicos, creando una comunidad comprometida con una alimentación sana y sostenible. 
                                         </p>
                                         </div>
@@ -68,8 +70,6 @@ function SobreNosotros () {
                         </div>
                     </div>
                 </div>
-
-
 
                {/*  <div class="container">
     <div class="row">
@@ -87,6 +87,14 @@ function SobreNosotros () {
     </div>
 </div> */}
 {/* <div class="row"> <div class="col-sm-9"> Level 1: .col-sm-9 <div class="row"> <div class="col-8 col-sm-6"> Level 2: .col-8 .col-sm-6 </div> <div class="col-4 col-sm-6"> Level 2: .col-4 .col-sm-6 </div> </div> </div> </div> */}
+            </section>
+            <section>
+                <h2 className='titulo-h2 text-center'>Nuestros aliados y colaboradores</h2>
+                <p  className='parrafo-verde text-center'>
+                Trabajamos con productores y productoras de la CDMX y sus alrededores que cultivan alimentos de alta calidad mediante prácticas agroecológicas responsables. Su enfoque respeta la biodiversidad, protege la salud del suelo y regenera los ecosistemas, promoviendo una agricultura consciente, libre de químicos dañinos y basada en el equilibrio natural.</p>
+            </section>
+            <section>
+                <img className='imagen-valores' src="public/images/valores.png" alt="" />
             </section>
         
         

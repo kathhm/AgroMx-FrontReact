@@ -20,10 +20,22 @@
 }
 
 .bloque-azul{
-    background-color: cadetblue;
+    background-color: rgba(25, 194, 129, 0.26);
+    
+    
 }
 
 .mision, .vision{
-    width: 10rem;
-    height: 10rem;
+    width: 20em;
+    height: 20em;
+    /* object-fit: contain; */
+}
+
+.titulo-h2{
+    color: #00745F;
+}
+
+.imagen-valores{
+    width: 80%;
+    height: 95%;
 }
