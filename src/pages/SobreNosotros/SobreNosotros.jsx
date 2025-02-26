@@ -94,6 +94,7 @@ function SobreNosotros () {
                 Trabajamos con productores y productoras de la CDMX y sus alrededores que cultivan alimentos de alta calidad mediante prácticas agroecológicas responsables. Su enfoque respeta la biodiversidad, protege la salud del suelo y regenera los ecosistemas, promoviendo una agricultura consciente, libre de químicos dañinos y basada en el equilibrio natural.</p>
             </section>
             <section>
+                <h2 className='titulo-h2 text-center'>Valores</h2>
                 <img className='imagen-valores' src="public/images/valores.png" alt="" />
             </section>
         
