@@ -20,7 +20,8 @@ function App() {
         {/* <Inicio></Inicio> */}
         <Routes>
           <Route path="/SobreNosotros" element = {<SobreNosotros/>} />
-          <Route path="/Inicio" element = {<Inicio></Inicio>}></Route>
+          <Route path="/Inicio" element = {<Inicio/>}></Route>
+          <Route path="/" element = {<Navigate to = "/Inicio" replace />}></Route>
         </Routes>
 
         <Footer></Footer>
