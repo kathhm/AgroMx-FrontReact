@@ -21,7 +21,7 @@ function App() {
         <Routes>
           <Route path="/SobreNosotros" element = {<SobreNosotros/>} />
           <Route path="/Inicio" element = {<Inicio/>}></Route>
-          <Route path="/" element = {<Navigate to = "/Inicio" replace />}></Route>
+          <Route path="/" element = {<Inicio/>}></Route>
         </Routes>
 
         <Footer></Footer>

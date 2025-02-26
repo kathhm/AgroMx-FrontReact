@@ -1,75 +1,70 @@
 :root {
-	--subTitleColor: #00745f;
-	--subTitleColor2: #ae7d00;
+  --subTitleColor: #00745f;
+  --subTitleColor2: #ae7d00;
 }
 
-main{
-    margin-bottom: 80vb;
+main {
+  margin-bottom: 25vh;
 }
 
-#logo-footer{
-    width: 80px;
-    height: 80px;
-    margin: 15px 45px 15px 45px;
+#logo-footer {
+  width: 80px;
+  height: 80px;
+  margin: 15px 45px 15px 45px;
 }
 
 .container-fluid img {
-	width: 100%;
-	height: 70%;
-	padding: 0;
-	margin: 0;
+  width: 100%;
+  height: 70%;
+  padding: 0;
+  margin: 0;
 }
 
 .subTitle {
-	font-family: 'Gabriela', 'serif';
-	color: var(--subTitleColor);
-	font-size: auto;
+  font-family: 'Gabriela', 'serif';
+  color: var(--subTitleColor);
+  font-size: auto;
 }
 
 .subTitle2 {
-	font-family: 'Mako', 'serif';
-	color: var(--subTitleColor2);
+  font-family: 'Mako', 'serif';
+  color: var(--subTitleColor2);
 }
 
-.filterText{
-	font-size: 2vw;
+.filterText {
+  font-size: 2vw;
 }
 
 .categoryImage {
-	border-radius: 30px;
-	max-width: 100%;
-	height: auto;
-	object-fit: cover;
+  border-radius: 30px;
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
 }
 
 .productImage {
-	max-width: 100%;
-	height: auto;
-	object-fit: contain;
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
 }
 
 .productName {
-	font-family: 'Mako', 'serif';
-	font-size: 2vw;
+  font-family: 'Mako', 'serif';
+  font-size: 2vw;
 }
 
-.comunidad-foto{
-	width: 100%;
-	height: 100%;
-	object-fit: contain;
-	border-radius: 40px;
-	border-color: black;
-	border-width: 1px;
-	border-style: solid;
+.comunidad-foto {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 40px;
+  border-color: black;
+  border-width: 1px;
+  border-style: solid;
 
 }
 
-.nombre{
-	justify-content: left;
-	text-align: left;
+.nombre {
+  justify-content: left;
+  text-align: left;
 }
-
-
-
-
-
