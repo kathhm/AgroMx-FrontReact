@@ -1,0 +1,24 @@
+.login-card {
+    border-radius: 30px;
+    background-color: antiquewhite;
+    
+}
+
+.titulo{
+    font-family: gabriela;
+
+}
+
+.etiqueta{
+    font-family: mako;
+
+}
+
+.custom-btn{
+    background-color: #e17018 ;
+    border-color: black;
+    border-width: 0.1px;
+    color: white;
+    border-radius: 10px;
+
+}
