@@ -1,0 +1,79 @@
+.carousel-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .carousel-inner {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .slide-content {
+    position: relative;
+    padding: 20px;
+    text-align: center;
+    border-radius: 15px;
+    max-width: 600px; /* Limita el ancho del carrusel */
+  }
+  
+  .slide-bg-1 {
+    background-color: #a7d2c9; /* Verde pastel */
+    padding: 30px;
+  }
+  
+  .slide-bg-2 {
+    background-color: #d7d98d; /* Amarillo pastel */
+  }
+  
+  .slide-bg-3 {
+    background-color: #c7e5b4; /* Verde claro */
+  }
+  
+  .carousel-image {
+    border-radius: 10px;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto; /* Centra las imágenes */
+  }
+  
+  .large {
+    width: 400px;
+    height: auto;
+  }
+  
+  .small {
+    width: 150px;
+    height: auto;
+  }
+  
+  .slide-text {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-top: 15px;
+    text-align: center;
+    color: #000;
+  }
+  
+  .small-text {
+    font-size: 0.8rem;
+  }
+  
+  .carousel-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+  @media (max-width: 768px) {
+    .large {
+      width: 300px;
+    }
+  
+    .small {
+      width: 120px;
+    }
+  }
+  
