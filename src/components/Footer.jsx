@@ -35,7 +35,7 @@ function Footer() {
 							<h5>Developer Team</h5>
 						</NavLink>
 						<NavLink
-							to={"/NuevoProducto"}
+							to={"/NuevosProductos"}
 							style={{ color: "white", textDecoration: "none" }}
 						>
 							<h5>Nuevos Productos</h5>
