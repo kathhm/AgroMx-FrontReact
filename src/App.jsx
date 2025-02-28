@@ -10,7 +10,7 @@ import { SobreNosotros } from './pages/SobreNosotros/SobreNosotros'
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 import Inicio from './pages/Inicio'
-import Login from './pages/login/login'
+import Login from './pages/login/Login'
 
 function App() {
 
@@ -23,7 +23,7 @@ function App() {
           <Route path="/SobreNosotros" element = {<SobreNosotros/>} />
           <Route path="/Inicio" element = {<Inicio/>}></Route>
           <Route path="/" element = {<Inicio/>}></Route>
-          <Route path="/login" element= {<Login/>}></Route>
+          <Route path="/Login" element= {<Login/>}></Route>
         </Routes>
 
         <Footer></Footer>

@@ -1,21 +1,19 @@
 
 import "./login.css"
 
-function login() {
+function Login() {
   return (
     // <div>
-    <main>
-        <div className='container login-card m-2 p-5 text-center mt-5'>
-            <h1 className='titulo'>inicia sesión</h1> <hr/>
+    <main className="container">
+        <div className='container login-card my-5 p-5'>
+            <h1 className='titulo text-center'>Inicia sesión</h1> <hr/>
             <div className='container-fluid justify-content-center d-flex'>
                 <form className='form col-8 row'>
-                    <label className="etiqueta me-2 form-label text-align-start" for="correo">correo electronico:</label>
+                    <label className="etiqueta me-2 form-label text-align-start" htmlFor="correo">Correo electronico:</label>
                     <input className="form-control" type="text" placeholder="example@dominio.com" id="correo"/><br/>
-                    <label className="etiqueta me-2 form-label text-align-start" for="contraseña">contraseña</label>
+                    <label className="etiqueta me-2 form-label text-align-start" htmlFor="contraseña">Contraseña:</label>
                     <input className="form-control" type="password" placeholder="introduce tu contraseña" id="contraseña"/>
-                    <button className="btn custom-btn mt-5" type="submit">iniciar sesión</button>
-
-
+                    <button className="btn btn-primary w-100 addToCartBtn mt-3" type="submit">iniciar sesión</button>
                 </form>
                 
             </div>
@@ -29,4 +27,4 @@ function login() {
 )
 }
 
-export default login
+export default Login
