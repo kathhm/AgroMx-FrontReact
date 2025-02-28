@@ -10,6 +10,7 @@ import { SobreNosotros } from './pages/SobreNosotros/SobreNosotros'
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 import Inicio from './pages/Inicio'
+import Comunidad from './pages/Comunidad/Comunidad'
 
 function App() {
 
@@ -22,6 +23,7 @@ function App() {
           <Route path="/SobreNosotros" element = {<SobreNosotros/>} />
           <Route path="/Inicio" element = {<Inicio/>}></Route>
           <Route path="/" element = {<Inicio/>}></Route>
+          <Route path="/Comunidad" element = {<Comunidad/>}></Route> 
         </Routes>
 
         <Footer></Footer>
