@@ -12,6 +12,7 @@ import NuevosProductos from './pages/Productos/NuevosProductos';
 import Catalogo from './pages/Catalogo/Catalogo';
 
 import Inicio from './pages/Inicio';
+import Registro from './pages/Registro/registro';
 
 
 
@@ -29,6 +30,7 @@ function App() {
           <Route path="/" element = {<Inicio/>}></Route>
           <Route path="/NuevosProductos" element = {<NuevosProductos/>}></Route>
           <Route path="/catalogo" element={<Catalogo />} />
+          <Route path="/Registro" element={<Registro />}></Route>
 
         </Routes>
 
