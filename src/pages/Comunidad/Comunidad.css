@@ -1,0 +1,41 @@
+.titulo-sobre-nosotros{
+    color: #00745F;
+}
+.subtitulo-naranja{
+    color: #AE7D00;
+    font-family:Gabriela;
+}
+.parrafo-verde{
+    color: #368210;
+    padding: 0 2rem 0 2rem;
+}
+.parrafo-mostaza{
+    color: #768300;
+    padding: 0 2rem 0 2rem;
+}
+.imagen-ods{
+    width: 80%;
+    height: 95%;
+    padding: 5px;
+}
+.bloque-azul{
+    background-color: rgba(25, 194, 129, 0.26);
+    
+    
+}
+.mision, .vision{
+    width: 20em;
+    height: 20em;
+    /* object-fit: contain; */
+}
+.titulo-h2{
+    color: #00745F;
+}
+.imagen-valores{
+    width: 80%;
+    height: 95%;
+}
+.parrafo-verde-oscuro{
+    color: #007D3C;
+    
+}
