@@ -126,7 +126,7 @@ function SobreNosotros() {
 				<img
 					className="imagen-valores img-fluid mt-2"
 					src="public/images/valores.png"
-					alt=""
+					alt="imagen del producto"
 				/>
 			</section>
 		</main>

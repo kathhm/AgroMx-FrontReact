@@ -8,9 +8,10 @@ import Footer from './components/Footer'
 import Header from './components/Header'
 import { SobreNosotros } from './pages/SobreNosotros/SobreNosotros'
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import NuevosProductos from './pages/Productos/NuevosProductos';
+import Catalogo from './pages/Catalogo/Catalogo';
+import Inicio from './pages/Inicio';
 
-import Inicio from './pages/Inicio'
-import Login from './pages/login/login'
 
 function App() {
 
@@ -23,7 +24,9 @@ function App() {
           <Route path="/SobreNosotros" element = {<SobreNosotros/>} />
           <Route path="/Inicio" element = {<Inicio/>}></Route>
           <Route path="/" element = {<Inicio/>}></Route>
-          <Route path="/login" element= {<Login/>}></Route>
+          <Route path="/NuevosProductos" element = {<NuevosProductos/>}></Route>
+          <Route path="/catalogo" element={<Catalogo />} />
+
         </Routes>
 
         <Footer></Footer>
