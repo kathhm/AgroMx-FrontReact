@@ -6,9 +6,9 @@ const Carrusel = () => {
     <div className="carousel-container">
       <div id="customCarousel" className="carousel slide" data-bs-ride="carousel">
         <div className="carousel-inner">
-          {/* Slide 1 */}
-          <div className="carousel-item active d-flex justify-content-center align-items-center">
-            <div className="slide-content slide-bg-1">
+          {/* Slide 1 - IMAGEN PRINCIPAL */}
+          <div className="carousel-item active">
+            <div className="slide-content slide-bg-main">
               <img
                 src="https://cdn3.pixelcut.app/7/20/uncrop_hero_bdf08a8ca6.jpg"
                 className="carousel-image large"
@@ -20,25 +20,25 @@ const Carrusel = () => {
             </div>
           </div>
 
-          {/* Slide 2 */}
+          {/* Slide 2 - IMAGEN LATERAL IZQUIERDA*/}
           <div className="carousel-item">
-            <div className="slide-content slide-bg-2">
+            <div className="slide-content slide-bg-left">
               <img
                 src="https://cdn3.pixelcut.app/7/20/uncrop_hero_bdf08a8ca6.jpg"
                 className="carousel-image small"
-                alt="Imagen lateral 1"
+                alt="Imagen lateral izquierda"
               />
               <p className="slide-text small-text">Lorem ipsum dolor sit amet...</p>
             </div>
           </div>
 
-          {/* Slide 3 */}
+          {/* Slide 3 - IMAGEN LATERAL DERECHA*/}
           <div className="carousel-item">
-            <div className="slide-content slide-bg-3">
+            <div className="slide-content slide-bg-right">
               <img
                 src="https://cdn3.pixelcut.app/7/20/uncrop_hero_bdf08a8ca6.jpg"
                 className="carousel-image small"
-                alt="Imagen lateral 2"
+                alt="Imagen lateral derecha"
               />
               <p className="slide-text small-text">Otra historia interesante...</p>
             </div>
