@@ -1,83 +1,43 @@
 import "./Registro.css";
+import React, { useState } from "react";  //importación de useState
 
 function Registro() {
 
-
-
-        document.addEventListener("DOMContentLoaded", function () {
-
-        document.getElementById("toggle-password").addEventListener("click", function () {
-          const passwordField = document.getElementById("password");
-          passwordField.type = passwordField.type === "password" ? "text" : "password";
-        });
-      
-        document.getElementById("confirm-password").addEventListener("click", function () {
-          const confirmPasswordField = document.getElementById("contraseña");
-          confirmPasswordField.type = confirmPasswordField.type === "password" ? "text" : "password";
-        });
-      
-      
-        const form = document.getElementById("contactForm");
-        const passwordField = document.getElementById("password");
-        const confirmPasswordField = document.getElementById("contraseña");
-        const successMessage = document.getElementById("successMessage");
-      
-        form.addEventListener("submit", function (event) {
-          // Verificar si las contraseñas coinciden
-          if (passwordField.value !== confirmPasswordField.value) {
-            confirmPasswordField.setCustomValidity("Las contraseñas no coinciden");
-          } else {
-            confirmPasswordField.setCustomValidity("");
-          }
-      
-      
-          if (!form.checkValidity()) {
-            event.preventDefault();
-            form.reportValidity();
-          } else {
-            event.preventDefault();
-            successMessage.style.display = "block";
-            setTimeout(() => successMessage.style.display = "none", 3000);
-            setTimeout(() => form.reset(), 500);
-          }
-        });
-      
-        confirmPasswordField.addEventListener("input", function () {
-          this.setCustomValidity("");
-        });
-      });
-
-
-      function guardarUsuario(event) {
-        event.preventDefault(); // Evita que la página se recargue al enviar el formulario
-      
-        const userData = {
-          usuario: document.getElementById("usuario").value,
-          nombre: document.getElementById("nombre").value,
-          apellido: document.getElementById("apellidos").value,
-          email: document.getElementById("email").value,
-          password: document.getElementById("password").value,
-          contraseña: document.getElementById("contraseña").value,
-      
-        };
-      
-      
-        // Convertir el objeto en formato JSON
-        const userDataJSON = JSON.stringify(userData);
-      
-        // Almacenar el objeto en el localStorage
-        localStorage.setItem("userData", userDataJSON);
-      
-        console.log("Usuario nuevo registrado:", userData);
-      
-        // Mostrar mensaje de éxito
-        document.getElementById("successMessage").style.display = "block";
-      }
-      
-      // Asociar la función al evento submit del formulario
-      document.getElementById("contactForm").addEventListener("submit", guardarUsuario);
-      
-
+	const [formData, setFormData] = useState({
+		usuario: "",
+		nombre: "",
+		apellidos: "",
+		email: "",
+		password: "",
+		confirmPassword: "",
+		termsAccepted: false,
+	  });
+	
+	  const [successMessage, setSuccessMessage] = useState(false);
+	  const [passwordVisible, setPasswordVisible] = useState(false);
+	  const [confirmPasswordVisible, setConfirmPasswordVisible] = useState(false);
+	
+	  // Manejar cambios en los inputs
+	  const handleChange = (e) => {
+		const { name, value, type, checked } = e.target;
+		setFormData((prev) => ({
+		  ...prev,
+		  [name]: type === "checkbox" ? checked : value,
+		}));
+	  };
+	
+	  // Validar y enviar el formulario
+	  const handleSubmit = (evento) => {
+		evento.preventDefault();
+		if (formData.password !== formData.confirmPassword) {
+		  alert("Las contraseñas no coinciden");
+		  return;
+		}
+	
+		// Guardar en localStorage
+		localStorage.setItem("userData", JSON.stringify(formData));
+		setSuccessMessage(true);  
+	}
 
 	return (
 		<>
@@ -90,7 +50,7 @@ function Registro() {
 					y sé parte de la comunidad
 				</h2>
 
-				<form id="contactForm">
+				<form onSubmit={handleSubmit}>
 					{/* <!-- Usuario --> */}
 					<div className="mb-3 usuario col-8 mx-auto">
 						<label htmlFor="nombre" className="form-label">
@@ -100,6 +60,9 @@ function Registro() {
 							type="text"
 							className="form-control"
 							id="usuario"
+							name="usuario"
+            				value={formData.usuario}
+            				onChange={handleChange}
 							placeholder="Ingresa tu usuario"
 							required
 						/>
@@ -117,6 +80,9 @@ function Registro() {
 							type="text"
 							className="form-control"
 							id="nombre"
+							name="nombre"
+            				value={formData.nombre}
+            				onChange={handleChange}
 							placeholder="Ingresa tu nombre"
 							required
 						/>
@@ -133,6 +99,9 @@ function Registro() {
 							type="text"
 							className="form-control"
 							id="apellidos"
+							name="apellidos"
+            				value={formData.apellidos}
+            				onChange={handleChange}
 							placeholder="Ingresa tu nombre"
 							required
 						/>
@@ -150,6 +119,9 @@ function Registro() {
 							type="email"
 							className="form-control"
 							id="email"
+							name="email"
+            				value={formData.email}
+           					onChange={handleChange}
 							placeholder="Ingresa tu correo electrónico"
 							required
 						/>
@@ -166,16 +138,21 @@ function Registro() {
 						<div className="password-container position-relative">
 							{" "}
 							<input
-								type="password"
+								type={passwordVisible ? "text" : "password"}
 								required
 								minlength="6"
 								className="form-control"
 								id="password"
+								name="password"
+              					value={formData.password}
+              					onChange={handleChange}
 								placeholder="Ingresa tu contraseña"
 							/>{" "}
 							<span
 								id="toggle-password"
-								className="eye-icon position-absolute top-50 end-0 translate-middle-y pe-3"
+								className="eye-icon position-absolute top-50 end-0 translate-middle-y pe-3" 
+								onClick={() => setPasswordVisible(!passwordVisible)}
+								style={{ cursor: "pointer" }}
 							>
 								👁️
 							</span>
@@ -194,16 +171,21 @@ function Registro() {
 						<div className="password-container position-relative">
 							{" "}
 							<input
-								type="password"
+								type={confirmPasswordVisible ? "text" : "password"}
 								required
 								minlength="6"
 								className="form-control"
+								name="confirmPassword"
+              					value={formData.confirmPassword}
+              					onChange={handleChange}
 								id="contraseña"
 								placeholder="Confirma tu contraseña"
 							/>{" "}
 							<span
 								id="confirm-password"
 								className="eye-icon position-absolute top-50 end-0 translate-middle-y pe-3"
+								onClick={() => setConfirmPasswordVisible(!confirmPasswordVisible)}
+              					style={{ cursor: "pointer" }}
 							>
 								👁️
 							</span>
@@ -221,6 +203,9 @@ function Registro() {
 						<input
 							className="form-check-input"
 							type="checkbox"
+							name="termsAccepted"
+            				checked={formData.termsAccepted}
+            				onChange={handleChange}
 							id="termsCheckbox"
 							required
 						/>
@@ -228,13 +213,13 @@ function Registro() {
 							className="form-check-label terminos-condiciones"
 							htmlFor="termsCheckbox"
 						>
-							Acepto los
+							Acepto los{" "}
 							<a
 								className="terminos-condiciones"
 								href="#"
 								target="_blank"
 							>
-								términos y condiciones.
+								 términos y condiciones.
 							</a>
 						</label>
 						<div className="invalid-feedback terminos-condiciones">
@@ -247,14 +232,9 @@ function Registro() {
 							Regístrame
 						</button>
 					</div>
-					<div
-						id="successMessage"
-						style={{ display: "none" }}
-						className="alert alert-success mt-3"
-					>
-						{" "}
-						¡Tu registro ha sido exitoso!
-					</div>
+					{successMessage && (
+          			<div className="alert alert-success mt-3">¡Tu registro ha sido exitoso!</div>
+        			)}
 
 					{/*  <!-- Inicio de sesión --> */}
 
