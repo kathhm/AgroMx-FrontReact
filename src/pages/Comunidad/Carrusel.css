@@ -1,80 +1,75 @@
-.carousel-container {
-    
-  
-    width: 100%;
-    overflow: hidden;
+.carousel-container{
+display: flex;
+justify-content: center;
+align-items: center;
+flex-wrap: nowrap;
+width: auto;
+margin-top: 15px;
+margin-bottom: 15px;
 
+}
 
-  }
+.carousel-main{
+  background-color: #96C8BF;
+  justify-content: center;
+  text-align: center;
+  border-radius: 25px;
+  width: auto;
+  margin: 0 auto;
+  max-width: 60%;
+}
+
+.carousel-left{
+  background-color: #DDDA79;
+  justify-content: center;
+  text-align: center;
+  border-radius: 25px;
+  width: auto;
+  margin: 0 auto;
+  max-width: 60%;
+
+}
+
+.carousel-right{
+  background-color: #AFC896;
+  justify-content: center;
+  text-align: center;
+  border-radius: 25px;
+  width: auto;
+  margin: 0 auto;
+  max-width: 60%;
   
-  .carousel-inner {
-    display: flex;
-    width: 100%;
-    height: 100%;
+}
+.carousel-image{
+  display: flex;
+  justify-content: center;
+  width: 60%;
+  height: 60%;
+  max-height: 50%;
+  margin: auto;
+  margin-top: 35px;
+  border-radius: 25px;;
+}
+
+.slide-text{
   position: relative;
-  }
-  
-  .slide-content {
-  
-    padding: 20px;
-    text-align: center;
-    border-radius: 15px;
-    max-width: 600px; /* Limita el ancho del carrusel */
-  }
-  
-  .slide-bg-main{
-    background-color: #a7d2c9; /* Verde pastel */
-    padding: 30px;
-  }
-  
-  .slide-bg-left {
-    background-color: #d7d98d; /* Amarillo pastel */
-  }
-  
-  .slide-bg-right {
-    background-color: #c7e5b4; /* Verde claro */
-  }
-  
-  .carousel-image.large {
-    width: 100%;
-    max-width: 450px;
-    border-radius: 15px;
-  }
-  
-  .carousel-image.small {
-    width: 100%;
-    max-width: 150px;
-    border-radius: 10px;
-  }
+  margin-top: 15px;
+  font-size: 18px;
+  font-family: 'mako', 'sans-serif';
+  text-align: center;
+  justify-content: center;
+  white-space: normal;  /* Permite que el texto haga saltos de línea */
+  word-wrap: break-word; /* Rompe palabras largas si es necesario */
+  overflow-wrap: break-word; /* Alternativa para navegadores modernos */
+  max-width: 100%; /* Se asegura de que no se desborde */
+}
 
-  .slide-text {
-    font-size: 1rem;
-    font-weight: bold;
-    margin-top: 15px;
-    text-align: center;
-    color: #000;
-  }
+.subtitulo{
+  margin-top: 10px;
+  text-decoration: none;
   
-  .small-text {
-    font-size: 0.8rem;
-  }
-  
-  .carousel-item.active {
-    opacity: 1;
-    position: relative;
-    z-index: 2;
-    display: flex;
-    align-items: center;
-    text-align: center;
-  }
-  
-  @media (max-width: 768px) {
-    .large {
-      width: 300px;
-    }
-  
-    .small {
-      width: 120px;
-    }
-  }
-  
+}
+
+.button{
+  background-color: black;
+}
