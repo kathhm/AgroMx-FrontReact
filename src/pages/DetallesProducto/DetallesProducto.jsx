@@ -1,6 +1,26 @@
-import { useState } from "react";
+import {useState } from "react";
 import "./DetallesProductos.css";
 useState
+// const App = () => {
+//   const [users, setUsers] = useState([]);
+//   useEffect(() => {
+//     fetch('/public/json/data2.json')
+//       .then(response => response.json())
+//       .then(data => setUsers(data.users));
+//   }, []);
+
+//   return (
+//     <div>
+//       <ul>
+//         {users.map(user => (
+//           <li key={user.id}>{user.nombre}</li>
+//         ))}
+//       </ul>
+//     </div>
+//   );
+// };
+// export default App;
+
 const DetallesProducto = () => {
   // const [cantidad, setCantidad] = useState(1);
 
@@ -8,24 +28,24 @@ const DetallesProducto = () => {
   //   setCantidad(cantidad + 1);
 
   // };
-
-  return (
-    <>
-      <div className="container col-12 mt-5 d-flex justify-content-center">
-
-        <div className="row d-flex justify-content-center ">
-
-          <div className="col-md-3 sm-2 ">
-            <h2>Manzana Gala</h2>
-            <img src="https://www.recetasnestle.com.mx/sites/default/files/inline-images/tipos-de-manzana-royal-gala.jpg" alt="Manzana Gala" />
+return (
+  <>
+      <div className="container col-12 mt-5">
+        <div>
+      <h2 class="text-start">Manzana Gala</h2>
+      </div>
+        <div className="row justify-content-center ">
+          <div className="col-md-5 sm-2 px-10">
+            <img class="img-fluid" src="//mercadoacasa.mx/cdn/shop/products/2502808-00-CH515Wx515H_7ddf79a2-30aa-4d06-829f-b896173133a0_grande.jpg?v=1588641604" alt="Manzana Gala" />
           </div>
           <div className="col-md-4">
-            <h3> $11.00</h3>
-            <p>
+            <div><h3> $11.00</h3></div>
+            <div><p>
               Cosechada localmente por “Manzanas, La Conchita”. Fuente de fibra, vitamina C y E. Contiene antioxidantes y polifenoles.
               Una manzana equivale a 2/3 de la porción mínima diaria recomendada de fruta.
 
             </p>
+            </div>
           </div>
         </div>
       </div>
@@ -57,7 +77,6 @@ const DetallesProducto = () => {
           </div>
         </div>
       </div>
-
     </>
 
 

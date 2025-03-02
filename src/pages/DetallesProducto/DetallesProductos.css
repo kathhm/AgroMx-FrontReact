@@ -8,9 +8,12 @@
 }
 
 .detallesProducto {
-
   margin-left: 13%;
   margin-right: 13%;
+}
+
+#imgProducto {
+  object-fit: contain;
 }
 
 #text1 {
