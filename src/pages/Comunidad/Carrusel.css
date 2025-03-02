@@ -1,15 +1,29 @@
 .carousel-container{
-display: flex;
 justify-content: center;
 align-items: center;
 flex-wrap: nowrap;
 width: auto;
 margin-top: 15px;
 margin-bottom: 15px;
-
 }
 
+
+/* Imágenes con tamaño fijo */
+.carousel-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  width: 300px; /* Tamaño fijo */
+  height: 200px; /* Tamaño fijo */
+  object-fit: cover; /* Mantiene proporciones y llena el contenedor */
+  border-radius: 15px;
+}
+
+
+
 .carousel-main{
+  
   background-color: #96C8BF;
   justify-content: center;
   text-align: center;
@@ -32,6 +46,7 @@ margin-bottom: 15px;
 
 .carousel-right{
   background-color: #AFC896;
+  
   justify-content: center;
   text-align: center;
   border-radius: 25px;
@@ -40,7 +55,7 @@ margin-bottom: 15px;
   max-width: 60%;
   
 }
-.carousel-image{
+/* .carousel-image{
   display: flex;
   justify-content: center;
   width: 60%;
@@ -49,27 +64,22 @@ margin-bottom: 15px;
   margin: auto;
   margin-top: 35px;
   border-radius: 25px;;
-}
+} */
 
 .slide-text{
   position: relative;
-  margin-top: 15px;
+  margin-top: 5px;
   font-size: 18px;
   font-family: 'mako', 'sans-serif';
   text-align: center;
   justify-content: center;
-  white-space: normal;  /* Permite que el texto haga saltos de línea */
-  word-wrap: break-word; /* Rompe palabras largas si es necesario */
-  overflow-wrap: break-word; /* Alternativa para navegadores modernos */
-  max-width: 100%; /* Se asegura de que no se desborde */
+  white-space: normal; 
 }
 
 .subtitulo{
   margin-top: 10px;
   text-decoration: none;
   
-}
+} 
 
-.button{
-  background-color: black;
-}
+
