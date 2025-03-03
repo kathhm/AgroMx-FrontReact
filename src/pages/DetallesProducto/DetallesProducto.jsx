@@ -2,12 +2,12 @@ import { useState } from "react";
 import "./DetallesProductos.css";
 useState
 const DetallesProducto = () => {
-  // const [cantidad, setCantidad] = useState(1);
+  const [cantidad, setCantidad] = useState(1);
 
-  // const aumentarContador = () => {
-  //   setCantidad(cantidad + 1);
+  const aumentarContador = () => setCantidad(cantidad + 1);
+  const disminuirContador = () => setCantidad(cantidad > 1 ? cantidad - 1 : 1);
 
-  // };
+
 
   return (
     <>
@@ -18,14 +18,34 @@ const DetallesProducto = () => {
           <div className="col-md-3 sm-2 ">
             <h2>Manzana Gala</h2>
             <img src="https://www.recetasnestle.com.mx/sites/default/files/inline-images/tipos-de-manzana-royal-gala.jpg" alt="Manzana Gala" />
+
+            <div className=" d-flex align-items-center mb-3">
+
+
+
+              {/* <button>
+                <i className="bi bi-dash-lg btn-warning" onClick={disminuirContador}></i>
+              </button>
+              <span className="mx-2">{cantidad}</span>
+              <button>
+                <i className="bi bi-plus-lg btn-warning" onClick={aumentarContador}></i>
+              </button> */}
+              <button className="btn contador mx-2" onClick={disminuirContador}>-</button>
+              <span className="fs-5 cantidad">{cantidad}</span>
+              <button className="btn contador mx-2 " onClick={aumentarContador}>+</button>
+              <button className="btn agregar w-100">Agregar</button>
+
+            </div>
+
+
           </div>
           <div className="col-md-4">
-            <h3> $11.00</h3>
-            <p>
+            <div><h3> $11.00</h3></div>
+            <div><p>
               Cosechada localmente por “Manzanas, La Conchita”. Fuente de fibra, vitamina C y E. Contiene antioxidantes y polifenoles.
               Una manzana equivale a 2/3 de la porción mínima diaria recomendada de fruta.
 
-            </p>
+            </p></div>
           </div>
         </div>
       </div>
@@ -38,9 +58,14 @@ const DetallesProducto = () => {
           </h4>
           <div className="collapse" id="contenidoProducto">
             <p>
-              La manzana es una fruta rica en nutrientes. Fuente de fibra, vitamina C, E, K, potasio, cobre,
-              además contiene antioxidantes y polifenoles.
+              La manzana es una fruta rica en nutrientes. Fuente de fibra, vitamina C, E, K, potasio, cobre, además contiene antioxidantes y polifenoles.
+
             </p>
+            <p>   Nuestra Manzana Gala está producida localmente por {"Manzanas, La Conchita"}, una productora familiar que cosecha sin agroquímicos, con técnicas sostenibles.
+
+            </p>
+            <p> Comprando apoyas a la economía local, la reducción de la contaminación y cuidas tu salud.</p>
+
           </div>
         </div>
 
@@ -50,9 +75,14 @@ const DetallesProducto = () => {
           </h4>
           <div className="collapse" id="contenidoProduccion">
             <p>Producida en la Ciudad de México por la productora familiar {'"Manzanas, La Conchita"'}.</p>
+            <p>Para el cultivo y cosecha de esta manzana se utilizaron  técnicas agroecológicas como:
+            </p>
             <ul>
-              <li><strong>Sistema de captación de agua:</strong> Riego con agua captada de lluvia.</li>
-              <li><strong>Lombricomposta:</strong> Nutre el suelo y mejora su productividad.</li>
+
+              <li><strong>Sistema de captación de agua:</strong> Regada con un lluvia captada por medio de techos, con su respectivo sistema de riego por goteo.
+              </li>
+              <li><strong>Lombricomposta:</strong>Nutre y fertiliza el suelo haciéndolo más productivo y mitiga los daños por heladas y sequías, aumentando la respuesta a los fertilizantes.
+              </li>
             </ul>
           </div>
         </div>
