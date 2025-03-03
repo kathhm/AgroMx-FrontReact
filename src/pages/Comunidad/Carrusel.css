@@ -13,8 +13,8 @@ margin-bottom: 15px;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: auto;
-  width: 300px; /* Tamaño fijo */
+  margin: 35px auto;
+  width: 60%; /* Tamaño fijo */
   height: 200px; /* Tamaño fijo */
   object-fit: cover; /* Mantiene proporciones y llena el contenedor */
   border-radius: 15px;
@@ -28,9 +28,11 @@ margin-bottom: 15px;
   justify-content: center;
   text-align: center;
   border-radius: 25px;
-  width: auto;
+  width: 60%;
   margin: 0 auto;
   max-width: 60%;
+  object-fit: cover;
+  object-position: bottom;
 }
 
 .carousel-left{
@@ -38,9 +40,11 @@ margin-bottom: 15px;
   justify-content: center;
   text-align: center;
   border-radius: 25px;
-  width: auto;
+  width: 60%;
   margin: 0 auto;
   max-width: 60%;
+  object-fit: cover;
+  object-position: bottom;
 
 }
 
@@ -50,9 +54,11 @@ margin-bottom: 15px;
   justify-content: center;
   text-align: center;
   border-radius: 25px;
-  width: auto;
+  width: 60%;
   margin: 0 auto;
   max-width: 60%;
+  object-fit: cover;
+  object-position: bottom;
   
 }
 /* .carousel-image{
@@ -68,18 +74,53 @@ margin-bottom: 15px;
 
 .slide-text{
   position: relative;
-  margin-top: 5px;
+  margin-top: 2px;
+  padding: 0px 4px 0px 4px;
   font-size: 18px;
   font-family: 'mako', 'sans-serif';
   text-align: center;
   justify-content: center;
   white-space: normal; 
+  width: 100%; /* Tamaño fijo */
+  height: 150px; /* Tamaño fijo */
+  object-fit: cover; /* Mantiene proporciones y llena el contenedor */
+}
+
+@media (max-width: 768px) {
+  .slide-text {
+    font-size: 10px;
+    height: 100px; /* Tamaño fijo */
+  }
+}
+
+@media (max-width: 480px) {
+  .slide-text {
+    font-size: 8px;
+    height: 100px; /* Tamaño fijo */
+  }
 }
 
 .subtitulo{
-  margin-top: 10px;
+  margin-top: 2px;
   text-decoration: none;
+  width: 100%; /* Tamaño fijo */
+  height: 80px; Tamaño fijo
+  object-fit: cover; /* Mantiene proporciones y llena el contenedor */
   
 } 
+
+@media (max-width: 768px) {
+  .subtitulo {
+    font-size: 14px;
+    height: 25px; Tamaño fijo
+  }
+}
+
+@media (max-width: 480px) {
+  .subtitulo {
+    font-size: 10px;
+    height: 28px; Tamaño fijo
+  }
+}
 
 

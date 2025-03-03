@@ -14,7 +14,7 @@ const Carrusel = () => {
                 className="carousel-image"
                 alt="Imagen principal"
               />
-              <a className="subtitulo" href="https://gatoencerrado.news/2023/02/01/milpa-alta-el-territorio-campesino-de-cdmx-que-resiste-en-solidaridad-y-comercio-justo/"><h3 className="subtitulo">Milpa Alta, el territorio campesino de CDMX que resiste en solidaridad y comercio justo.</h3></a>
+              <a className="subtitulo" href="https://gatoencerrado.news/2023/02/01/milpa-alta-el-territorio-campesino-de-cdmx-que-resiste-en-solidaridad-y-comercio-justo/"><h3 className="subtitulo">Milpa Alta, el territorio campesino de CDMX que resiste en solidaridad y comercio justo</h3></a>
               <p className="slide-text">
                 La producción agroecológica en el suelo de conservación de la Ciudad de México es una actividad realizada por familias y cooperativas que habitan principalmente las alcaldías de la región sureste de la metrópolis, quienes participan en mercados verdes y espacios de venta alternativos. Dentro de este escenario, una iniciativa de comercio justo ha destacado por ser también una red solidaria que promueve prácticas agroecológicas y restaurativas ambiental y socialmente.
               </p>
@@ -29,7 +29,7 @@ const Carrusel = () => {
                 className="carousel-image"
                 alt="Imagen lateral izquierda"
               />
-              <a className="subtitulo" href="https://www.elgrafico.mx/historias/2023/12/24/productores-agricolas-pina-de-romeritos-hablan-del-tradicional-alimento-sembrado-en-la/"><h3 className="subtitulo">Romeritos de Xochimilco</h3></a>
+              <a className="subtitulo" href="https://www.elgrafico.mx/historias/2023/12/24/productores-agricolas-pina-de-romeritos-hablan-del-tradicional-alimento-sembrado-en-la/"><h3 className="subtitulo">De Xochimilco a tu cena navideña, ¡éntrale sabroso a los romeritos!</h3></a>
               <p className="slide-text">
               La Ciudad de México es una de las principales productoras de Romeritos a nivel nacional, tan sólo el año pasado se obtuvieron mil 524 toneladas de las 225 hectáreas sembradas en en las alcaldías Xochimilco y Tláhuac. Entre ellas las que plantan año con año los hermanos Peña Piña con su cooperativa "Productores Agrícolas Piña" que lleva este platillo hasta la mesa navideña y de año nuevo. 
  
