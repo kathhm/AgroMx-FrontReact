@@ -1,4 +1,5 @@
 import './Comunidad.css';
+import 'bootstrap-icons/font/bootstrap-icons.css'; 
 import Carrusel from "./Carrusel";
 import CarruselRecetas from "./CarruselRecetas";
 

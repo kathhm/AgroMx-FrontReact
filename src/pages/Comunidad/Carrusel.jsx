@@ -3,7 +3,7 @@ import "./Carrusel.css"; // Importa estilos personalizados
 
 const Carrusel = () => {
   return (
-<div className="carousel-container d-flex">
+<div id="carrusel-historias" className="carousel-container d-flex">
       <div id="customCarousel" className="carousel slide" data-bs-ride="carousel">
         <div className="carousel-inner d-flex">
           {/* Slide 1 - Imagen principal */}
@@ -52,11 +52,11 @@ const Carrusel = () => {
         </div>
 
         {/* Controles del carrusel */}
-        <button className="carousel-control-prev" type="button" data-bs-target="#customCarousel" data-bs-slide="prev">
-          <span className="carousel-control-prev-icon"></span>
+        <button className="carousel-control-prev custom-button" type="button" data-bs-target="#customCarousel" data-bs-slide="prev">
+        <i className="bi bi-arrow-left-square-fill custom-arrow"></i>  {/* Icono Bootstrap */}
         </button>
-        <button className="carousel-control-next" type="button" data-bs-target="#customCarousel" data-bs-slide="next">
-          <span className="carousel-control-next-icon"></span>
+        <button className="carousel-control-next custom-button" type="button" data-bs-target="#customCarousel" data-bs-slide="next">
+        <i className="bi bi-arrow-right-square-fill custom-arrow"></i> {/* Icono Bootstrap */}
         </button>
       </div>
     </div>

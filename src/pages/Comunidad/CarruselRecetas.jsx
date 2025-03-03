@@ -3,20 +3,20 @@ import "./CarruselRecetas.css"; // Importa estilos personalizados
 
 const CarruselRecetas = () => {
     return (
-  <div className="carousel-container d-flex">
+  <div id="carrusel-recetas" className="carousel-container d-flex">
         <div id="customCarouselRecipes" className="carousel slide" data-bs-ride="carousel">
           <div className="carousel-inner d-flex">
             {/* Slide 1 - Imagen principal */}
             <div className="carousel-item active carousel-main">
               <div className="slide-content slide-bg-main">
                 <img
-                  src="./public/images/milpa-alta.png"
+                  src="./public/images/hamburguesa-coliflor.png"
                   className="carousel-image"
-                  alt="Imagen principal"
+                  alt="Hamburguesa de coliflor vegana"
                 />
-                <a className="subtitulo" href="https://gatoencerrado.news/2023/02/01/milpa-alta-el-territorio-campesino-de-cdmx-que-resiste-en-solidaridad-y-comercio-justo/"><h3 className="subtitulo">Milpa Alta, el territorio campesino de CDMX que resiste en solidaridad y comercio justo</h3></a>
+                <a className="subtitulo" href="https://www.kiwilimon.com/receta/saludables/hamburguesa-vegetariana-con-pan-de-coliflor"><h3 className="subtitulo">Prepara una deliciosa hamburguesa vegetariana con pan de coliflor 😋</h3></a>
                 <p className="slide-text">
-                  La producción agroecológica en el suelo de conservación de la Ciudad de México es una actividad realizada por familias y cooperativas que habitan principalmente las alcaldías de la región sureste de la metrópolis, quienes participan en mercados verdes y espacios de venta alternativos. Dentro de este escenario, una iniciativa de comercio justo ha destacado por ser también una red solidaria que promueve prácticas agroecológicas y restaurativas ambiental y socialmente.
+                Si tienes ganas de una hamburguesa pero quieres evitar los carbohidratos de más, arma esta rica hamburguesa con un increíble “pan” de coliflor hecho con queso y cebollín. Además, la hamburguesa de portobello será tu fascinación.
                 </p>
               </div>
             </div>
@@ -25,13 +25,13 @@ const CarruselRecetas = () => {
             <div className="carousel-item carousel-left">
               <div className="slide-content slide-bg-left">
                 <img
-                  src="./public/images/romeritos.jpg"
+                  src="./public/images/ceviche-mango.png"
                   className="carousel-image"
-                  alt="Imagen lateral izquierda"
+                  alt="Ceviche de mango"
                 />
-                <a className="subtitulo" href="https://www.elgrafico.mx/historias/2023/12/24/productores-agricolas-pina-de-romeritos-hablan-del-tradicional-alimento-sembrado-en-la/"><h3 className="subtitulo">De Xochimilco a tu cena navideña, ¡éntrale sabroso a los romeritos!</h3></a>
+                <a className="subtitulo" href="https://www.kiwilimon.com/receta/platos-fuertes/vegetarianos/receta-de-ceviche-de-mango"><h3 className="subtitulo">Prepara un exquisito ceviche de mango, ¡para chuparse los dedos! 😋 </h3></a>
                 <p className="slide-text">
-                La Ciudad de México es una de las principales productoras de Romeritos a nivel nacional, tan sólo el año pasado se obtuvieron mil 524 toneladas de las 225 hectáreas sembradas en en las alcaldías Xochimilco y Tláhuac. Entre ellas las que plantan año con año los hermanos Peña Piña con su cooperativa "Productores Agrícolas Piña" que lleva este platillo hasta la mesa navideña y de año nuevo. 
+                Aprovecha que la temporada de mango ya está aquí y prepara este fresco y delicioso ceviche de mango para disfrutar cualquier día de la semana. Además, ¿sabes qué es lo mejor de esta receta sin carne? ¡Qué se puede disfrutar con tostadas, galletas saladas o hasta en tacos de jícama! ¿Se te antojo?
    
                 </p>
               </div>
@@ -41,22 +41,22 @@ const CarruselRecetas = () => {
             <div className="carousel-item carousel-right">
               <div className="slide-content slide-bg-right">
                 <img
-                  src="./public/images/chinampa1.jpg"
+                  src="./public/images/tortitas-calabaza.png" 
                   className="carousel-image"
-                  alt="Imagen lateral derecha"
+                  alt="Tortitas de calabaza"
                 />
-                <a className="subtitulo" href="https://www.meteored.mx/noticias/actualidad/chinampas-el-ejemplo-de-agricultura-sostenible-que-ha-perdurado-durante-siglos-cultura-historia.html"><h3 className="subtitulo">Chinampas: el ejemplo de agricultura sostenible que ha perdurado durante siglos</h3></a>
-                <p className="slide-text ">Las chinampas son un antiguo sistema de cultivo desarrollado por los mexicas en el Valle de México. Este método consiste en crear islas flotantes sobre cuerpos de agua, aprovechando los recursos naturales del entorno para la producción de alimentos. Aunque su origen se remonta a tiempos prehispánicos, las chinampas siguen siendo una práctica agrícola vigente y relevante en la actualidad, por ejemplo en Tláhuac y Xochimilco.</p>
+                <a className="subtitulo" href="https://www.kiwilimon.com/receta/platos-fuertes/vegetarianos/tortitas-de-calabaza"><h3 className="subtitulo">¿Qué tal unas deliciosas tortitas de calabaza? 😋</h3></a>
+                <p className="slide-text ">¿Ya no sabes qué hacer de comer hoy? No te preocupes, ¡aquí tenemos la solución! Esta receta de tortitas de calabaza es una opción deliciosa, práctica y muy fácil de hacer, así que no dudes en incluirlas en tu menú semanal. Otra buena razón para llevar esta receta a tu mesa es que les puedes añadir más verduras y especias y también se pueden acompañar con todo tipo de guarniciones. ¡Pruébalas ya!</p>
               </div>
             </div>
           </div>
   
           {/* Controles del carrusel */}
-          <button className="carousel-control-prev" type="button" data-bs-target="#customCarousel" data-bs-slide="prev">
-            <span className="carousel-control-prev-icon"></span>
+          <button className="carousel-control-prev custom-button" type="button" data-bs-target="#customCarouselRecipes" data-bs-slide="prev">
+          <i className="bi bi-arrow-left-square-fill custom-arrow"></i>  {/* Icono Bootstrap */}
           </button>
-          <button className="carousel-control-next" type="button" data-bs-target="#customCarousel" data-bs-slide="next">
-            <span className="carousel-control-next-icon"></span>
+          <button className="carousel-control-next custom-button" type="button" data-bs-target="#customCarouselRecipes" data-bs-slide="next">
+          <i className="bi bi-arrow-right-square-fill custom-arrow"></i> {/* Icono Bootstrap */}
           </button>
         </div>
       </div>

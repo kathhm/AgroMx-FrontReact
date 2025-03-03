@@ -1,4 +1,4 @@
-.carousel-container{
+#carrusel-recetas .carousel-container{
     justify-content: center;
     align-items: center;
     flex-wrap: nowrap;
@@ -7,7 +7,7 @@
     margin-bottom: 15px;
     }
     
-    .carousel-image {
+    #carrusel-recetas .carousel-image {
       display: flex;
       justify-content: center;
       align-items: center;
@@ -18,9 +18,9 @@
       border-radius: 15px;
     }
     
-    .carousel-main{
+    #carrusel-recetas .carousel-main{
       
-      background-color: #A96338;
+      background-color: #d59f2a;
       justify-content: center;
       text-align: center;
       border-radius: 25px;
@@ -31,7 +31,7 @@
       object-position: bottom;
     }
     
-    .carousel-left{
+    #carrusel-recetas .carousel-left{
       background-color: #EBA8BB;
       justify-content: center;
       text-align: center;
@@ -44,7 +44,7 @@
     
     }
     
-    .carousel-right{
+    #carrusel-recetas .carousel-right{
       background-color: #F4BE88;
       
       justify-content: center;
@@ -58,7 +58,7 @@
       
     }
     
-    .slide-text{
+    #carrusel-recetas .slide-text{
       position: relative;
       margin-top: 2px;
       padding: 0px 4px 0px 4px;
@@ -73,39 +73,53 @@
     }
     
     @media (max-width: 768px) {
-      .slide-text {
+      #carrusel-recetas .slide-text {
         font-size: 10px;
         height: 100px; 
       }
     }
     
     @media (max-width: 480px) {
-      .slide-text {
+      #carrusel-recetas .slide-text {
         font-size: 8px;
         height: 100px; 
       }
     }
     
-    .subtitulo{
+    #carrusel-recetas .subtitulo{
       margin-top: 2px;
       text-decoration: none;
       width: 100%; 
       height: 80px; 
       object-fit: cover; 
+      color: white;
     } 
     
     @media (max-width: 768px) {
-      .subtitulo {
+      #carrusel-recetas .subtitulo {
         font-size: 14px;
         height: 25px; 
+        color: white;
       }
     }
     
     @media (max-width: 480px) {
-      .subtitulo {
+      #carrusel-recetas .subtitulo {
         font-size: 10px;
         height: 28px; 
+        color: white;
       }
     }
+
+    #carrusel-recetas .custom-arrow {
+      font-size: 40px; 
+      color: #007D3C; 
+    }
     
+    #carrusel-recetas .custom-arrow:hover {
+      color: #768300; 
+    }
+    
+
+
     
