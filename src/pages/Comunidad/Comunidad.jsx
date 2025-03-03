@@ -7,20 +7,20 @@ function Comunidad() {
     return (
         <main>
 
-            <h1 className='titulo-comunidad-explora-cocina-comparte text-center'>Explora, cocina y comparte</h1>
+            <h1 className='titulo-comunidad-explora-cocina-comparte subtituloNaranjaCentradoH2 text-center'>Explora, cocina y comparte</h1>
             <section>
-                <p className='parrafo-verde text-center'>Trabajamos con productores y productoras de la CDMX y sus alrededores que cultivan alimentos de alta calidad mediante prácticas agroecológicas responsables. Su enfoque respeta la biodiversidad, protege la salud del suelo y regenera los ecosistemas, promoviendo una agricultura consciente, libre de químicos dañinos y basada en el equilibrio natural.</p>
+                <p className='parrafo-verde text-center'>¡Bienvenido a la comunidad de AgroMX! 🌱✨ Aquí celebramos la cocina con productos agroecológicos, compartimos recetas deliciosas, consejos prácticos y experiencias inspiradoras. ¡Únete y descubre un mundo de sabores sostenibles! 🍽️💚 </p>
             </section>
 
             <section>
-                <h2 className='subtitulo-historia-de-las-y-los-productores subtitulo-naranja text-center'>Historias de las y los productores</h2>
+                <h2 className='subtitulo-historia-de-las-y-los-productores subtituloNaranjaCentradoH2 text-center'>Historias de las y los productores</h2>
                 <Carrusel />
             </section>
 
 
 
             <section>
-            <h2 className='subtitulo-recetas subtitulo-naranja text-center subtitulo-naranja'>Recetas</h2>
+            <h2 className='subtitulo-recetas subtituloNaranjaCentradoH2 text-center subtitulo-naranja'>Recetas</h2>
             <CarruselRecetas />
             </section>
 
