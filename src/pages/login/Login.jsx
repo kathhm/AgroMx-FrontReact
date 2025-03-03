@@ -1,7 +1,20 @@
 import "./login.css";
+import {jwtDecode} from 'jwt-decode';
+import { useEffect } from 'react';
+
 function Login() {
-	return (
-		// <div>
+	const handleGoogleResponse = (response) => {
+    const token = response.credential;
+    const decodedToken = jwtDecode(token);
+    console.log(decodedToken);
+    // Aquí puedes manejar la información del usuario decodificada
+  };
+
+  useEffect(() => {
+    window.handleGoogleResponse = handleGoogleResponse;
+  }, []);
+
+  return (
 		<main className="container">
 			<div className="container login-card my-5 p-5">
 				<h1 className="titulo text-center">Inicia sesión</h1> <hr />
@@ -29,7 +42,7 @@ function Login() {
 						<input
 							className="form-control"
 							type="password"
-							placeholder="introduce tu contraseña"
+							placeholder="Introduce tu contraseña"
 							id="contraseña"
 						/>
 						<button
@@ -40,24 +53,26 @@ function Login() {
 						</button>
 					</form>
 				</div>
-        <div className="container-fluid mt-4 justify-content-center">
+        <div className="container-fluid mt-4">
 					<div
 						id="g_id_onload"
 						data-client_id="852189199431-elq37edvmgere2fgboo0gemqrouggcif.apps.googleusercontent.com"
-						data-login_uri="http://localhost:5173/Inicio"
+						data-login_uri="" //TODO: Agregar la URL de Backend para manejar el JWt del login con Google
+            data-callback="handleGoogleResponse"
 					></div>
 					<div
-						className="g_id_signin"
+						className="g_id_signin justify-content-center d-flex"
 						data-type="standard"
 						data-size="large"
 						data-theme="outline"
 						data-text="sign_up_with"
 						data-shape="circle"
-						data-logo_alignment="center"
+						data-logo_alignment="left"
 					></div>
         </div>
 			</div>
           <script src="https://accounts.google.com/gsi/client" async></script>
+          
 		</main>
 	);
 }

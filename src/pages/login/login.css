@@ -24,4 +24,7 @@
 
 }
 
-
+::placeholder {
+    color: #000;
+    font-family: mako;
+}
