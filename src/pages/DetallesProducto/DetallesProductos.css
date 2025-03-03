@@ -67,3 +67,32 @@
 .contador {
   height: 1%;
 }
+
+.card {
+  height: 75%;
+  border: white;
+}
+
+.card-img-top {
+  height: 55%;
+  object-fit: contain;
+}
+
+.completaCanasta {
+  margin: 5%;
+}
+
+.btnAgregar,
+.btn-primary {
+  border: #E17018;
+  width: 50% !important;
+}
+
+.cards {
+  margin: 5%;
+}
+
+.card-body {
+  margin: 0%;
+  padding: 0%;
+}
