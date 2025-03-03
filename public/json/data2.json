@@ -1,38 +1,42 @@
 [
-    {
-      "id": 1,
-      "nombre": "Manzana",
-      "categoria": "Frutas",
-      "precio": 28.00,
-      "imagen": "//mercadoacasa.mx/cdn/shop/products/2502808-00-CH515Wx515H_7ddf79a2-30aa-4d06-829f-b896173133a0_grande.jpg?v=1588641604"
-    },
-    {
-      "id": 2,
-      "nombre": "Plátano",
-      "categoria": "Frutas",
-      "precio": 18.00,
-      "imagen": "https://mercadoacasa.mx/cdn/shop/products/platano-2_540x.jpg?v=1587779653"
+  {
+    "id": 1,
+    "nombre": "Manzana",
+    "categoria": "Frutas",
+    "precio": 28.00,
+    "imagen": "//mercadoacasa.mx/cdn/shop/products/2502808-00-CH515Wx515H_7ddf79a2-30aa-4d06-829f-b896173133a0_grande.jpg?v=1588641604",
+    "destacado": true
+  },
+  {
+    "id": 2,
+    "nombre": "Plátano",
+    "categoria": "Frutas",
+    "precio": 18.00,
+    "imagen": "https://mercadoacasa.mx/cdn/shop/products/platano-2_540x.jpg?v=1587779653"
   },
   {
     "id": 3,
     "nombre": "Naranja",
     "categoria": "Frutas",
     "precio": 24.00,
-    "imagen": "https://www.centralenlinea.com/images/thumbs/002/0023229_naranja-gota-de-miel_550.png"
+    "imagen": "https://www.centralenlinea.com/images/thumbs/002/0023229_naranja-gota-de-miel_550.png",
+    "destacado": true
   },
   {
     "id": 4,
     "nombre": "Zanahoria",
     "categoria": "Verduras",
     "precio": 12.00,
-    "imagen": "https://www.centralenlinea.com/images/thumbs/001/0019771_zanahoria-premium_550.png"
+    "imagen": "https://www.centralenlinea.com/images/thumbs/001/0019771_zanahoria-premium_550.png",
+    "destacado": true
   },
   {
     "id": 5,
     "nombre": "Tomate",
     "categoria": "Verduras",
     "precio": 22.00,
-    "imagen": "https://www.centralenlinea.com/images/thumbs/005/0059750_tomate-verde-grande-premium-sin-cascara_550.png"
+    "imagen": "https://www.centralenlinea.com/images/thumbs/005/0059750_tomate-verde-grande-premium-sin-cascara_550.png",
+    "destacado": true
   },
   {
     "id": 6,

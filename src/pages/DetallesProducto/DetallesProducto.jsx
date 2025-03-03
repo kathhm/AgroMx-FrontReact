@@ -1,25 +1,54 @@
-import {useState } from "react";
+import { useEffect, useState } from "react";
 import "./DetallesProductos.css";
 useState
-// const App = () => {
-//   const [users, setUsers] = useState([]);
-//   useEffect(() => {
-//     fetch('/public/json/data2.json')
-//       .then(response => response.json())
-//       .then(data => setUsers(data.users));
-//   }, []);
 
-//   return (
-//     <div>
-//       <ul>
-//         {users.map(user => (
-//           <li key={user.id}>{user.nombre}</li>
-//         ))}
-//       </ul>
-//     </div>
-//   );
-// };
-// export default App;
+const ProductosDestacados = () => {
+  const [productos, setProductos] = useState([]);
+
+  useEffect(() => {
+    fetch("/json/data2.json")
+      .then((response) => response.json())
+      .then((data) => {
+        const destacados = data.filter((producto) => producto.destacado).slice(0, 4);
+        setProductos(destacados);
+      });
+  }, []);
+
+  return (
+
+    <div className="mt-5 container col-12 mt-5  justify-content-center">
+
+      <h3 className="text-center completaCanasta">Completa tu canasta</h3>
+      <div className="row cards">
+        {productos.map((producto) => (
+          <div key={producto.id} className=" col-12 col-md-3 text-center">
+            <div className="card ">
+              <img src={producto.imagen} className="card-img-top" alt={producto.nombre} />
+              <div className="card-body">
+                <h5 className="card-title">{producto.nombre}</h5>
+                <p className="card-text">${producto.precio.toFixed(2)} MXN</p>
+                <button className="btn btn-primary mt-0 btnAgregar">Agregar</button>
+              </div>
+            </div>
+          </div>
+        ))}
+
+      </div>
+
+
+    </div>
+    // <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 p-4">
+    //   {productos.map((producto) => (
+    //     <div key={producto.id} className="border p-4 rounded-lg shadow-md">
+    //       <img src={producto.imagen} alt={producto.nombre} className="w-full h-40 object-cover rounded-md" />
+    //       <h3 className="text-lg font-semibold mt-2">{producto.nombre}</h3>
+    //       <p className="text-gray-600">{producto.categoria}</p>
+    //       <p className="text-xl font-bold text-blue-600">${producto.precio}</p>
+    //     </div>
+    //   ))}
+    // </div>
+  );
+};
 
 const DetallesProducto = () => {
   const [cantidad, setCantidad] = useState(1);
@@ -104,6 +133,7 @@ const DetallesProducto = () => {
           </div>
         </div>
       </div>
+      <ProductosDestacados />
     </>
 
 
@@ -112,3 +142,6 @@ const DetallesProducto = () => {
 
 };
 export default DetallesProducto;
+
+
+
