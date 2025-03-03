@@ -31,17 +31,16 @@ const DetallesProducto = () => {
 
   return (
     <>
-      <div className="container col-12 mt-5 d-flex justify-content-center">
-
-        <div className="row d-flex justify-content-center ">
-
-          <div className="col-md-3 sm-2 ">
-            <h2>Manzana Gala</h2>
-            <img src="https://www.recetasnestle.com.mx/sites/default/files/inline-images/tipos-de-manzana-royal-gala.jpg" alt="Manzana Gala" />
-
-            <div className=" d-flex align-items-center mb-3">
-
-
+      <div className="container col-md-12 mt-5">
+        <div className="row">
+         <div class="col-md-5 offset-md-2">
+            <h2 class="text-start">Manzana Gala</h2>
+          </div>
+        </div>
+        <div className="row justify-content-center ">
+          <div className="col-md-4 sm-1 offset-md-1">             
+            <img className="img-fluid" src="//mercadoacasa.mx/cdn/shop/products/2502808-00-CH515Wx515H_7ddf79a2-30aa-4d06-829f-b896173133a0_grande.jpg?v=1588641604" alt="Manzana Gala" />
+            <div className="col-md-6 d-flex align-items-center mb-3 mt-0">
 
               {/* <button>
                 <i className="bi bi-dash-lg btn-warning" onClick={disminuirContador}></i>
@@ -50,25 +49,23 @@ const DetallesProducto = () => {
               <button>
                 <i className="bi bi-plus-lg btn-warning" onClick={aumentarContador}></i>
               </button> */}
-              <button className="btn contador mx-2" onClick={disminuirContador}>-</button>
+              <button className="btn contador mx-2 h-25" onClick={disminuirContador}>-</button>
               <span className="fs-5 cantidad">{cantidad}</span>
-              <button className="btn contador mx-2 " onClick={aumentarContador}>+</button>
-              <button className="btn agregar w-100">Agregar</button>
-
-            </div>
-
-
+              <button className="btn contador mx-2 h-25" onClick={aumentarContador}>+</button>
+              <button className="btn agregar mx-5 w-50">Agregar</button>
+              </div>
           </div>
-          <div className="col-md-4">
-            <div><h3> $11.00</h3></div>
-            <div><p>
+          <div className="col-md-3 offset-md-1">
+          <div className=""></div>
+          <div class="d-flex mt-5" id="precio"><p>$11.00</p></div>
+          <div class="d-flex mt-5" id="descripcion"><p>
               Cosechada localmente por “Manzanas, La Conchita”. Fuente de fibra, vitamina C y E. Contiene antioxidantes y polifenoles.
               Una manzana equivale a 2/3 de la porción mínima diaria recomendada de fruta.
-
-            </p></div>
+            </p>
+            </div>
+          </div>
           </div>
         </div>
-      </div>
 
 
       <div className=" col-12 mt-4 mb-5 my-4">
