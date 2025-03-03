@@ -30,19 +30,19 @@
   }
   
   #subtitulo {
-    color: #AE7D00 !important;
-    text-align: center !important;
+    color: #AE7D00;
+    text-align: center;
     font-family: 'Gabriela', serif;
   }
   
   .terminos-condiciones {
-    color: #AE7D00 !important;
-    text-align: center !important;
+    color: #AE7D00;
+    text-align: center;
     font-family: 'Nokora', sans-serif;
   }
   
   .form-check {
-    display: flex !important;
+    display: flex;
     align-items: center;
     /* Alinear verticalmente checkbox y texto */
     gap: 6px;
@@ -52,8 +52,8 @@
   }
   
   .inicio-sesion {
-    color: #AE7D00 !important;
-    text-align: center !important;
+    color: #AE7D00;
+    text-align: center;
     font-family: 'Nokora', sans-serif;
     display: flex;
     align-items: center;
@@ -62,20 +62,17 @@
     /* espacio entre el checkbox - el texto */
   }
   
-  .custom-btn {
-    background-color: #E17018 !important;
-    border-color: #000000 !important;
-    border-width: 0.1px !important;
-    color: white !important;
-    border-radius: 10px 10px 10px 10px !important;
+  #boton-registro {
+    background-color: #E17018;
+    border-color: #000000;
+    border-width: 0.1px;
+    color: white;
+    border-radius: 10px 10px 10px 10px;
+    font-family: 'Nokora', sans-serif;
+
   }
   
-  button {
-    font-family: 'Nokora', sans-serif !important;
-  
-  }
-  
-  .custom-btn:hover {
+  #boton-registro:hover {
     background-color: #005a48;
     border-color: #004137;
   }

@@ -93,7 +93,7 @@ function Registro() {
 					{/* <!-- Apellidos --> */}
 					<div className="mb-3 apellidos col-8 mx-auto">
 						<label htmlFor="nombre" className="form-label">
-							Apellidos
+							Apellido(s)
 						</label>
 						<input
 							type="text"
@@ -102,7 +102,7 @@ function Registro() {
 							name="apellidos"
             				value={formData.apellidos}
             				onChange={handleChange}
-							placeholder="Ingresa tu nombre"
+							placeholder="Ingresa tu apellido"
 							required
 						/>
 						<div className="invalid-feedback" id="apellidoError">
@@ -228,7 +228,7 @@ function Registro() {
 					</div>
 
 					<div className="mb-3 col-8 mx-auto">
-						<button type="submit" className="btn custom-btn w-100">
+						<button type="submit" className="btn custom-btn w-100" id="boton-registro">
 							Regístrame
 						</button>
 					</div>
@@ -240,9 +240,10 @@ function Registro() {
 
 					<div>
 						<a className="inicio-sesion" href="#">
-							¿Ya tienes cuenta? Inicia sesión.
+							¿Ya tienes cuenta? Inicia sesión
 						</a>
 					</div>
+					<br />
 				</form>
 			</div>
 		</>
