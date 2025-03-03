@@ -40,3 +40,33 @@
 #contenidoProducto {
   color: white
 }
+
+.contador,
+.agregar {
+  background-color: #E17018;
+
+  border-color: #E17018;
+  color: white;
+  margin: 15%;
+}
+
+.contador:hover {
+  background-color: #ae7d00;
+  border-color: #A97F3B;
+  color: white;
+}
+
+.agregar:hover {
+  background-color: #ae7d00;
+  border-color: #A97F3B;
+  color: white;
+}
+
+
+.cantidad {
+  margin: 8%;
+}
+
+.contador {
+  height: 1%;
+}
