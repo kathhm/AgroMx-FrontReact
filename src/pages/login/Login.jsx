@@ -27,8 +27,15 @@ function Login() {
 	}, []);
 
 	const handleEmailChange = (e) => {
-		setEmail(e.target.value);
-	};
+		const value = e.target.value;
+        setEmail(value);
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(value)) {
+            setError("Correo electrónico no válido");
+        } else {
+            setError("");
+        }
+    };
 
 	const handlePasswordChange = (e) => {
 		setPassword(e.target.value);
@@ -86,7 +93,7 @@ function Login() {
 							</label>
 							<input
 								className="form-control"
-								type="text"
+								type="email"
 								placeholder="example@dominio.com"
 								id="correo"
 								value={email}
@@ -110,7 +117,7 @@ function Login() {
 							<button
 								className="btn btn-primary w-100 addToCartBtn mt-3"
 								type="button"
-                onClick={handleLogin}
+								onClick={handleLogin}
 							>
 								Inicia sesión
 							</button>
