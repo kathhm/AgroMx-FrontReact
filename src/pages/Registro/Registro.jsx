@@ -3,7 +3,7 @@ import React, { useState } from "react";  //importación de useState
 
 function Registro() {
 
-	const [formData, setFormData] = useState({
+	const [formData, setFormData] = useState({   // Se ocupó formData para recopilar los datos del formulario
 		usuario: "",
 		nombre: "",
 		apellidos: "",
@@ -13,13 +13,13 @@ function Registro() {
 		termsAccepted: false,
 	  });
 	
-	  const [successMessage, setSuccessMessage] = useState(false);
-	  const [passwordVisible, setPasswordVisible] = useState(false);
-	  const [confirmPasswordVisible, setConfirmPasswordVisible] = useState(false);
+	  const [successMessage, setSuccessMessage] = useState(false); // Mensaje si fueron correctos los datos del formulario, por default es false
+	  const [passwordVisible, setPasswordVisible] = useState(false); // el default del ojito de la contraseña que sea falso
+	  const [confirmPasswordVisible, setConfirmPasswordVisible] = useState(false); // el default del ojito de la confirmacion de la contraseña que sea falso
 	
 	  // Manejar cambios en los inputs
-	  const handleChange = (e) => {
-		const { name, value, type, checked } = e.target;
+	  const handleChange = (evento) => {
+		const { name, value, type, checked } = evento.target;
 		setFormData((prev) => ({
 		  ...prev,
 		  [name]: type === "checkbox" ? checked : value,
@@ -28,10 +28,10 @@ function Registro() {
 	
 	  // Validar y enviar el formulario
 	  const handleSubmit = (evento) => {
-		evento.preventDefault();
+		evento.preventDefault(); // evitar que se recargue el formulario
 		if (formData.password !== formData.confirmPassword) {
 		  alert("Las contraseñas no coinciden");
-		  return;
+		  return ; // Para evitar que avance el programa
 		}
 	
 		// Guardar en localStorage
@@ -239,7 +239,7 @@ function Registro() {
 					{/*  <!-- Inicio de sesión --> */}
 
 					<div>
-						<a className="inicio-sesion" href="pagina inexistente">
+						<a className="inicio-sesion" href="#">
 							¿Ya tienes cuenta? Inicia sesión.
 						</a>
 					</div>
