@@ -7,20 +7,16 @@ margin-top: 15px;
 margin-bottom: 15px;
 }
 
-
-/* Imágenes con tamaño fijo */
 .carousel-image {
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 35px auto;
-  width: 60%; /* Tamaño fijo */
-  height: 200px; /* Tamaño fijo */
-  object-fit: cover; /* Mantiene proporciones y llena el contenedor */
+  width: 60%; /
+  height: 200px; 
+  object-fit: cover; 
   border-radius: 15px;
 }
-
-
 
 .carousel-main{
   
@@ -61,16 +57,6 @@ margin-bottom: 15px;
   object-position: bottom;
   
 }
-/* .carousel-image{
-  display: flex;
-  justify-content: center;
-  width: 60%;
-  height: 60%;
-  max-height: 50%;
-  margin: auto;
-  margin-top: 35px;
-  border-radius: 25px;;
-} */
 
 .slide-text{
   position: relative;
@@ -81,45 +67,44 @@ margin-bottom: 15px;
   text-align: center;
   justify-content: center;
   white-space: normal; 
-  width: 100%; /* Tamaño fijo */
-  height: 150px; /* Tamaño fijo */
-  object-fit: cover; /* Mantiene proporciones y llena el contenedor */
+  width: 100%; 
+  height: 150px; 
+  object-fit: cover; 
 }
 
 @media (max-width: 768px) {
   .slide-text {
     font-size: 10px;
-    height: 100px; /* Tamaño fijo */
+    height: 100px; 
   }
 }
 
 @media (max-width: 480px) {
   .slide-text {
     font-size: 8px;
-    height: 100px; /* Tamaño fijo */
+    height: 100px; 
   }
 }
 
 .subtitulo{
   margin-top: 2px;
   text-decoration: none;
-  width: 100%; /* Tamaño fijo */
-  height: 80px; Tamaño fijo
-  object-fit: cover; /* Mantiene proporciones y llena el contenedor */
-  
+  width: 100%; 
+  height: 80px; 
+  object-fit: cover; 
 } 
 
 @media (max-width: 768px) {
   .subtitulo {
     font-size: 14px;
-    height: 25px; Tamaño fijo
+    height: 25px; 
   }
 }
 
 @media (max-width: 480px) {
   .subtitulo {
     font-size: 10px;
-    height: 28px; Tamaño fijo
+    height: 28px; 
   }
 }
 

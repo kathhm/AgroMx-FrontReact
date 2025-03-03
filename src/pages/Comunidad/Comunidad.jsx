@@ -1,5 +1,6 @@
 import './Comunidad.css';
 import Carrusel from "./Carrusel";
+import CarruselRecetas from "./CarruselRecetas";
 
 function Comunidad() {
     return (
@@ -19,6 +20,7 @@ function Comunidad() {
 
             <section>
             <h2 className='subtitulo-recetas subtitulo-naranja text-center subtitulo-naranja'>Recetas</h2>
+            <CarruselRecetas />
             </section>
 
             <section>
