@@ -54,16 +54,6 @@ const ProductosDestacados = () => {
 
 
     </div>
-    // <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 p-4">
-    //   {productos.map((producto) => (
-    //     <div key={producto.id} className="border p-4 rounded-lg shadow-md">
-    //       <img src={producto.imagen} alt={producto.nombre} className="w-full h-40 object-cover rounded-md" />
-    //       <h3 className="text-lg font-semibold mt-2">{producto.nombre}</h3>
-    //       <p className="text-gray-600">{producto.categoria}</p>
-    //       <p className="text-xl font-bold text-blue-600">${producto.precio}</p>
-    //     </div>
-    //   ))}
-    // </div>
   );
 };
 
@@ -97,15 +87,6 @@ const DetallesProducto = () => {
 
 
           <div className="row botones align-items-center justify-content-start mt-3">
-
-
-            {/* <button>
-                <i className="bi bi-dash-lg btn-warning" onClick={disminuirContador}></i>
-              </button>
-              <span className="mx-2">{cantidad}</span>
-              <button>
-                <i className="bi bi-plus-lg btn-warning" onClick={aumentarContador}></i>
-              </button> */}
             <div className="col-auto">
               <button className="btn btn-warning contador mx-1" onClick={disminuirContador}>-</button>
             </div>
