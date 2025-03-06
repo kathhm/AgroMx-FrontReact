@@ -5,14 +5,33 @@
     "categoria": "Frutas",
     "precio": 28.00,
     "imagen": "//mercadoacasa.mx/cdn/shop/products/2502808-00-CH515Wx515H_7ddf79a2-30aa-4d06-829f-b896173133a0_grande.jpg?v=1588641604",
-    "destacado": true
+    "destacado": true,
+    "descripcion": "Cosechada localmente por 'Manzanas, La Conchita'. Fuente de fibra, vitamina C y E.",
+    "beneficios": "La manzana es una fruta rica en nutrientes. Fuente de fibra, vitamina C, E, K, potasio, cobre, además contiene antioxidantes y polifenoles.",
+    "produccion": "Producida en la Ciudad de México por la productora familiar 'Manzanas, La Conchita'.",
+    "detalles": {
+      "informacion": "Para el cultivo y cosecha de esta manzana se utilizaron técnicas agroecológicas como:",
+      "tecnicas": [
+        {
+          "nombre": "Sistema de captación de agua",
+          "descripcion": "Regada con un lluvia captada por medio de techos, con su respectivo sistema de riego por goteo."
+        },
+        {
+          "nombre": "Lombricomposta",
+          "descripcion": "Nutre y fertiliza el suelo haciéndolo más productivo y mitiga los daños por heladas y sequías, aumentando la respuesta a los fertilizantes."
+        }
+      ]
+    }
   },
   {
     "id": 2,
     "nombre": "Plátano",
     "categoria": "Frutas",
     "precio": 18.00,
-    "imagen": "https://mercadoacasa.mx/cdn/shop/products/platano-2_540x.jpg?v=1587779653"
+    "imagen": "https://mercadoacasa.mx/cdn/shop/products/platano-2_540x.jpg?v=1587779653",
+    "descripcion": "Plátano orgánico producido sin agroquímicos. Perfecto para postres y batidos.",
+    "beneficios": "Rico en potasio y vitamina B6, ideal para mejorar la digestión y energía.",
+    "produccion": "Cultivado con sistemas de captación de agua y fertilización natural."
   },
   {
     "id": 3,

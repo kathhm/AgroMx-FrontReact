@@ -80,9 +80,12 @@ p {
 }
 
 .card {
-  height: 75%;
+  height: 88%;
   border: white;
+  padding-bottom: 0% !important;
 }
+
+
 
 .card-img-top {
   height: 55%;
@@ -90,20 +93,26 @@ p {
 }
 
 .completaCanasta {
-  margin: 5%;
+  margin-top: 8%;
+  margin-bottom: 4%;
 }
 
 .btnAgregar,
 .btn-primary {
   border: #E17018;
   width: 50% !important;
+  margin: 0%;
 }
 
 .cards {
-  margin: 5%;
+
+  justify-content: center;
+  margin: 0%;
+  padding: 05;
 }
 
 .card-body {
   margin: 0%;
   padding: 0%;
+
 }
