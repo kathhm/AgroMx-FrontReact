@@ -10,8 +10,7 @@ function Footer() {
           alt="Logo AgroMX"
         />
         <p id="slogan-footer">
-          <h2>Alimentos sanos, comercio justo, futuro sostenible</h2>
-
+          <strong>Alimentos sanos, comercio justo, futuro sostenible</strong>
 
         </p>
       </div>
