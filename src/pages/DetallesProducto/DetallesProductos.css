@@ -8,7 +8,7 @@
 }
 
 p {
-	font-family: 'Mako', 'serif';
+  font-family: 'Mako', 'serif';
 }
 
 .detallesProducto {
@@ -17,11 +17,11 @@ p {
 }
 
 .agregar {
-  margin-left:60% !important;
+  margin-left: 60% !important;
 }
 
 #imgProducto {
-  object-fit: contain; 
+  object-fit: contain;
 }
 
 #text1 {
@@ -115,4 +115,24 @@ p {
   margin: 0%;
   padding: 0%;
 
+}
+
+.botones {
+  margin-left: 4%;
+  margin-bottom: 5%;
+}
+
+#precio {
+  color: #768300;
+}
+
+#descripcion {
+  font-size: large;
+
+}
+
+@media (min-width: 1024px) {
+  #info {
+    margin-top: 18% !important;
+  }
 }

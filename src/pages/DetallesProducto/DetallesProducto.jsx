@@ -60,45 +60,53 @@ const DetallesProducto = () => {
 
   return (
     <>
-      <div className="container col-md-12 mt-5">
-        <div className="row col-12 col-md-12">
-          <div className="col-2 col-md-2"></div>
-          <div className="col-8 col-md-5">
-            <h2 className="text-start">Manzana Gala</h2>
-          </div>
-        </div>
-        <div className="row col-12 col-md-12">
-          <div className="col-2 col-md-2"></div>
-          <div className="col-9 col-md-5 sm-3 mb-0 pb-0">
-            <img className="img-fluid" src="//mercadoacasa.mx/cdn/shop/products/2502808-00-CH515Wx515H_7ddf79a2-30aa-4d06-829f-b896173133a0_grande.jpg?v=1588641604" alt="Manzana Gala" />
-          </div>
-          <div className="sm-4 col-md-3 mx-4">
-            <div className="fs-2 mt-5" id="precio"><p><strong>$11.00</strong></p></div>
-            <div className="" id="descripcion"><p>
-              Cosechada localmente por “Manzanas, La Conchita”. Fuente de fibra, vitamina C y E. Contiene antioxidantes y polifenoles.
-              <br />Una manzana equivale a 2/3 de la porción mínima diaria recomendada de fruta.</p>
-
+      <div className="row mt-5" id="">
+        <div className="col-8 col-md-8 mx-auto">
+          <h2 className="text-start">Manzana Gala</h2>
+          <div className="row">
+            <div className="col-12 col-md-6" id="imagen">
+              <img className="img-fluid" src="//mercadoacasa.mx/cdn/shop/products/2502808-00-CH515Wx515H_7ddf79a2-30aa-4d06-829f-b896173133a0_grande.jpg?v=1588641604" alt="Manzana Gala" />
+            </div>
+            <div className="col-12 col-md-6 mt-5" id="info">
+              <div className="fs-2" id="precio"><p><strong>$11.00</strong></p></div>
+              <div id="descripcion">
+                <p>
+                  Cosechada localmente por “Manzanas, La Conchita”. Fuente de fibra, vitamina C y E. Contiene antioxidantes y polifenoles.
+                  <br />Una manzana equivale a 2/3 de la porción mínima diaria recomendada de fruta.
+                </p>
+              </div>
             </div>
           </div>
-          <div className="row align-items-start">
-            <div className="col-md-2"></div>
-            <div className="col-md-6">
-              {/* <button>
+
+
+          <div className="row botones align-items-center justify-content-start mt-3">
+
+
+            {/* <button>
                 <i className="bi bi-dash-lg btn-warning" onClick={disminuirContador}></i>
               </button>
               <span className="mx-2">{cantidad}</span>
               <button>
                 <i className="bi bi-plus-lg btn-warning" onClick={aumentarContador}></i>
               </button> */}
-              <button className="btn contador mx-1 " onClick={disminuirContador}>-</button>
-              <span className="fs-5 cantidad">{cantidad}</span>
-              <button className="btn contador mx-1 " onClick={aumentarContador}>+</button>
-              <button className="btn agregar mx-1 ">Agregar</button>
+            <div className="col-auto">
+              <button className="btn btn-warning contador mx-1" onClick={disminuirContador}>-</button>
+            </div>
+            <div className="col-auto">
+              <span className="fs-5 cantidad text-center">{cantidad}</span>
+            </div>
+            <div className="col-auto">
+              <button className="btn btn-warning contador mx-1" onClick={aumentarContador}>+</button>
+            </div>
+            <div className="col-auto">
+              <button className="btn btn-success agregar mx-1 ms-auto">Agregar</button>
+
             </div>
 
           </div>
         </div>
       </div>
+
 
 
       <div className=" col-12 mt-4 mb-5 my-4">
