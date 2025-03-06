@@ -62,27 +62,27 @@ const DetallesProducto = () => {
     <>
       <div className="container col-md-12 mt-5">
         <div className="row col-12 col-md-12">
-        <div class="col-2 col-md-2"></div>
-         <div class="col-8 col-md-5">
-            <h2 class="text-start">Manzana Gala</h2>
+          <div className="col-2 col-md-2"></div>
+          <div className="col-8 col-md-5">
+            <h2 className="text-start">Manzana Gala</h2>
           </div>
         </div>
         <div className="row col-12 col-md-12">
-        <div class="col-2 col-md-2"></div>
-          <div className="col-9 col-md-5 sm-3 mb-0 pb-0">             
-            <img className="img-fluid" src="//mercadoacasa.mx/cdn/shop/products/2502808-00-CH515Wx515H_7ddf79a2-30aa-4d06-829f-b896173133a0_grande.jpg?v=1588641604" alt="Manzana Gala" />            
+          <div className="col-2 col-md-2"></div>
+          <div className="col-9 col-md-5 sm-3 mb-0 pb-0">
+            <img className="img-fluid" src="//mercadoacasa.mx/cdn/shop/products/2502808-00-CH515Wx515H_7ddf79a2-30aa-4d06-829f-b896173133a0_grande.jpg?v=1588641604" alt="Manzana Gala" />
           </div>
           <div className="sm-4 col-md-3 mx-4">
-          <div class="fs-2 mt-5" id="precio"><p><strong>$11.00</strong></p></div>
-          <div class="" id="descripcion"><p>
-              Cosechada localmente por “Manzanas, La Conchita”. Fuente de fibra, vitamina C y E. Contiene antioxidantes y polifenoles. 
-              <br/>Una manzana equivale a 2/3 de la porción mínima diaria recomendada de fruta.</p>
-            
-         </div>
+            <div className="fs-2 mt-5" id="precio"><p><strong>$11.00</strong></p></div>
+            <div className="" id="descripcion"><p>
+              Cosechada localmente por “Manzanas, La Conchita”. Fuente de fibra, vitamina C y E. Contiene antioxidantes y polifenoles.
+              <br />Una manzana equivale a 2/3 de la porción mínima diaria recomendada de fruta.</p>
+
+            </div>
           </div>
           <div className="row align-items-start">
-          <div class="col-md-2"></div>
-          <div className="col-md-6">
+            <div className="col-md-2"></div>
+            <div className="col-md-6">
               {/* <button>
                 <i className="bi bi-dash-lg btn-warning" onClick={disminuirContador}></i>
               </button>
@@ -94,11 +94,11 @@ const DetallesProducto = () => {
               <span className="fs-5 cantidad">{cantidad}</span>
               <button className="btn contador mx-1 " onClick={aumentarContador}>+</button>
               <button className="btn agregar mx-1 ">Agregar</button>
-              </div>
-          
-              </div>
+            </div>
+
           </div>
         </div>
+      </div>
 
 
       <div className=" col-12 mt-4 mb-5 my-4">
