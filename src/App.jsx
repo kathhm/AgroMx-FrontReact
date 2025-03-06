@@ -14,7 +14,7 @@ import { Comunidad } from './pages/Comunidad/Comunidad'
 import Catalogo from './pages/Catalogo/Catalogo';
 
 import Inicio from './pages/Inicio';
-import Registro from './pages/Registro/registro';
+import Registro from './pages/Registro/Registro';
 
 
 
