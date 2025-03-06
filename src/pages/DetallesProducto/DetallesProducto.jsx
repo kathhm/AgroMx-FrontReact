@@ -38,7 +38,7 @@ const ProductosDestacados = () => {
       <h2 className="text-center completaCanasta">Completa tu canasta</h2>
       <div className="row cards g-2">
         {productos.map((producto) => (
-          <div key={producto.id} className="col-12 col-sm-6 col-md-4 col-lg-3 text-center">
+          <div key={producto.id} className="col-6 col-sm-6 col-md-4 col-lg-3 text-center">
             <div className="card">
               <img src={producto.imagen} className="card-img-top" alt={producto.nombre} />
               <div className="card-body">
