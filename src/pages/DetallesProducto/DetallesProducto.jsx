@@ -61,16 +61,28 @@ const DetallesProducto = () => {
   return (
     <>
       <div className="container col-md-12 mt-5">
-        <div className="row">
-         <div class="col-md-5 offset-md-2">
+        <div className="row col-12 col-md-12">
+        <div class="col-2 col-md-2"></div>
+         <div class="col-8 col-md-5">
             <h2 class="text-start">Manzana Gala</h2>
           </div>
         </div>
-        <div className="row justify-content-center ">
-          <div className="col-md-4 sm-1 offset-md-1">             
-            <img className="img-fluid" src="//mercadoacasa.mx/cdn/shop/products/2502808-00-CH515Wx515H_7ddf79a2-30aa-4d06-829f-b896173133a0_grande.jpg?v=1588641604" alt="Manzana Gala" />
-            <div className="col-md-6 d-flex align-items-center mb-3 mt-0">
-
+        <div className="row col-12 col-md-12">
+        <div class="col-2 col-md-2"></div>
+          <div className="col-9 col-md-5 sm-3 mb-0 pb-0">             
+            <img className="img-fluid" src="//mercadoacasa.mx/cdn/shop/products/2502808-00-CH515Wx515H_7ddf79a2-30aa-4d06-829f-b896173133a0_grande.jpg?v=1588641604" alt="Manzana Gala" />            
+          </div>
+          <div className="sm-4 col-md-3 mx-4">
+          <div class="fs-2 mt-5" id="precio"><p><strong>$11.00</strong></p></div>
+          <div class="" id="descripcion"><p>
+              Cosechada localmente por “Manzanas, La Conchita”. Fuente de fibra, vitamina C y E. Contiene antioxidantes y polifenoles. 
+              <br/>Una manzana equivale a 2/3 de la porción mínima diaria recomendada de fruta.</p>
+            
+         </div>
+          </div>
+          <div className="row align-items-start">
+          <div class="col-md-2"></div>
+          <div className="col-md-6">
               {/* <button>
                 <i className="bi bi-dash-lg btn-warning" onClick={disminuirContador}></i>
               </button>
@@ -78,21 +90,13 @@ const DetallesProducto = () => {
               <button>
                 <i className="bi bi-plus-lg btn-warning" onClick={aumentarContador}></i>
               </button> */}
-              <button className="btn contador mx-2 h-25" onClick={disminuirContador}>-</button>
+              <button className="btn contador mx-1 " onClick={disminuirContador}>-</button>
               <span className="fs-5 cantidad">{cantidad}</span>
-              <button className="btn contador mx-2 h-25" onClick={aumentarContador}>+</button>
-              <button className="btn agregar mx-5 w-50">Agregar</button>
+              <button className="btn contador mx-1 " onClick={aumentarContador}>+</button>
+              <button className="btn agregar mx-1 ">Agregar</button>
               </div>
-          </div>
-          <div className="col-md-3 offset-md-1">
-          <div className=""></div>
-          <div class="d-flex mt-5" id="precio"><p>$11.00</p></div>
-          <div class="d-flex mt-5" id="descripcion"><p>
-              Cosechada localmente por “Manzanas, La Conchita”. Fuente de fibra, vitamina C y E. Contiene antioxidantes y polifenoles.
-              Una manzana equivale a 2/3 de la porción mínima diaria recomendada de fruta.
-            </p>
-            </div>
-          </div>
+          
+              </div>
           </div>
         </div>
 
@@ -127,7 +131,7 @@ const DetallesProducto = () => {
 
               <li><strong>Sistema de captación de agua:</strong> Regada con un lluvia captada por medio de techos, con su respectivo sistema de riego por goteo.
               </li>
-              <li><strong>Lombricomposta:</strong>Nutre y fertiliza el suelo haciéndolo más productivo y mitiga los daños por heladas y sequías, aumentando la respuesta a los fertilizantes.
+              <li><strong>Lombricomposta: </strong>Nutre y fertiliza el suelo haciéndolo más productivo y mitiga los daños por heladas y sequías, aumentando la respuesta a los fertilizantes.
               </li>
             </ul>
           </div>
