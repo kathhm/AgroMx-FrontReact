@@ -5,14 +5,31 @@ useState
 const ProductosDestacados = () => {
   const [productos, setProductos] = useState([]);
 
+  // Function to generate an array of random IDs (1 to 45)
+  const RandomArray = () => {
+    let ArrayDestacados = [];
+    for (let i = 0; i < 4; i++) {
+      ArrayDestacados.push(Math.floor(Math.random() * 45) + 1); // Generate random IDs between 1 and 45
+    }
+    return ArrayDestacados;
+  };
+
   useEffect(() => {
     fetch("/json/data2.json")
       .then((response) => response.json())
       .then((data) => {
-        const destacados = data.filter((producto) => producto.destacado).slice(0, 4);
-        setProductos(destacados);
+        const destacados = (ids, data) => {
+          // Returns an array of corresponding data or null if ID is not found
+          return ids.map((id) => data[id] || null);
+        };
+
+        const idsArray = RandomArray(); // Call the RandomArray function to generate random IDs
+        const result = destacados(idsArray, data);
+
+        setProductos(result); // Set the fetched and processed data into state
       });
-  }, []);
+  }, []); // Empty dependency array ensures this effect runs only once after the component mounts
+
 
   return (
 
@@ -154,8 +171,6 @@ const DetallesProducto = () => {
 
 };
 export default DetallesProducto;
-
-
 
 // import { useParams } from "react-router-dom";
 // import { useEffect, useState } from "react";
