@@ -8,7 +8,7 @@ import './App.css'
 import Footer from './components/Footer'
 import Header from './components/Header'
 import DetallesProducto from './pages/DetallesProducto/DetallesProducto'
-import NuevosProductos from './pages/Productos/NuevosProductos'
+import NuevosProductos from './pages/Productos/nuevosProductos'
 import { SobreNosotros } from './pages/SobreNosotros/SobreNosotros'
 import { Comunidad } from './pages/Comunidad/Comunidad'
 import Catalogo from './pages/Catalogo/Catalogo';
