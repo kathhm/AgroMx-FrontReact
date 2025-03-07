@@ -1,5 +1,5 @@
 import "./Registro.css";
-import React, { useState } from "react";  //importación de useState
+import React, { useState, useRef, useEffect } from "react";  //importación de useState
 
 function Registro() {
 
@@ -16,6 +16,8 @@ function Registro() {
 	  const [successMessage, setSuccessMessage] = useState(false); // Mensaje si fueron correctos los datos del formulario, por default es false
 	  const [passwordVisible, setPasswordVisible] = useState(false); // el default del ojito de la contraseña que sea falso
 	  const [confirmPasswordVisible, setConfirmPasswordVisible] = useState(false); // el default del ojito de la confirmacion de la contraseña que sea falso
+	  const [differentPassword, setDifferentPassword] = useState("");
+	  const successMessageRef = useRef(null);
 	
 	  // Manejar cambios en los inputs
 	  const handleChange = (evento) => {
@@ -30,8 +32,10 @@ function Registro() {
 	  const handleSubmit = (evento) => {
 		evento.preventDefault(); // evitar que se recargue el formulario
 		if (formData.password !== formData.confirmPassword) {
-		  alert("Las contraseñas no coinciden");
-		  return ; // Para evitar que avance el programa
+			setDifferentPassword("Las contraseñas no coinciden.");
+			return;
+		} else {
+			setDifferentPassword("");
 		}
 	
 		// Guardar en localStorage
@@ -39,16 +43,25 @@ function Registro() {
 		setSuccessMessage(true);  
 	}
 
+	useEffect(() => {
+        if (successMessage && successMessageRef.current) {
+            successMessageRef.current.scrollIntoView({ behavior: "smooth" });
+        }
+    }, [successMessage]);
+
+
 	return (
 		<>
 			<header id="header"></header>
 			<div className="container mt-5">
+			
 				<h2 id="titulo" className="text-center titulo">
 					Regístrate
 				</h2>
 				<h2 id="subtitulo" className="text-center">
 					y sé parte de la comunidad
 				</h2>
+			
 
 				<form onSubmit={handleSubmit}>
 					{/* <!-- Usuario --> */}
@@ -58,7 +71,7 @@ function Registro() {
 						</label>
 						<input
 							type="text"
-							className="form-control"
+							className="form-control usuario"
 							id="usuario"
 							name="usuario"
             				value={formData.usuario}
@@ -78,7 +91,7 @@ function Registro() {
 						</label>
 						<input
 							type="text"
-							className="form-control"
+							className="form-control nombre"
 							id="nombre"
 							name="nombre"
             				value={formData.nombre}
@@ -97,7 +110,7 @@ function Registro() {
 						</label>
 						<input
 							type="text"
-							className="form-control"
+							className="form-control apellidos"
 							id="apellidos"
 							name="apellidos"
             				value={formData.apellidos}
@@ -117,7 +130,7 @@ function Registro() {
 						</label>
 						<input
 							type="email"
-							className="form-control"
+							className="form-control email"
 							id="email"
 							name="email"
             				value={formData.email}
@@ -141,7 +154,7 @@ function Registro() {
 								type={passwordVisible ? "text" : "password"}
 								required
 								minlength="6"
-								className="form-control"
+								className="form-control contraseña"
 								id="password"
 								name="password"
               					value={formData.password}
@@ -174,7 +187,7 @@ function Registro() {
 								type={confirmPasswordVisible ? "text" : "password"}
 								required
 								minlength="6"
-								className="form-control"
+								className="form-control contraseña"
 								name="confirmPassword"
               					value={formData.confirmPassword}
               					onChange={handleChange}
@@ -190,18 +203,16 @@ function Registro() {
 								👁️
 							</span>
 						</div>
-						<div
-							className="invalid-feedback"
-							id="confirmaContraseñaError"
-						>
-							Tu contraseña no coincide.
-						</div>
+						<div className="invalid-feedback d-block" id="confirmaContraseñaError">
+            					{differentPassword}
+        				</div>
 					</div>
+					<br />
 
 					{/* <!-- Confirmación de Acuerdos y Condiciones --> */}
-					<div className="form-check mb-3">
+					<div className="form-check d-flex justify-content-center text-center">
 						<input
-							className="form-check-input"
+							className="form-check-input me-2"
 							type="checkbox"
 							name="termsAccepted"
             				checked={formData.termsAccepted}
@@ -219,7 +230,7 @@ function Registro() {
 								href="#"
 								target="_blank"
 							>
-								 términos y condiciones.
+								términos y condiciones.
 							</a>
 						</label>
 						<div className="invalid-feedback terminos-condiciones">
@@ -227,14 +238,15 @@ function Registro() {
 						</div>
 					</div>
 
-					<div className="mb-3 col-8 mx-auto">
-						<button type="submit" className="btn custom-btn w-100" id="boton-registro">
+					<div className="mb-3 d-flex justify-content-center">
+						<button type="submit" className="btn custom-btn w-50" id="boton-registro">
 							Regístrame
 						</button>
 					</div>
 					{successMessage && (
-          			<div className="alert alert-success mt-3">¡Tu registro ha sido exitoso!</div>
+          			<div ref={successMessageRef} className="alert alert-success mt-3">¡Tu registro ha sido exitoso!</div>
         			)}
+					
 
 					{/*  <!-- Inicio de sesión --> */}
 
