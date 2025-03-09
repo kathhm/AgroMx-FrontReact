@@ -28,7 +28,7 @@ function Footer() {
           {/* {Acerca de nosotros} */}
           <div className="col-4 col-md-3 col-lg-3 text-center">
             <NavLink
-              to={"/EquipoDesarrollador"}
+              to={"/DeveloperTeam"}
               style={{ color: "white", textDecoration: "none" }}
             >
               <h5>Developer Team</h5>
