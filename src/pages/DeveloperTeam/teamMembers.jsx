@@ -87,4 +87,3 @@ const teamMembers = [
     teamContainer.appendChild(card);
   });
 
-  export {teamMembers};

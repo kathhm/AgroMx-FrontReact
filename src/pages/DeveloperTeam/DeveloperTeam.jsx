@@ -1,6 +1,7 @@
 import './DeveloperTeam.css';
-import teamMembers from './teamMembers';
+// import teamMembers from './teamMembers';
 import 'bootstrap-icons/font/bootstrap-icons.css'; 
+
 
 
 function DeveloperTeam() {
@@ -23,12 +24,12 @@ function DeveloperTeam() {
 
                 Conoce más sobre cada uno de nosotros:
             </p>
+
+        
             <div id="team-container" class="team-container"></div>
         </section>
 
-        <section>
-        <teamMembers />
-        </section>
+
     </main>
 
 
