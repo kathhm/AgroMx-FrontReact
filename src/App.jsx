@@ -12,7 +12,7 @@ import NuevosProductos from './pages/Productos/NuevosProductos'
 import { SobreNosotros } from './pages/SobreNosotros/SobreNosotros'
 import { Comunidad } from './pages/Comunidad/Comunidad'
 import Catalogo from './pages/Catalogo/Catalogo';
-
+import { DeveloperTeam } from './pages/DeveloperTeam/DeveloperTeam'
 import Inicio from './pages/Inicio';
 import Registro from './pages/Registro/Registro';
 
@@ -34,6 +34,7 @@ function App() {
           <Route path="/catalogo" element={<Catalogo />} />
           <Route path="/Registro" element={<Registro />}></Route>
           <Route path="/DetallesProducto" element={<DetallesProducto />} />
+          <Route path="/DeveloperTeam" element = {<DeveloperTeam/>} />
 
         </Routes>
 
