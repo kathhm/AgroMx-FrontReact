@@ -22,7 +22,7 @@
   }
   
   .about-us {
-    max-width: 800px;
+    max-width: 1200px;
     margin: auto;
   }
   
@@ -33,16 +33,20 @@
   
   .paragraph {
     color: #000000;
+    text-align: justify;
   }
   
   .team-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
+    padding: 20px;
     margin-top: 30px;
+
   }
   
   .card {
+    display: flex;
     background-color: #00745F;
     color: #fff;
     border-radius: 10px;
@@ -50,6 +54,9 @@
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     text-align: center;
     transition: transform 0.3s ease;
+    flex-direction: column; /* Asegura que los elementos estén en una columna */
+    justify-content: space-between; /* Espaciado uniforme entre los elementos */
+    
   }
   
   .card:hover {
@@ -67,20 +74,30 @@
     color: white;
     font-size: 16px;
     margin: 10px 0;
+   
   }
   
-  .card .icons {
+  .icons {
+    grid-row: 4; 
     display: flex;
-    justify-content: center;
-    gap: 10px;
+    justify-content: center; 
+    gap: 10px; 
   }
   
-  .card .icons a {
-    color: #fff;
-    font-size: 20px;
+  .icons a {
+    font-size: 1.5rem; 
     text-decoration: none;
+    margin-bottom: 15px;
   }
   
-  .card .icons a:hover {
-    color: #ddd;
+  .linkedin-icon {
+    color:white; 
+  }
+  
+  .github-icon {
+    color:white;  
+  }
+  
+  .icons a:hover {
+    transform: scale(1.2);
   }

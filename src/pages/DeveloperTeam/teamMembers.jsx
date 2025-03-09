@@ -15,7 +15,7 @@ const teamMembers = [
     },
     {
       name: "Katherine Hinojosa Molina",
-      phrase: "Estoy convencida de que la programación es la llave para construir un mundo lleno de posibilidades.",
+      phrase: "Desarrolladora Java e Ingeniera Geofísica, explorando el mundo a través de datos y código.",
       role: "Desarrolladora Full-Stack",
       linkedin: "https://www.linkedin.com/in/katherine-hinojosa-molina-6556521a4",
       github: "https://github.com/kathhm",
@@ -49,13 +49,6 @@ const teamMembers = [
       github: "https://github.com/ECjeux24",
     },
     {
-      name: "Luis Alberto Eusebio Barranco",
-      role: "Desarrollador Full-Stack",
-      phrase: '"No solo escribo código, creo experiencias"',
-      linkedin: "https://www.linkedin.com/in/luisalbertobarranco/",
-      github: "https://github.com/LuisBarranco96",
-    },
-    {
       name: "Hilari Hernández Islas",
       role: "Desarrolladora Full-Stack",
       phrase: 'Programadora y Administradora "El código y la gestión, transforman ideas en innovación."',
@@ -63,27 +56,6 @@ const teamMembers = [
       github: "https://github.com/HilaryYuuki?tab=repositories",
     },
   ];
-  
-  const teamContainer = document.getElementById("team-container");
-  
-  function createCard(member) {
-    const card = document.createElement("div");
-    card.className = "card";
-  
-    card.innerHTML = `
-      <h3>${member.name}</h3>
-      <p>${member.role}</p>
-      <p>${member.phrase}</p>
-      <div class="icons">
-          <a href="${member.linkedin}" target="_blank"><i class="fab fa-linkedin"></i></a>
-          <a href="${member.github}" target="_blank"><i class="fab fa-github"></i></a>
-      </div>`;
-  
-    return card;
-  }
-  
-  teamMembers.forEach((member) => {
-    const card = createCard(member);
-    teamContainer.appendChild(card);
-  });
 
+
+  export default teamMembers;
