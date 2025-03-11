@@ -34,6 +34,8 @@ function App() {
           <Route path="/producto/:id" element={<DetallesProducto />} />
           <Route path="/Registro" element={<Registro />}></Route>
           <Route path="/DetallesProducto" element={<DetallesProducto />} />
+          <Route path="/DeveloperTeam" element={<DeveloperTeam />} />
+
 
 
         </Routes>
