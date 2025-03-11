@@ -10,11 +10,11 @@ import Header from './components/Header'
 import Catalogo from './pages/Catalogo/Catalogo'
 import { Comunidad } from './pages/Comunidad/Comunidad'
 import DetallesProducto from './pages/DetallesProducto/DetallesProducto'
-import NuevosProductos from './pages/Productos/NuevosProductos'
-import { SobreNosotros } from './pages/SobreNosotros/SobreNosotros'
-
+import { DeveloperTeam } from './pages/DeveloperTeam/DeveloperTeam'
 import Inicio from './pages/Inicio'
+import NuevosProductos from './pages/Productos/NuevosProductos'
 import Registro from './pages/Registro/Registro'
+import { SobreNosotros } from './pages/SobreNosotros/SobreNosotros'
 
 
 

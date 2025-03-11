@@ -6,7 +6,7 @@ const ProductList = ({
   agregarAlCarrito,
   eliminarProducto,
   modificarProducto,
-  verDetalles,  // 💡 Añadimos la función como prop
+  verDetalles,
 }) => {
   return (
     <div className="row">
@@ -17,14 +17,13 @@ const ProductList = ({
           agregarAlCarrito={agregarAlCarrito}
           eliminarProducto={eliminarProducto}
           modificarProducto={modificarProducto}
-          verDetalles={verDetalles}  // 💡 Pasamos la función a cada tarjeta
+          verDetalles={verDetalles}
         />
       ))}
     </div>
   );
 };
 
-// Validación de PropTypes
 ProductList.propTypes = {
   productos: PropTypes.arrayOf(
     PropTypes.shape({
@@ -38,7 +37,7 @@ ProductList.propTypes = {
   agregarAlCarrito: PropTypes.func.isRequired,
   eliminarProducto: PropTypes.func.isRequired,
   modificarProducto: PropTypes.func.isRequired,
-  verDetalles: PropTypes.func.isRequired,  // 💡 Añadimos la validación de prop
+  verDetalles: PropTypes.func.isRequired,
 };
 
 export default ProductList;

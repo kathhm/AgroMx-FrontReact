@@ -35,9 +35,9 @@ const ProductosDestacados = () => {
       <div className="row cards g-2">
         {productos.map((producto) => (
           <div key={producto.id} className="col-6 col-sm-6 col-md-4 col-lg-3 text-center">
-            <div className="card">
+            <div id="cardDetalles" className="card">
               <img src={producto.imagen} className="card-img-top" alt={producto.nombre} />
-              <div className="card-body">
+              <div className="cardDetalles-body">
                 <h5 className="card-title">{producto.nombre}</h5>
                 <p className="card-text">${producto.precio.toFixed(2)} MXN</p>
                 <button className="btn btn-primary mt-0 btnAgregar">Agregar</button>

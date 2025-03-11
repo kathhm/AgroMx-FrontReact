@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import style from "./catalogo.module.css";
 import ProductList from "./ProductList";
-import "./catalogo.css";
+style
 
 const Catalogo = () => {
   const [productos, setProductos] = useState([]);

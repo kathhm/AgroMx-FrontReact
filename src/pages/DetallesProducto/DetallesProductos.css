@@ -79,7 +79,7 @@ p {
   height: 1%;
 }
 
-.card {
+#cardDetalles {
   height: 88%;
   border: white;
   padding-bottom: 0% !important;
@@ -111,7 +111,7 @@ p {
   padding: 05;
 }
 
-.card-body {
+#cardDetalles-body {
   margin: 0%;
   padding: 0%;
 

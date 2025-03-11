@@ -1,4 +1,5 @@
 import PropTypes from "prop-types";
+import style from "./catalogo.module.css"; // Asegúrate de que la extensión sea '.module.css'
 
 const ProductCard = ({
   producto,
@@ -13,10 +14,10 @@ const ProductCard = ({
       onClick={() => verDetalles(producto.id)}
       style={{ cursor: "pointer" }}
     >
-      <div className="card h-100 d-flex flex-column">
+      <div id="cardCatalogo" className="card h-100 d-flex flex-column">
         <img
           src={producto.imagen}
-          className="card-img-top product-img"
+          className={`card-img-top ${style.productImg}`} // Usando el estilo de módulo
           alt={producto.nombre}
         />
         <div className="card-body flex-grow-1">
@@ -29,16 +30,16 @@ const ProductCard = ({
         </div>
         <div className="card-footer d-flex flex-column">
           <button
-            className="btn btn-primary w-100 addToCartBtn"
+            className={`btn btn-primary w-100 ${style.addToCartBtn}`} // Usando el estilo de módulo
             onClick={(e) => {
-              e.stopPropagation(); // Evita la redirección a página de detallesal hacer clic en el botón, este y todos los similares de abajo
+              e.stopPropagation();
               agregarAlCarrito(producto);
             }}
           >
             Agregar al carrito
           </button>
           <button
-            className="btn btn-primary w-100 modifyBtn"
+            className={`btn btn-primary w-100 ${style.modifyBtn}`} // Usando el estilo de módulo
             onClick={(e) => {
               e.stopPropagation();
               modificarProducto(producto);
@@ -47,7 +48,7 @@ const ProductCard = ({
             Modificar
           </button>
           <button
-            className="btn btn-primary w-100 deleteBtn"
+            className={`btn btn-primary w-100 ${style.deleteBtn}`} // Usando el estilo de módulo
             onClick={(e) => {
               e.stopPropagation();
               eliminarProducto(producto.id);
@@ -72,7 +73,7 @@ ProductCard.propTypes = {
   agregarAlCarrito: PropTypes.func.isRequired,
   eliminarProducto: PropTypes.func.isRequired,
   modificarProducto: PropTypes.func.isRequired,
-  verDetalles: PropTypes.func.isRequired, // 💡 Añadimos la validación de la función
+  verDetalles: PropTypes.func.isRequired,
 };
 
 export default ProductCard;
