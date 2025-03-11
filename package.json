@@ -12,6 +12,7 @@
   "dependencies": {
     "@fontsource/gabriela": "^5.1.1",
     "@fontsource/mako": "^5.1.1",
+    "@fortawesome/fontawesome-free": "^6.7.2",
     "@popperjs/core": "^2.11.8",
     "agromx-frontreact": "file:",
     "bootstrap": "^5.3.3",
