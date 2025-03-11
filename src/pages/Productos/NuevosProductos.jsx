@@ -139,6 +139,7 @@ const NuevosProductos = () => {
               onChange={(e) => setStock(e.target.value)}
               placeholder="Número de productos a añadir al stock"
               required
+              min="1"
             />
             {errors.stock && <div className="invalid-feedback">{errors.stock}</div>}
           </div>
