@@ -1,9 +1,11 @@
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import ProductList from "./ProductList";
-import "./catalogo.css"
+import "./catalogo.css";
 
 const Catalogo = () => {
   const [productos, setProductos] = useState([]);
+  const navigate = useNavigate();
   const [carrito, setCarrito] = useState([]);
   const [cantidadCarrito, setCantidadCarrito] = useState(0);
 
@@ -21,23 +23,21 @@ const Catalogo = () => {
         })
         .then((data) => {
           setProductos(data);
-          localStorage.setItem("productos", JSON.stringify(data)); // Guardamos en LocalStorage
+          localStorage.setItem("productos", JSON.stringify(data));
         })
         .catch((error) => console.error("Error cargando el JSON:", error));
     }
   }, []);
-  
 
   useEffect(() => {
-      if (productos.length > 0) {
-        localStorage.setItem("productos", JSON.stringify(productos));
-      }
-    }, [productos]);
-    
+    if (productos.length > 0) {
+      localStorage.setItem("productos", JSON.stringify(productos));
+    }
+  }, [productos]);
 
-  // const agregarProducto = (nuevoProducto) => {
-  //   setProductos([...productos, { id: Date.now(), ...nuevoProducto }]);
-  // };
+  const verDetalles = (id) => {
+    navigate(`/producto/${id}`);
+  };
 
   const eliminarProducto = (id) => {
     setProductos(productos.filter((p) => p.id !== id));
@@ -66,8 +66,9 @@ const Catalogo = () => {
         agregarAlCarrito={agregarAlCarrito}
         eliminarProducto={eliminarProducto}
         modificarProducto={modificarProducto}
-        />
-        <p>Carrito: {cantidadCarrito}</p>
+        verDetalles={verDetalles}
+      />
+      <p>Carrito: {cantidadCarrito}</p>
       <button className="btn btn-danger mb-5 w-75" onClick={eliminarTodos}>Eliminar Todos</button>
     </div>
   );
