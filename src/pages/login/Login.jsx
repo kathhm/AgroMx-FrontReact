@@ -45,6 +45,14 @@ function Login() {
 	// 	setError("");
 	// 	alert("Información guardada en localStorage");
 	// };
+	const loadFromLocalStorage = () => {
+		const itemData = LocalStorage.getItem("items");
+		retur itemsData ? JSON.parse(itemsData) : [];
+	}
+	
+	const saveItemsToLocalStorage = (items) => {
+		localStorage.setItem("items", JSON.stringify(items))
+	}
 
 	const handleLogin = () => {
 		const storedUser = JSON.parse(localStorage.getItem("user"));
