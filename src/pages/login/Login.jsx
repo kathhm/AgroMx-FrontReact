@@ -34,42 +34,58 @@ function Login() {
 		setPassword(e.target.value);
 	};
 
-	// const handleSubmit = (e) => {
-	// 	e.preventDefault();
-	// 	if (email === "" || password === "") {
-	// 		setError("Todos los campos son obligatorios");
-	// 		return;
-	// 	}
-	// 	// Guardar la información en localStorage
-	// 	localStorage.setItem("user", JSON.stringify({ email, password }));
-	// 	setError("");
-	// 	alert("Información guardada en localStorage");
-	// };
-	const loadFromLocalStorage = () => {
-		const itemData = LocalStorage.getItem("items");
-		retur itemsData ? JSON.parse(itemsData) : [];
-	}
-	
-	const saveItemsToLocalStorage = (items) => {
-		localStorage.setItem("items", JSON.stringify(items))
-	}
+	// Guardar usuario en localStorage
+const saveUser = (user) => {
+    const users = JSON.parse(localStorage.getItem("users")) || [];
+    users.push(user);
+    localStorage.setItem("users", JSON.stringify(users));
+};
 
-	const handleLogin = () => {
-		const storedUser = JSON.parse(localStorage.getItem("user"));
-		if (
-			storedUser &&
-			storedUser.email === email &&
-			storedUser.password === password
-		) {
-			setUser(storedUser);
-			alert("Inicio de sesión exitoso");
-			setTimeout(() => {
-				navigate("/Inicio");
-			}, 2000);
-		} else {
-			setError("Correo electrónico o contraseña incorrectos");
-		}
-	};
+// Validar campos vacíos
+const validateFields = () => {
+    if (email.trim() === "" || password.trim() === "") {
+        setError("Todos los campos son obligatorios");
+        return false;
+    }
+    return true;
+};
+
+// Manejar envío del formulario
+const handleSubmit = (e) => {
+    e.preventDefault();
+    if (!validateFields()) return;
+
+    saveUser({ email, password });
+    setError("");
+    alert("Usuario guardado en localStorage");
+};
+
+// Iniciar sesión
+const handleLogin = () => {
+    const users = JSON.parse(localStorage.getItem("users")) || [];
+    const user = users.find(
+        (u) => u.email === email && u.password === password
+    );
+
+    if (user) {
+        setUser(user);
+        alert("Inicio de sesión exitoso");
+        setTimeout(() => {
+            navigate("/Inicio");
+        }, 2000);
+    } else {
+        setError("Correo electrónico o contraseña incorrectos");
+    }
+};
+
+// Restaurar estado al cargar la página
+useEffect(() => {
+    const storedUser = JSON.parse(localStorage.getItem("user"));
+    if (storedUser) {
+        setUser(storedUser);
+    }
+}, []);
+
 
 	return (
 		<main className="container">
