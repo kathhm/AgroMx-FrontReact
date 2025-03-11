@@ -7,6 +7,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import './App.css'
 import Footer from './components/Footer'
 import Header from './components/Header'
+import Carrito from './pages/Carrito/Carrito'
 import Catalogo from './pages/Catalogo/Catalogo'
 import { Comunidad } from './pages/Comunidad/Comunidad'
 import DetallesProducto from './pages/DetallesProducto/DetallesProducto'
@@ -35,7 +36,7 @@ function App() {
           <Route path="/Registro" element={<Registro />}></Route>
           <Route path="/DetallesProducto" element={<DetallesProducto />} />
           <Route path="/DeveloperTeam" element={<DeveloperTeam />} />
-
+          <Route path="/Carrito" element={<Carrito />} />
 
 
         </Routes>
