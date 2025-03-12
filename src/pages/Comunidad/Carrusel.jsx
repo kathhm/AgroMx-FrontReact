@@ -10,7 +10,7 @@ const Carrusel = () => {
           <div className="carousel-item active carousel-main">
             <div className="slide-content slide-bg-main">
               <img
-                src="./public/images/milpa-alta.png"
+                src="/images/milpa-alta.png"
                 className="carousel-image"
                 alt="Imagen principal"
               />
@@ -25,7 +25,7 @@ const Carrusel = () => {
           <div className="carousel-item carousel-left">
             <div className="slide-content slide-bg-left">
               <img
-                src="./public/images/romeritos.jpg"
+                src="/images/romeritos.jpg"
                 className="carousel-image"
                 alt="Imagen lateral izquierda"
               />
@@ -41,7 +41,7 @@ const Carrusel = () => {
           <div className="carousel-item carousel-right">
             <div className="slide-content slide-bg-right">
               <img
-                src="./public/images/chinampa1.jpg"
+                src="/images/chinampa1.jpg"
                 className="carousel-image"
                 alt="Imagen lateral derecha"
               />
