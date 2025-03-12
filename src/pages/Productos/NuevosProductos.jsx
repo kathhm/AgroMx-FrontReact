@@ -208,7 +208,7 @@ const NuevosProductos = () => {
           </button>
 
           <Link
-            href="/Catalogo" 
+            to="/Catalogo" 
             className="btn btn-primary w-100 col-8 mx-auto"
           >
             Ver catálogo
