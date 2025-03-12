@@ -107,40 +107,14 @@ function Header() {
 									Sobre Nosotros
 								</NavLink>
 							</li>
-							<li className="nav-item dropdown">
+							<li className="nav-item">
 								<NavLink
-									className="nav-link dropdown-toggle"
-									id="linkToPage"
+									className="nav-link"
+									id = "linkToPage"
 									to={"/Comunidad"}
-									role="button"
-									data-bs-toggle="dropdown"
-									aria-expanded="false"
 								>
 									Comunidad
 								</NavLink>
-								<ul className="dropdown-menu">
-									<li>
-										<NavLink
-											className="dropdown-item text-dark"
-											id="linkToPage"
-											to={"/Comunidad"}
-										>
-											Recetas
-										</NavLink>
-									</li>
-									<li>
-										<hr className="dropdown-divider" />
-									</li>
-									<li>
-										<NavLink
-											className="dropdown-item text-dark"
-											id="linkToPage"
-											to={"/Comunidad"}
-										>
-											Comunidad
-										</NavLink>
-									</li>
-								</ul>
 							</li>
 							<li className="nav-item">
 								<NavLink

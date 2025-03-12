@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
+
 import "./NuevosProductos.css";
 
 const NuevosProductos = () => {
@@ -14,13 +16,13 @@ const NuevosProductos = () => {
 
   // Cargar los productos del localStorage
   const loadItemsFromLocalStorage = () => {
-    const itemsData = localStorage.getItem("items");
+    const itemsData = localStorage.getItem("productos");
     return itemsData ? JSON.parse(itemsData) : [];
   };
 
   // Guardar los productos en localStorage
   const saveItemsToLocalStorage = (items) => {
-    localStorage.setItem("items", JSON.stringify(items));
+    localStorage.setItem("productos", JSON.stringify(items));
   };
 
   // Función de validación de URL de imagen
@@ -139,6 +141,7 @@ const NuevosProductos = () => {
               onChange={(e) => setStock(e.target.value)}
               placeholder="Número de productos a añadir al stock"
               required
+              min="1"
             />
             {errors.stock && <div className="invalid-feedback">{errors.stock}</div>}
           </div>
@@ -196,16 +199,20 @@ const NuevosProductos = () => {
             {errors.imagenProducto && <div className="invalid-feedback">{errors.imagenProducto}</div>}
           </div>
 
+          {imagenProducto && isValidImageUrl(imagenProducto) && (
+            <div className="mb-3">
+              <img src={imagenProducto} alt="Imagen del Producto" className="img-fluid" />
+            </div>
+          )}
+
           <button type="submit" className="btn btn-primary w-100 col-8 mx-auto">
             Agregar producto
           </button>
 
-          <a
-            href="/Catalogo"
-            className="btn btn-primary w-100 col-8 mx-auto"
-          >
-            Ver catálogo
-          </a>
+
+         <Link to="/catalogo" className="btn btn-primary w-100 col-8 mx-auto">
+  Ver catálogo
+</Link>
         </form>
       </div>
 

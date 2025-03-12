@@ -4,41 +4,55 @@
     font-style: normal;
   }
   
+
   .usuario {
     color: black;
     font-family: "Mako", serif;
+    font-size: clamp(12px, 2.5vw, 18px);
   }
   
   .nombre {
     color: black;
     font-family: "Mako", serif;
+    font-size: clamp(12px, 2.5vw, 18px);
+  }
+
+  .apellidos{
+    color: black;
+    font-family: "Mako", serif;
+    font-size: clamp(12px, 2.5vw, 18px);
   }
   
   .email {
     color: black;
     font-family: "Mako", serif;
+    font-size: clamp(12px, 2.5vw, 18px);
   }
   
   .contraseña {
     color: black;
     font-family: "Mako", serif;
+    font-size: clamp(12px, 2.5vw, 18px);
   }
   
   #titulo {
     color: #00745F;
     font-family: 'Gabriela', serif;
+    font-size: clamp(15px, 6vw, 50px);
   }
   
   #subtitulo {
     color: #AE7D00;
     text-align: center;
     font-family: 'Gabriela', serif;
+    font-size: clamp(15px, 4vw, 40px);
   }
   
   .terminos-condiciones {
     color: #AE7D00;
     text-align: center;
     font-family: 'Nokora', sans-serif;
+    font-size: clamp(12px, 2.5vw, 18px);
   }
   
   .form-check {
@@ -59,6 +73,7 @@
     align-items: center;
     justify-content: center;
     gap: 6px;
+    font-size: clamp(12px, 2.5vw, 18px);
     /* espacio entre el checkbox - el texto */
   }
   
@@ -69,6 +84,7 @@
     color: white;
     border-radius: 10px 10px 10px 10px;
     font-family: 'Nokora', sans-serif;
+    font-size: clamp(12px, 2.5vw, 18px);
 
   }
   
