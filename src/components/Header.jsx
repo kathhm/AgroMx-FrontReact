@@ -1,3 +1,5 @@
+import { NavLink } from "react-router-dom";
+
 function Header() {
 	return (
 		<>
@@ -5,11 +7,11 @@ function Header() {
 				{/* <!-- Barra superior con el logo, búsqueda y los iconos --> */}
 				<div className="row align-items-center">
 					{/* <!-- Logo --> */}
-					<div className="col-3 col-md-2 d-flex justify-content-start">
+					<div className="col-3 col-md-2 d-flex justify-content-center">
 						<img
 							className="img-fluid p-1"
 							id="logo"
-							src="/images/logo.png"
+							src="/images/logVectorizado2.svg"
 							alt="Logo AgroMX"
 						/>
 					</div>
@@ -43,12 +45,12 @@ function Header() {
 					{/* <!-- Carrito y Avatar --> */}
 					<div className="col-4 col-md-4 d-flex justify-content-end align-items-end mt-2 p-4 mt-md-0">
 						<i className="bi bi-basket2 mx-5">
-						<a
+						<NavLink
 							className="nav-link active"
 							aria-current="page"
-							href="/public/sources/pages/carrito/carrito.html"
+							to={"/Carrito"}
 						>
-						</a>
+						</NavLink>
 						</i>
 						<i className="bi bi-person-circle me-4"></i>
 					</div>
@@ -57,9 +59,9 @@ function Header() {
 
 			<nav className="navbar navbar-expand-lg navbar-light">
 				<div className="container-fluid">
-					<a className="navbar-brand" id="linkToPage" href="/index.html">
+					<NavLink className="navbar-brand" id="linkToPage" to={"/Inicio"}>
 						Inicio
-					</a>
+					</NavLink>
 					<button
 						className="navbar-toggler"
 						type="button"
@@ -77,67 +79,41 @@ function Header() {
 					>
 						<ul className="navbar-nav me-auto mb-2 mb-lg-0">
 							<li className="nav-item">
-								<a
+								<NavLink
 									className="nav-link active"
 									id="linkToPage"
 									aria-current="page"
-									href="/public/sources/pages/catalogo/catalogo.html"
+									to={"/Catalogo"}
 								>
 									Catálogo
-								</a>
+								</NavLink>
 							</li>
 							<li className="nav-item">
-								<a
+								<NavLink
 									className="nav-link"
 									id="linkToPage"
-									href="/public/sources/pages/sobreNosotrosAgroMX/sobreNosotrosAgroMX.html"
+									to={"/SobreNosotros"}
 								>
 									Sobre Nosotros
-								</a>
-							</li>
-							<li className="nav-item dropdown">
-								<a
-									className="nav-link dropdown-toggle"
-									id = "linkToPage"
-									href="#"
-									role="button"
-									data-bs-toggle="dropdown"
-									aria-expanded="false"
-								>
-									Comunidad
-								</a>
-								<ul className="dropdown-menu">
-									<li>
-										<a
-											className="dropdown-item text-dark"
-											id="linkToPage"
-											href="#"
-										>
-											Recetas
-										</a>
-									</li>
-									<li>
-										<hr className="dropdown-divider" />
-									</li>
-									<li>
-										<a
-											className="dropdown-item text-dark"
-											id="linkToPage"
-											href="/public/sources/pages/comunidad/comunidad.html"
-										>
-											Comunidad
-										</a>
-									</li>
-								</ul>
+								</NavLink>
 							</li>
 							<li className="nav-item">
-								<a
+								<NavLink
+									className="nav-link"
+									id = "linkToPage"
+									to={"/Comunidad"}
+								>
+									Comunidad
+								</NavLink>
+							</li>
+							<li className="nav-item">
+								<NavLink
 									className="nav-link"
 									id="linkToPage"
-									href="/public/sources/pages/contacto/contacto.html"
+									to={"/Registro"}	
 								>
 									Regístrate
-								</a>
+								</NavLink>
 							</li>
 						</ul>
 					</div>
