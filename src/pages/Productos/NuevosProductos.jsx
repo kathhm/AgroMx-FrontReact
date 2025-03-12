@@ -210,7 +210,6 @@ const NuevosProductos = () => {
 
           <Link
             to="/Catalogo" 
-            className="btn btn-primary w-100 col-8 mx-auto"
           >
             <button type ="button">
             Ver catálogo
