@@ -10,7 +10,7 @@ const CarruselRecetas = () => {
             <div className="carousel-item active carousel-main">
               <div className="slide-content slide-bg-main">
                 <img
-                  src="./public/images/hamburguesa-coliflor.png"
+                  src="/images/hamburguesa-coliflor.png"
                   className="carousel-image"
                   alt="Hamburguesa de coliflor vegana"
                 />
@@ -25,7 +25,7 @@ const CarruselRecetas = () => {
             <div className="carousel-item carousel-left">
               <div className="slide-content slide-bg-left">
                 <img
-                  src="./public/images/ceviche-mango.png"
+                  src="/images/ceviche-mango.png"
                   className="carousel-image"
                   alt="Ceviche de mango"
                 />
@@ -41,7 +41,7 @@ const CarruselRecetas = () => {
             <div className="carousel-item carousel-right">
               <div className="slide-content slide-bg-right">
                 <img
-                  src="./public/images/tortitas-calabaza.png" 
+                  src="/images/tortitas-calabaza.png" 
                   className="carousel-image"
                   alt="Tortitas de calabaza"
                 />
