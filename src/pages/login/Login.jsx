@@ -83,10 +83,10 @@ function Login() {
 					<h1 className="titulo text-center">Inicia sesión</h1> <hr />
 					<div className="container-fluid justify-content-center d-flex">
 						<form
-							className="form col-8 row"
+							className="form col-8 row justify-content-center"
 						>
 							<label
-								className="etiqueta me-2 form-label text-align-start"
+								className="etiqueta me-2 form-label text-start"
 								htmlFor="correo"
 							>
 								Correo electronico:
@@ -101,7 +101,7 @@ function Login() {
 							/>
 							<br />
 							<label
-								className="etiqueta me-2 form-label text-align-start"
+								className="etiqueta me-2 form-label text-start"
 								htmlFor="contraseña"
 							>
 								Contraseña:
