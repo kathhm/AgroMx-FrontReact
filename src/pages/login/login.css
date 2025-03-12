@@ -1,0 +1,20 @@
+.login-card {
+    border-radius: 30px;
+    background-color: antiquewhite;
+    
+}
+
+.titulo{
+    font-family: gabriela;
+
+}
+
+.etiqueta{
+    font-family: mako;
+
+}
+
+::placeholder {
+    color: #000;
+    font-family: mako;
+}

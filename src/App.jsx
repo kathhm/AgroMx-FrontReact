@@ -15,8 +15,7 @@ import Inicio from './pages/Inicio'
 import NuevosProductos from './pages/Productos/NuevosProductos'
 import Registro from './pages/Registro/Registro'
 import { SobreNosotros } from './pages/SobreNosotros/SobreNosotros'
-
-
+import Login from './pages/login/Login'
 
 function App() {
 
@@ -24,7 +23,9 @@ function App() {
     <>
       <BrowserRouter>
         <Header></Header>
+
         <Routes>
+          <Route path="/Login" element= {<Login/>}></Route>
           <Route path="/SobreNosotros" element={<SobreNosotros />} />
           <Route path="/Inicio" element={<Inicio />}></Route>
           <Route path="/" element={<Inicio />}></Route>
@@ -35,9 +36,6 @@ function App() {
           <Route path="/Registro" element={<Registro />}></Route>
           <Route path="/DetallesProducto" element={<DetallesProducto />} />
           <Route path="/DeveloperTeam" element={<DeveloperTeam />} />
-
-
-
         </Routes>
 
         <Footer></Footer>
