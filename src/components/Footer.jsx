@@ -17,7 +17,7 @@ function Footer() {
       <div className="container-fluid text-white py-4 final-footer">
         <div className="row">
           {/* {Necesitas Ayuda} */}
-          <div className="col-4 col-md-3 col-lg-3 text-center px-1">
+          <div className="col-12 col-md-3 col-lg-3 text-center px-1">
             <h5>¿Necesitas ayuda?</h5>
             <p className="mb-1">Tel. 555 324 6353</p>
             <p className="mb-1 none">agromx.soporte@gmail.com</p>
@@ -26,7 +26,7 @@ function Footer() {
           </div>
 
           {/* {Acerca de nosotros} */}
-          <div className="col-4 col-md-3 col-lg-3 text-center">
+          <div className="col-12 col-md-3 col-lg-3 text-center">
             <NavLink
               to={"/DeveloperTeam"}
               style={{ color: "white", textDecoration: "none" }}
@@ -42,7 +42,7 @@ function Footer() {
           </div>
 
           {/* Registráte */}
-          <div className="col-4 col-md-3 col-lg-3 text-center">
+          <div className="col-12 col-md-3 col-lg-3 text-center">
             <NavLink
               to={"/Registro"}
               style={{ color: "white", textDecoration: "none" }}
