@@ -207,12 +207,12 @@ const NuevosProductos = () => {
             Agregar producto
           </button>
 
-          <Link
+          <a
             href="/Catalogo" 
             className="btn btn-primary w-100 col-8 mx-auto"
           >
             Ver catálogo
-          </Link>
+          </a>
         </form>
       </div>
 
