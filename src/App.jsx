@@ -15,8 +15,6 @@ import Inicio from './pages/Inicio'
 import NuevosProductos from './pages/Productos/NuevosProductos'
 import Registro from './pages/Registro/Registro'
 import { SobreNosotros } from './pages/SobreNosotros/SobreNosotros'
-import Inicio from './pages/Inicio';
-import Registro from './pages/Registro/Registro';
 import Login from './pages/login/Login'
 
 function App() {
@@ -25,7 +23,7 @@ function App() {
     <>
       <BrowserRouter>
         <Header></Header>
-        
+
         <Routes>
           <Route path="/Login" element= {<Login/>}></Route>
           <Route path="/SobreNosotros" element={<SobreNosotros />} />
