@@ -153,3 +153,8 @@ footer p {
   color: #000;
   /* Cambia el color del icono para verlo claramente */
 }
+
+.item-carrito{
+  font-size: 1.5em;
+  color: aqua;
+}

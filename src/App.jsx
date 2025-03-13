@@ -15,13 +15,16 @@ import Inicio from './pages/Inicio'
 import NuevosProductos from './pages/Productos/NuevosProductos'
 import Registro from './pages/Registro/Registro'
 import { SobreNosotros } from './pages/SobreNosotros/SobreNosotros'
+import CarritoProvider from './pages/carrito'
 
 
 
 function App() {
 
+
   return (
     <>
+    <CarritoProvider>
       <BrowserRouter>
         <Header></Header>
         <Routes>
@@ -42,6 +45,7 @@ function App() {
 
         <Footer></Footer>
       </BrowserRouter>
+      </CarritoProvider>
     </>
   )
 }
