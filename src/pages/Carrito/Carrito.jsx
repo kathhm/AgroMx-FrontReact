@@ -2,6 +2,8 @@
 import React, { useState } from "react";
 // import "../../index.css";
 import "bootstrap/dist/css/bootstrap.min.css";
+import style from "./carrito.module.css";
+style
 React
 
 const Carrito = () => {
