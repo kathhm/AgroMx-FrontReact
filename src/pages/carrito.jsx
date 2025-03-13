@@ -9,7 +9,17 @@ const CarritoProvider = ({ children }) => {
   const [countProducts, setCountProducts] = useState(0);
 
   const agregarAlCarrito = (producto) => {
-    setCarrito([...carrito, producto]);
+    const productoExistente = carrito.find((item) => item.id === producto.id);
+  
+    if (productoExistente) {
+      const carritoActualizado = carrito.map((item) =>
+        item.id === producto.id ? { ...item, cantidad: item.cantidad + 1 } : item
+      );
+      setCarrito(carritoActualizado);
+    } else {
+      setCarrito([...carrito, { ...producto, cantidad: 1 }]);
+    }
+  
     setCountProducts(countProducts + 1);
     setTotal(total + producto.precio);
   };
