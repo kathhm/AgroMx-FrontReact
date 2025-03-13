@@ -50,7 +50,7 @@ function Header() {
 					</NavLink>
 					{user ? (
 						<img
-							src={user.picture}
+							src={user.picture || "/images/default-profile.png"}
 							alt="Foto de perfil"
 							className="rounded-circle"
 							width="40"

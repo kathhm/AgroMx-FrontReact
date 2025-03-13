@@ -1,5 +1,5 @@
 import "./login.css";
-import { jwtDecode } from "jwt-decode";
+import {jwtDecode} from "jwt-decode";
 import { useEffect, useContext, useState } from "react";
 import { UserContext } from "../../context/UserContext";
 import { useNavigate } from "react-router-dom";
@@ -16,7 +16,7 @@ function Login() {
 		const decodedToken = jwtDecode(token);
 		console.log(decodedToken);
 		setUser(decodedToken);
-		// Aquí puedes manejar la información del usuario decodificada
+		localStorage.setItem("userData", JSON.stringify(decodedToken)); // Guardar en localStorage
 		setTimeout(() => {
 			navigate("/Inicio");
 		}, 2000); // Retraso de 2 segundos antes de redirigir
@@ -24,91 +24,58 @@ function Login() {
 
 	useEffect(() => {
 		window.handleGoogleResponse = handleGoogleResponse;
+		const storedUser = JSON.parse(localStorage.getItem("userData"));
+		if (storedUser) {
+			setUser(storedUser);
+		}
 	}, []);
 
 	const handleEmailChange = (e) => {
 		const value = e.target.value;
-        setEmail(value);
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        if (!emailRegex.test(value)) {
-            setError("Correo electrónico no válido");
-        } else {
-            setError("");
-        }
-    };
+		setEmail(value);
+		const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+		if (!emailRegex.test(value)) {
+			setError("Correo electrónico no válido");
+		} else {
+			setError("");
+		}
+	};
 
 	const handlePasswordChange = (e) => {
 		setPassword(e.target.value);
 	};
 
-	// Guardar usuario en localStorage
-const saveUser = (user) => {
-    const users = JSON.parse(localStorage.getItem("users")) || [];
-    users.push(user);
-    localStorage.setItem("users", JSON.stringify(users));
-};
+	const handleLogin = () => {
+		const users = JSON.parse(localStorage.getItem("userData")) || [];
+		const user = users.find(
+			(u) => u.email === email && u.password === password
+		);
 
-// Validar campos vacíos
-const validateFields = () => {
-    if (email.trim() === "" || password.trim() === "") {
-        setError("Todos los campos son obligatorios");
-        return false;
-    }
-    return true;
-};
-
-// Manejar envío del formulario
-const handleSubmit = (e) => {
-    e.preventDefault();
-    if (!validateFields()) return;
-
-    saveUser({ email, password });
-    setError("");
-    alert("Usuario guardado en localStorage");
-};
-
-// Iniciar sesión
-const handleLogin = () => {
-    const users = JSON.parse(localStorage.getItem("users")) || [];
-    const user = users.find(
-        (u) => u.email === email && u.password === password
-    );
-
-    if (user) {
-        setUser(user);
-        alert("Inicio de sesión exitoso");
-        setTimeout(() => {
-            navigate("/Inicio");
-        }, 2000);
-    } else {
-        setError("Correo electrónico o contraseña incorrectos");
-    }
-};
-
-// Restaurar estado al cargar la página
-useEffect(() => {
-    const storedUser = JSON.parse(localStorage.getItem("user"));
-    if (storedUser) {
-        setUser(storedUser);
-    }
-}, []);
-
+		if (user) {
+			setUser(user);
+			localStorage.setItem("userData", JSON.stringify(user)); // Guardar en localStorage
+			alert("Inicio de sesión exitoso");
+			setTimeout(() => {
+				navigate("/Inicio");
+			}, 2000);
+		} else {
+			setError("Correo electrónico o contraseña incorrectos");
+		}
+	};
 
 	return (
 		<main className="container">
 			{user ? (
 				<div className="container login-card my-5 p-5">
 					<h1 className="titulo text-center">
-						Bienvenido, {user.name}
+						Bienvenido, {user.nombre || user.name}
 					</h1>
 				</div>
 			) : (
 				<div className="container login-card my-5 p-5">
 					<h1 className="titulo text-center">Inicia sesión</h1> <hr />
 					<div className="container-fluid justify-content-center d-flex">
-						<form
-							className="form col-8 row justify-content-center"
-						>
+						<form className="form col-8 row justify-content-center">
 							<label
 								className="etiqueta me-2 form-label text-start"
 								htmlFor="correo"
@@ -145,13 +112,6 @@ useEffect(() => {
 							>
 								Inicia sesión
 							</button>
-							{/* <button
-								className="btn btn-secondary w-100 addToCartBtn mt-3"
-								type="button"
-								onClick={handleLogin}
-							>
-								Iniciar sesión
-							</button> */}
 							{error && (
 								<p className="text-danger mt-3">{error}</p>
 							)}
