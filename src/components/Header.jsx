@@ -1,6 +1,11 @@
+import { useContext } from "react";  // Solo una importación de useContext
+import { UserContext } from "../context/UserContext";
 import { NavLink } from "react-router-dom";
+import { CarritoContext } from "../pages/carrito";  // Asegúrate de que esta línea esté bien
+
 
 function Header() {
+	const { countProducts } = useContext(CarritoContext);
 	return (
 		<>
 			<div className="container-fluid">
@@ -44,15 +49,21 @@ function Header() {
 
 					{/* <!-- Carrito y Avatar --> */}
 					<div className="col-4 col-md-4 d-flex justify-content-end align-items-end mt-2 p-4 mt-md-0">
-						<i className="bi bi-basket2 mx-5">
-						<NavLink
-							className="nav-link active"
-							aria-current="page"
-							to={"/Carrito"}
-						>
-						</NavLink>
-						</i>
-						<i className="bi bi-person-circle me-4"></i>
+					<NavLink to={"/Carrito"} className="position-relative">
+					
+						<i className="bi bi-basket2 mx-5 position-relative"></i>
+						<p style={{fontSize:"0.75rem", textAlign:"center"}}>Carrito</p>
+						{countProducts > 0 && (
+							<span className="position-absolute badge rounded-pill bg-danger"
+							style={{ fontSize: "0.75rem", top: "-5px", right: "50px", transform: "translate(50%, -50%)" }}>
+								{countProducts}
+							</span>
+						)}
+					</NavLink>
+					<NavLink to={"/Login"}>
+						<i className="bi bi-person-circle me-4 mx-4"></i>
+						<p style={{fontSize:"0.75rem", textAlign:"center"}}>Iniciar sesión</p>
+					</NavLink>
 					</div>
 				</div>
 			</div>

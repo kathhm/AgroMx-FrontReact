@@ -16,33 +16,38 @@ import Inicio from './pages/Inicio'
 import NuevosProductos from './pages/Productos/NuevosProductos'
 import Registro from './pages/Registro/Registro'
 import { SobreNosotros } from './pages/SobreNosotros/SobreNosotros'
-
-
+import CarritoProvider from './pages/carrito'
+import Login from './pages/login/Login'
 
 function App() {
 
+
   return (
     <>
-      <BrowserRouter>
-        <Header></Header>
-        <Routes>
-          <Route path="/SobreNosotros" element={<SobreNosotros />} />
-          <Route path="/Inicio" element={<Inicio />}></Route>
-          <Route path="/" element={<Inicio />}></Route>
-          <Route path="/Comunidad" element={<Comunidad />} />
-          <Route path="/NuevosProductos" element={<NuevosProductos />}></Route>
-          <Route path="/catalogo" element={<Catalogo />} />
-          <Route path="/producto/:id" element={<DetallesProducto />} />
-          <Route path="/Registro" element={<Registro />}></Route>
-          <Route path="/DetallesProducto" element={<DetallesProducto />} />
-          <Route path="/DeveloperTeam" element={<DeveloperTeam />} />
-          <Route path="/Carrito" element={<Carrito />} />
+      <CarritoProvider>
+        <BrowserRouter>
+          <Header></Header>
+
+          <Routes>
+            <Route path="/Login" element={<Login />}></Route>
+            <Route path="/SobreNosotros" element={<SobreNosotros />} />
+            <Route path="/Inicio" element={<Inicio />}></Route>
+            <Route path="/" element={<Inicio />}></Route>
+            <Route path="/Comunidad" element={<Comunidad />} />
+            <Route path="/NuevosProductos" element={<NuevosProductos />}></Route>
+            <Route path="/catalogo" element={<Catalogo />} />
+            <Route path="/producto/:id" element={<DetallesProducto />} />
+            <Route path="/Registro" element={<Registro />}></Route>
+            <Route path="/DetallesProducto" element={<DetallesProducto />} />
+            <Route path="/DeveloperTeam" element={<DeveloperTeam />} />
+            <Route path="/Carrito" element={<Carrito />} />
 
 
-        </Routes>
+          </Routes>
 
-        <Footer></Footer>
-      </BrowserRouter>
+          <Footer></Footer>
+        </BrowserRouter>
+      </CarritoProvider>
     </>
   )
 }

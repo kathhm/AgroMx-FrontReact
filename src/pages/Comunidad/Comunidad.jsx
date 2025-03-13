@@ -81,37 +81,37 @@ function Comunidad() {
       <div className="reseñas-lista">
         <div className="reseña-card">
           <h4>Usuario: Juan Pérez Torres</h4>
-          <img src="public/images/Juan.jpg" alt="Juan Pérez Torres" />
+          <img src="/images/Juan.jpg" alt="Juan Pérez Torres" />
           <div className="estrellas">⭐⭐⭐⭐⭐</div>
           <p>"El melón es increíblemente dulce y jugoso. Definitivamente lo compraré de nuevo."</p>
         </div>
         <div className="reseña-card">
           <h4>Usuario: María López Ceballos</h4>
-          <img src="public/images/mariaa.jpg" alt="María López" />
+          <img src="/images/mariaa.jpg" alt="María López" />
           <div className="estrellas">⭐⭐⭐⭐</div>
           <p>"El pimiento rojo tiene un sabor delicioso y fresco. Perfecto para ensaladas y salsas."</p>
         </div>
         <div className="reseña-card">
           <h4>Usuario: Carlos Gómez Reyes</h4>
-          <img src="public/images/Carlos.jpg" alt="Carlos Gómez" />
+          <img src="/images/Carlos.jpg" alt="Carlos Gómez" />
           <div className="estrellas">⭐⭐⭐⭐⭐</div>
           <p>"El chile chipotle seco tiene el mejor aroma y sabor ahumado que he probado."</p>
         </div>
         <div className="reseña-card">
           <h4>Usuario: Ana Ramírez Villalba</h4>
-          <img src="public/images/Ana.jpg" alt="Ana Ramírez" />
+          <img src="/images/Ana.jpg" alt="Ana Ramírez" />
           <div className="estrellas">⭐⭐⭐⭐</div>
           <p>"Las semillas de chía son de excelente calidad. Perfectas para mis batidos y postres."</p>
         </div>
         <div className="reseña-card">
           <h4>Usuario: Ricardo Fernández Mendoza</h4>
-          <img src="public/images/Ricardo.jpg" alt="Ricardo Fernández" />
+          <img src="/images/Ricardo.jpg" alt="Ricardo Fernández" />
           <div className="estrellas">⭐⭐⭐⭐⭐</div>
           <p>"El aguacate está en su punto perfecto de maduración. Muy cremoso y delicioso."</p>
         </div>
         <div className="reseña-card">
           <h4>Usuario: Sofía Espinoza Gil </h4>
-          <img src="public/images/Sofia.jpg" alt="Sofía Espinoza" />
+          <img src="/images/Sofia.jpg" alt="Sofía Espinoza" />
           <div className="estrellas">⭐⭐⭐⭐⭐</div>
           <p>"Las fresas están súper dulces y frescas, perfectas para mis postres."</p>
         </div>

@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
+
 import "./NuevosProductos.css";
 
 const NuevosProductos = () => {
@@ -207,12 +209,10 @@ const NuevosProductos = () => {
             Agregar producto
           </button>
 
-          <a
-            href="/Catalogo"
-            className="btn btn-primary w-100 col-8 mx-auto"
-          >
-            Ver catálogo
-          </a>
+
+         <Link to="/catalogo" className="btn btn-primary w-100 col-8 mx-auto">
+  Ver catálogo
+</Link>
         </form>
       </div>
 

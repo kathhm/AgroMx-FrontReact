@@ -17,8 +17,8 @@ function Footer() {
       <div className="container-fluid text-white py-4 final-footer">
         <div className="row">
           {/* {Necesitas Ayuda} */}
-          <div className="col-4 col-md-3 col-lg-3 text-center px-1">
-            <h5>¿Necesitas ayuda?</h5>
+          <div className="col-12 col-md-6 col-lg-3 text-center px-1">
+            <h5 className="mt-1">¿Necesitas ayuda?</h5>
             <p className="mb-1">Tel. 555 324 6353</p>
             <p className="mb-1 none">agromx.soporte@gmail.com</p>
             <p className="mb-0">Horarios de atención:</p>
@@ -26,12 +26,12 @@ function Footer() {
           </div>
 
           {/* {Acerca de nosotros} */}
-          <div className="col-4 col-md-3 col-lg-3 text-center">
+          <div className="col-12 col-md-6 col-lg-3 text-center">
             <NavLink
               to={"/DeveloperTeam"}
               style={{ color: "white", textDecoration: "none" }}
             >
-              <h5>Developer Team</h5>
+              <h5 className="mt-1">Developer Team</h5>
             </NavLink>
             <NavLink
               to={"/NuevosProductos"}
@@ -39,22 +39,24 @@ function Footer() {
             >
               <h5>Nuevos Productos</h5>
             </NavLink>
-          </div>
-
-          {/* Registráte */}
-          <div className="col-4 col-md-3 col-lg-3 text-center">
+            {/* Registráte */}
             <NavLink
               to={"/Registro"}
               style={{ color: "white", textDecoration: "none" }}
             >
               <h5>Regístrate</h5>
             </NavLink>
-            <h4 className="fw-bold mt-3 p-1">AgroMX </h4>
+          </div>
+
+
+          <div className="col-12 col-md-6 col-lg-3 text-center">
+
+            <h4 className="fw-bold mt-1 p-1">AgroMX </h4>
             <i className="fa-regular fa-copyright fa-xl"></i>
           </div>
 
           {/* <!-- Logos de redes sociales --> */}
-          <div className="col-12 col-md-3 col-lg-3 text-center">
+          <div className="col-12 col-md-6 col-lg-3 text-center">
             <div className="d-flex justify-content-center align-items-center">
               <div className="text-center mx-3 my-4">
                 <NavLink
