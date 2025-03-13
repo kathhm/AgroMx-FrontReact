@@ -1,72 +1,70 @@
-
-import React, { useState } from "react";
-// import "../../index.css";
+import React, { useContext } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-React
+import { CarritoContext } from "../carrito";
 
 const Carrito = () => {
-  const [productos, setProductos] = useState([
-    { id: 1, nombre: "Manzana", precio: 145, cantidad: 1, img: "//mercadoacasa.mx/cdn/shop/products/2502808-00-CH515Wx515H_7ddf79a2-30aa-4d06-829f-b896173133a0_grande.jpg?v=1588641604" },
-    { id: 2, nombre: "Linaza", precio: 145, cantidad: 1, img: "https://m.media-amazon.com/images/I/A1irhFW9O8L.jpg" },
-    { id: 3, nombre: "Tomate", precio: 240, cantidad: 1, img: "https://www.centralenlinea.com/images/thumbs/005/0059750_tomate-verde-grande-premium-sin-cascara_550.png" },
-  ]);
+  const { carrito, setCarrito, total, countProducts } = useContext(CarritoContext);
 
   const envio = 15;
   const descuento = 0.2; // 20%
 
-
+  // Función para actualizar la cantidad de un producto
   const actualizarCantidad = (id, cambio) => {
-    setProductos((prev) =>
+    setCarrito((prev) =>
       prev.map((prod) =>
         prod.id === id ? { ...prod, cantidad: Math.max(1, prod.cantidad + cambio) } : prod
       )
     );
   };
 
+  // Función para eliminar un producto del carrito
   const eliminarProducto = (id) => {
-    setProductos(productos.filter((prod) => prod.id !== id));
+    setCarrito(carrito.filter((prod) => prod.id !== id));
   };
 
-
-  const subtotal = productos.reduce((acc, prod) => acc + prod.precio * prod.cantidad, 0);
+  const subtotal = carrito.reduce((acc, prod) => acc + prod.precio * prod.cantidad, 0);
   const descuentoAplicado = subtotal * descuento;
-  const total = subtotal - descuentoAplicado + envio;
+  const totalPagar = subtotal - descuentoAplicado + envio;
 
   return (
     <div className="container mt-5">
-      <h2 className="text-center text-success">Tu carrito</h2>
+      <h2 className="text-center text-success">Tu carrito ({countProducts} productos)</h2>
 
       <div className="row">
         {/* Lista de productos */}
         <div className="col-md-7">
           <div className="card p-3">
-            {productos.map((prod) => (
-              <div key={prod.id} className="d-flex align-items-center border-bottom pb-2 mb-2">
-                <img src={prod.img} alt={prod.nombre} className="me-3" style={{ width: "60px" }} />
-                <div className="flex-grow-1">
-                  <h5 className="mb-1">{prod.nombre}</h5>
-                  <p className="mb-0 fw-bold">${prod.precio}</p>
-                </div>
-                <div className="d-flex align-items-center">
-                  <button
-                    className="btn btn-outline-secondary btn-sm"
-                    onClick={() => actualizarCantidad(prod.id, -1)}
-                  >
-                    −
+            {carrito.length === 0 ? (
+              <p className="text-center">Tu carrito está vacío.</p>
+            ) : (
+              carrito.map((prod) => (
+                <div key={prod.id} className="d-flex align-items-center border-bottom pb-2 mb-2">
+                  <img src={prod.imagen} alt={prod.nombre} className="me-3" style={{ width: "60px" }} />
+                  <div className="flex-grow-1">
+                    <h5 className="mb-1">{prod.nombre}</h5>
+                    <p className="mb-0 fw-bold">${prod.precio}</p>
+                  </div>
+                  <div className="d-flex align-items-center">
+                    <button
+                      className="btn btn-outline-secondary btn-sm"
+                      onClick={() => actualizarCantidad(prod.id, -1)}
+                    >
+                      −
+                    </button>
+                    <span className="mx-2">{prod.cantidad}</span>
+                    <button
+                      className="btn btn-outline-secondary btn-sm"
+                      onClick={() => actualizarCantidad(prod.id, 1)}
+                    >
+                      +
+                    </button>
+                  </div>
+                  <button className="btn btn-danger btn-sm ms-3" onClick={() => eliminarProducto(prod.id)}>
+                    Eliminar
                   </button>
-                  <span className="mx-2">{prod.cantidad}</span>
-                  <button
-                    className="btn btn-outline-secondary btn-sm"
-                    onClick={() => actualizarCantidad(prod.id, 1)}
-                  >
-                    +
-                  </button>
                 </div>
-                <button className="btn btn-danger btn-sm ms-3" onClick={() => eliminarProducto(prod.id)}>
-                  Eliminar
-                </button>
-              </div>
-            ))}
+              ))
+            )}
           </div>
         </div>
 
@@ -85,7 +83,7 @@ const Carrito = () => {
             </p>
             <hr />
             <h5 className="d-flex justify-content-between">
-              <span>Total:</span> <span className="fw-bold">${total.toFixed(0)}</span>
+              <span>Total:</span> <span className="fw-bold">${totalPagar.toFixed(0)}</span>
             </h5>
 
             <div className="input-group my-3">
