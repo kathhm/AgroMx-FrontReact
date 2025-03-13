@@ -27,8 +27,15 @@ function Login() {
 	}, []);
 
 	const handleEmailChange = (e) => {
-		setEmail(e.target.value);
-	};
+		const value = e.target.value;
+        setEmail(value);
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(value)) {
+            setError("Correo electrónico no válido");
+        } else {
+            setError("");
+        }
+    };
 
 	const handlePasswordChange = (e) => {
 		setPassword(e.target.value);
@@ -100,17 +107,17 @@ useEffect(() => {
 					<h1 className="titulo text-center">Inicia sesión</h1> <hr />
 					<div className="container-fluid justify-content-center d-flex">
 						<form
-							className="form col-8 row"
+							className="form col-8 row justify-content-center"
 						>
 							<label
-								className="etiqueta me-2 form-label text-align-start"
+								className="etiqueta me-2 form-label text-start"
 								htmlFor="correo"
 							>
 								Correo electronico:
 							</label>
 							<input
 								className="form-control"
-								type="text"
+								type="email"
 								placeholder="example@dominio.com"
 								id="correo"
 								value={email}
@@ -118,7 +125,7 @@ useEffect(() => {
 							/>
 							<br />
 							<label
-								className="etiqueta me-2 form-label text-align-start"
+								className="etiqueta me-2 form-label text-start"
 								htmlFor="contraseña"
 							>
 								Contraseña:
@@ -134,7 +141,7 @@ useEffect(() => {
 							<button
 								className="btn btn-primary w-100 addToCartBtn mt-3"
 								type="button"
-                onClick={handleLogin}
+								onClick={handleLogin}
 							>
 								Inicia sesión
 							</button>

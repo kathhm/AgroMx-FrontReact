@@ -2,7 +2,6 @@ import { useContext } from "react";
 import { UserContext } from "../context/UserContext";
 import { NavLink } from "react-router-dom";
 
-
 function Header() {
 	const { user } = useContext(UserContext);
 
@@ -42,13 +41,13 @@ function Header() {
 				</div>
 
 				<div className="col-4 col-md-4 d-flex justify-content-end align-items-end mt-2 p-4 mt-md-0">
-					<i className="bi bi-basket2 mx-5">
-						<NavLink
-							className="nav-link active"
-							aria-current="page"
-							to={"/Carrito"}
-						></NavLink>
-					</i>
+					<NavLink
+						className="nav-link active"
+						aria-current="page"
+						to={"/Carrito"}
+					>
+						<i className="bi bi-basket2 mx-5"></i>
+					</NavLink>
 					{user ? (
 						<img
 							src={user.picture}
@@ -58,7 +57,13 @@ function Header() {
 							height="40"
 						/>
 					) : (
-						<i className="bi bi-person-circle me-4"></i>
+						<NavLink
+							className="nav-link active"
+							aria-current="page"
+							to={"/Login"}
+						>
+							<i className="bi bi-person-circle me-4"></i>
+						</NavLink>
 					)}
 				</div>
 			</div>
@@ -107,40 +112,14 @@ function Header() {
 									Sobre Nosotros
 								</NavLink>
 							</li>
-							<li className="nav-item dropdown">
+							<li className="nav-item">
 								<NavLink
-									className="nav-link dropdown-toggle"
+									className="nav-link"
 									id="linkToPage"
 									to={"/Comunidad"}
-									role="button"
-									data-bs-toggle="dropdown"
-									aria-expanded="false"
 								>
 									Comunidad
 								</NavLink>
-								<ul className="dropdown-menu">
-									<li>
-										<NavLink
-											className="dropdown-item text-dark"
-											id="linkToPage"
-											to={"/Comunidad"}
-										>
-											Recetas
-										</NavLink>
-									</li>
-									<li>
-										<hr className="dropdown-divider" />
-									</li>
-									<li>
-										<NavLink
-											className="dropdown-item text-dark"
-											id="linkToPage"
-											to={"/Comunidad"}
-										>
-											Comunidad
-										</NavLink>
-									</li>
-								</ul>
 							</li>
 							<li className="nav-item">
 								<NavLink
