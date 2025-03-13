@@ -32,13 +32,13 @@ function Login() {
 
 	const handleEmailChange = (e) => {
 		const value = e.target.value;
-		setEmail(value);
 		const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 		if (!emailRegex.test(value)) {
 			setError("Correo electrónico no válido");
 		} else {
 			setError("");
 		}
+		setEmail(value);
 	};
 
 	const handlePasswordChange = (e) => {
