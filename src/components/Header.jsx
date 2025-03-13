@@ -1,7 +1,7 @@
+import { useContext } from "react";  // Solo una importación de useContext
+import { UserContext } from "../context/UserContext";
 import { NavLink } from "react-router-dom";
-// importamos el contexto del carrito
-import { useContext } from "react";
-import { CarritoContext } from "../pages/carrito";
+import { CarritoContext } from "../pages/carrito";  // Asegúrate de que esta línea esté bien
 
 
 function Header() {
@@ -49,20 +49,16 @@ function Header() {
 
 					{/* <!-- Carrito y Avatar --> */}
 					<div className="col-4 col-md-4 d-flex justify-content-end align-items-end mt-2 p-4 mt-md-0">
-					<NavLink to={"/carrito"} className="position-relative">
-						<i className="bi bi-basket2 mx-5"></i>
-						<p style={{fontSize:"0.8rem", textAlign: "center"}}>Carrito</p>
+					<NavLink to={"/Carrito"} className="position-relative">
+						<i className="bi bi-basket2 mx-5 position-relative"></i>
 						{countProducts > 0 && (
 							<span className="position-absolute badge rounded-pill bg-danger"
-							style={{ fontSize: "0.75rem", top: "-2px", right: "50px", transform: "translate(50%, -50%)" }}>
+								style={{ fontSize: "0.75rem", transform: "translate(-50%, -50%)" }}>
 								{countProducts}
 							</span>
 						)}
 					</NavLink>
-					<NavLink to={"/Registro"} className="position-relative">
-						<i className="bi bi-person-circle me-4 mx-4"></i>
-						<p style={{fontSize:"0.8rem", textAlign: "center"}}>Usuario</p>
-					</NavLink>
+						<i className="bi bi-person-circle me-4"></i>
 					</div>
 				</div>
 			</div>

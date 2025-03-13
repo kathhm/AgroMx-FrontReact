@@ -10,13 +10,13 @@ const Carrusel = () => {
           <div className="carousel-item active carousel-main">
             <div className="slide-content slide-bg-main">
               <img
-                src="./public/images/milpa-alta.png"
+                src="/images/milpa-alta.png"
                 className="carousel-image"
                 alt="Imagen principal"
               />
               <a className="subtitulo" href="https://gatoencerrado.news/2023/02/01/milpa-alta-el-territorio-campesino-de-cdmx-que-resiste-en-solidaridad-y-comercio-justo/"><h3 className="subtitulo">Milpa Alta, el territorio campesino de CDMX que resiste en solidaridad y comercio justo</h3></a>
               <p className="slide-text">
-                La producción agroecológica en el suelo de conservación de la Ciudad de México es una actividad realizada por familias y cooperativas que habitan principalmente las alcaldías de la región sureste de la metrópolis, quienes participan en mercados verdes y espacios de venta alternativos. Dentro de este escenario, una iniciativa de comercio justo ha destacado por ser también una red solidaria que promueve prácticas agroecológicas y restaurativas ambiental y socialmente.
+                La producción agroecológica en el suelo de conservación de la Ciudad de México es una actividad realizada por familias y cooperativas que habitan principalmente las alcaldías de la región sureste de la Ciudad. Una iniciativa de comercio justo que es también una red solidaria que promueve prácticas agroecológicas y restaurativas ambiental y socialmente.
               </p>
             </div>
           </div>
@@ -25,7 +25,7 @@ const Carrusel = () => {
           <div className="carousel-item carousel-left">
             <div className="slide-content slide-bg-left">
               <img
-                src="./public/images/romeritos.jpg"
+                src="/images/romeritos.jpg"
                 className="carousel-image"
                 alt="Imagen lateral izquierda"
               />
@@ -41,12 +41,12 @@ const Carrusel = () => {
           <div className="carousel-item carousel-right">
             <div className="slide-content slide-bg-right">
               <img
-                src="./public/images/chinampa1.jpg"
+                src="/images/chinampa1.jpg"
                 className="carousel-image"
                 alt="Imagen lateral derecha"
               />
               <a className="subtitulo" href="https://www.meteored.mx/noticias/actualidad/chinampas-el-ejemplo-de-agricultura-sostenible-que-ha-perdurado-durante-siglos-cultura-historia.html"><h3 className="subtitulo">Chinampas: el ejemplo de agricultura sostenible que ha perdurado durante siglos</h3></a>
-              <p className="slide-text ">Las chinampas son un antiguo sistema de cultivo desarrollado por los mexicas en el Valle de México. Este método consiste en crear islas flotantes sobre cuerpos de agua, aprovechando los recursos naturales del entorno para la producción de alimentos. Aunque su origen se remonta a tiempos prehispánicos, las chinampas siguen siendo una práctica agrícola vigente y relevante en la actualidad, por ejemplo en Tláhuac y Xochimilco.</p>
+              <p className="slide-text ">El método de las chinampas consiste en crear islas flotantes sobre cuerpos de agua, aprovechando los recursos naturales del entorno para la producción de alimentos. Aunque su origen se remonta a tiempos prehispánicos, las chinampas siguen siendo una práctica agrícola vigente y relevante en la actualidad, por ejemplo en Tláhuac y Xochimilco.</p>
             </div>
           </div>
         </div>
