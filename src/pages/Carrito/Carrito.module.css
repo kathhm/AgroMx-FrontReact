@@ -82,3 +82,27 @@
 h2 {
   margin-bottom: 3%;
 }
+
+.carrito-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+}
+
+.carrito-icon {
+  font-size: 1.5rem; /* Ajusta el tamaño si es necesario */
+  color: black; /* Hace que el ícono sea negro */
+}
+
+.carrito-text {
+  font-size: 0.75rem;
+  text-align: center;
+  text-decoration: none;
+  opacity: 0; /* Oculta el texto */
+  transition: opacity 0.3s ease-in-out; /* Efecto suave */
+}
+
+.carrito-container:hover .carrito-text {
+  opacity: 1; /* Muestra el texto al pasar el mouse */
+}
