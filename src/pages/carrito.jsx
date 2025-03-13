@@ -16,7 +16,7 @@ const CarritoProvider = ({ children }) => {
     setTotal(nuevoTotal);
     setCountProducts(nuevaCantidadTotal);
   }, [carrito]);
-
+  
   // Agregar producto al carrito
   const agregarAlCarrito = (producto) => {
     setCarrito((prevCarrito) => {
