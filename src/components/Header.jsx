@@ -1,5 +1,4 @@
 import { useContext } from "react";  // Solo una importación de useContext
-import { UserContext } from "../context/UserContext";
 import { NavLink } from "react-router-dom";
 import { CarritoContext } from "../pages/carrito";  // Asegúrate de que esta línea esté bien
 
