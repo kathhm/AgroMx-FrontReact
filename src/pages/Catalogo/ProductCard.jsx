@@ -25,11 +25,11 @@ const ProductCard = ({
             {producto.nombre}
           </h5>
           <p className="card-text">
-            <strong>Precio: ${producto.precio}</strong>
+            <strong>Precio: ${producto.precio}MXN</strong>
           </p>
         </div>
-        <div className="card-footer d-flex flex-column">
-          <button
+        <div className="card-footer d-flex flex-column m-0 p-0">
+          <button id="botones"
             className={`btn btn-primary w-100 ${style.addToCartBtn}`} // Usando el estilo de módulo
             onClick={(e) => {
               e.stopPropagation();

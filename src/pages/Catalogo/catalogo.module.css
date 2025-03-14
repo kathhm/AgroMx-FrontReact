@@ -16,3 +16,8 @@
 .card {
   border: white;
 }
+
+.card-footer {
+  margin: 0%;
+  padding: 0%;
+}

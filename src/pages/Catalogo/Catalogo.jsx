@@ -1,14 +1,16 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import style from "./catalogo.module.css";
 import ProductList from "./ProductList";
-style
+import { CarritoContext } from "../carrito";
+style;
 
 const Catalogo = () => {
   const [productos, setProductos] = useState([]);
   const navigate = useNavigate();
-  const [carrito, setCarrito] = useState([]);
-  const [cantidadCarrito, setCantidadCarrito] = useState(0);
+  const {agregarAlCarrito, countProducts } = useContext(CarritoContext);
+  // const [carrito, setCarrito] = useState([]);
+  // const [cantidadCarrito, setCantidadCarrito] = useState(0);
 
   useEffect(() => {
     const data = localStorage.getItem("productos");
@@ -54,10 +56,6 @@ const Catalogo = () => {
     );
   };
 
-  const agregarAlCarrito = (producto) => {
-    setCarrito([...carrito, producto]);
-    setCantidadCarrito(cantidadCarrito + 1);
-  };
 
   return (
     <div className="container my-5 text-center">
@@ -69,7 +67,7 @@ const Catalogo = () => {
         modificarProducto={modificarProducto}
         verDetalles={verDetalles}
       />
-      <p>Carrito: {cantidadCarrito}</p>
+      <p>Carrito: {countProducts}</p>
       <button className="btn btn-danger mb-5 w-75" onClick={eliminarTodos}>Eliminar Todos</button>
     </div>
   );
