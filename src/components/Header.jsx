@@ -1,11 +1,14 @@
+import "bootstrap/dist/js/bootstrap.bundle.min";
 import { useContext } from "react"; // Solo una importación de useContext
 import { NavLink } from "react-router-dom";
 import { UserContext } from "../context/UserContext";
-import { CarritoContext } from "../pages/carrito"; // Asegúrate de que esta línea esté bien
+
 
 function Header() {
   const { countProducts } = useContext(CarritoContext);
   const { user } = useContext(UserContext);
+
+
   return (
     <div className="container-fluid">
       <div className="row align-items-center">
@@ -45,8 +48,8 @@ function Header() {
         <div className="col-4 col-md-4 d-flex justify-content-end align-items-end mt-2 p-4 mt-md-0">
           <NavLink to={"/Carrito"} className="position-relative">
 
-            <i className="bi bi-basket2 mx-5 position-relative text-dark"></i>
-            <p style={{ fontSize: "0.75rem", textAlign: "center" }}>Carrito</p>
+            <i data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-placement="right" title="Carrito" className="bi bi-basket2 mx-5 position-relative text-dark"></i>
+            {/* <p style={{fontSize:"0.75rem", textAlign:"center"}}>Carrito</p> */}
             {countProducts > 0 && (
               <span className="position-absolute badge rounded-pill bg-danger"
                 style={{ fontSize: "0.75rem", top: "-5px", right: "50px", transform: "translate(50%, -50%)" }}>
@@ -66,8 +69,8 @@ function Header() {
                 width="40"
                 height="40"
               />
-            ) : (<i className="bi bi-person-circle me-4 mx-4 text-dark"></i>)}
-            <p style={{ fontSize: "0.75rem", textAlign: "center" }}>Iniciar sesión</p>
+            ) : (<i style={{ "--bs-tooltip-bg": "var(--bs-primary)" }} data-bs-toggle="tooltip" data-bs-placement="right" title="Iniciar sesión" className="bi bi-person-circle me-4 mx-4 text-dark"></i>)}
+            {/* <p style={{fontSize:"0.75rem", textAlign:"center"}}>Iniciar sesión</p> */}
 
           </NavLink>
 

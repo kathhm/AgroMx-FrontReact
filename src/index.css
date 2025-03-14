@@ -154,7 +154,7 @@ footer p {
   /* Cambia el color del icono para verlo claramente */
 }
 
-.item-carrito{
-  font-size: 1.5em;
-  color: aqua;
+
+.custom-tooltip {
+  --bs-tooltip-bg: var(--bs-primary);
 }

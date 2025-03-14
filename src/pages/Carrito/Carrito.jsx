@@ -88,12 +88,12 @@ const Carrito = () => {
               <span>Total:</span> <span className="fw-bold">${totalPagar.toFixed(0)}</span>
             </h5>
 
-            <div className="input-group my-3">
-              <input type="text" className="form-control" placeholder="Añadir cupón de descuento" />
-              <button className="btn btn-warning">Aplicar</button>
+            <div className="input-group my-3 cupon-input">
+              <input type="text" className="form-control text-center" placeholder="Añadir cupón de descuento" />
+              <button className="btn btn-warning w-30 m-1">Aplicar</button>
             </div>
 
-            <button className="btn btn-success w-100">Pagar →</button>
+            <button className="btn btn-success">Pagar →</button>
 
             <div className="mt-3 text-center">
               <img src="/ruta/tarjetas.jpg" alt="Métodos de pago" style={{ width: "80%" }} />
