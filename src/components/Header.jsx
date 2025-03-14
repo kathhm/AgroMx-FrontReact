@@ -48,14 +48,14 @@ function Header() {
 				</div>
 
 				{/* Carrito y Avatar  */}
-				<div className="col-4 col-md-4 d-flex justify-content-end align-items-end mt-2 p-4 mt-md-0">
+				<div className="col-4 col-md-4 d-flex justify-content-end align-items-end mt-2 p-4 mt-md-0 ">
 						<NavLink to={"/Carrito"} className="position-relative">
 						
-							<i data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-placement="right" title = "Carrito" className="bi bi-basket2 mx-5 position-relative text-dark"></i>
+							<i style={{verticalAlign: "baseline"}} data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-placement="right" title = "Carrito" className="bi bi-basket2 mx-5 position-relative text-dark"></i>
 							{/* <p style={{fontSize:"0.75rem", textAlign:"center"}}>Carrito</p> */}
 							{countProducts > 0 && (
 							<span className="position-absolute badge rounded-pill bg-danger"
-							style={{ fontSize: "0.75rem", top: "-5px", right: "50px", transform: "translate(50%, -50%)" }}>
+							style={{ height:"40px", width:"40px",fontSize: "0.75rem", top: "-5px", right: "50px", transform: "translate(50%, -50%)" }}>
 								{countProducts}
 							</span>
 							)}
@@ -71,6 +71,8 @@ function Header() {
 							className="rounded-circle"
 							width="40"
 							height="40"
+							vertical-align="baseline"
+							position="absolute"
 						/>
 						) : (<i style={{"--bs-tooltip-bg": "var(--bs-primary)"}} data-bs-toggle="tooltip" data-bs-placement="right" title="Iniciar sesión" className="bi bi-person-circle me-4 mx-4 text-dark"></i>)}
 						{/* <p style={{fontSize:"0.75rem", textAlign:"center"}}>Iniciar sesión</p> */}
