@@ -48,6 +48,16 @@ h3 {
   padding-left: 1%;
 }
 
+#email {
+  height: 5%;
+  margin: 0%;
+
+}
+
+.input-group {
+  margin-bottom: 2%;
+}
+
 .navbar-toggler {
   margin-top: 0%;
   margin-bottom: 0%;

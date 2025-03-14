@@ -77,22 +77,22 @@ const Carrito = () => {
           <div className="card p-3">
             <h4 className="fw-bold">Total de compra</h4>
             <p className="d-flex justify-content-between">
-              <span>Subtotal:</span> <span className="fw-bold">${subtotal}</span>
+              <span>Subtotal:</span> <span className="fw-bold">${subtotal}MXN</span>
             </p>
             <p className="d-flex justify-content-between text-danger">
-              <span>Descuento (20%):</span> <span>- ${descuentoAplicado.toFixed(0)}</span>
+              <span>Descuento (20%):</span> <span>- ${descuentoAplicado.toFixed(0)}MXN</span>
             </p>
             <p className="d-flex justify-content-between">
               <span>Envío:</span> <span>${envio}</span>
             </p>
             <hr />
             <h5 className="d-flex justify-content-between">
-              <span>Total:</span> <span className="fw-bold">${totalPagar.toFixed(0)}</span>
+              <span>Total:</span> <span className="fw-bold">${totalPagar.toFixed(0)}MXN</span>
             </h5>
 
             <div className="input-group my-3 cupon-input">
               <input type="text" className="form-control text-center" placeholder="Añadir cupón de descuento" />
-              <button className="btn btn-warning w-30 m-1">Aplicar</button>
+              <button className="btn btn-warning w-30 m-0">Aplicar</button>
             </div>
 
             <button className="btn btn-success">Pagar →</button>
@@ -105,13 +105,13 @@ const Carrito = () => {
       </div>
 
       {/* Sección de suscripción */}
-      <div className="bg-success text-white text-center p-3 mt-4 rounded">
+      <div className="bg-success text-white text-center p-3 mt-4 mb-5 rounded">
         <h5>¡Descubre nuestras promociones!</h5>
         <p>¡Suscríbete!</p>
-        <div className="input-group w-50 mx-auto">
-          <span className="input-group-text">📧</span>
+        <div className="input-group h-25 w-50 mx-auto" style={{ maxHeight: "10%" }}>
+          <span id="email" className="input-group-text">📧</span>
           <input type="email" className="form-control" placeholder="Tu correo electrónico" />
-          <button className="btn btn-light">Enviar</button>
+          <button id="email" className="btn btn-light">Enviar</button>
         </div>
       </div>
     </div>
