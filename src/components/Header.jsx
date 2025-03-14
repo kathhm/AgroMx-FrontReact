@@ -1,7 +1,12 @@
+import { Tooltip } from "bootstrap";
 import "bootstrap/dist/js/bootstrap.bundle.min";
-import { useContext } from "react"; // Solo una importación de useContext
+import { useContext, useEffect } from "react"; // Solo una importación de useContext
 import { NavLink } from "react-router-dom";
 import { UserContext } from "../context/UserContext";
+import { CarritoContext } from "../pages/carrito"; // Asegúrate de que esta línea esté bien
+Tooltip
+useEffect
+
 
 
 function Header() {
@@ -10,8 +15,8 @@ function Header() {
 
 
   return (
-    <div className="container-fluid">
-      <div className="row align-items-center">
+    <div id="ancho" className="container-fluid">
+      <div id="anchoHA" className="row align-items-center">
         <div className="col-3 col-md-2 d-flex justify-content-center">
           <img
             className="img-fluid p-1"
@@ -45,14 +50,14 @@ function Header() {
         </div>
 
         {/* Carrito y Avatar  */}
-        <div className="col-4 col-md-4 d-flex justify-content-end align-items-end mt-2 p-4 mt-md-0">
+        <div className="col-4 col-md-4 d-flex justify-content-end align-items-end mt-2 p-4 mt-md-0 ">
           <NavLink to={"/Carrito"} className="position-relative">
 
-            <i data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-placement="right" title="Carrito" className="bi bi-basket2 mx-5 position-relative text-dark"></i>
+            <i style={{ verticalAlign: "baseline" }} data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-placement="right" title="Carrito" className="bi bi-basket2 mx-5 position-relative text-dark"></i>
             {/* <p style={{fontSize:"0.75rem", textAlign:"center"}}>Carrito</p> */}
             {countProducts > 0 && (
               <span className="position-absolute badge rounded-pill bg-danger"
-                style={{ fontSize: "0.75rem", top: "-5px", right: "50px", transform: "translate(50%, -50%)" }}>
+                style={{ height: "40px", width: "40px", fontSize: "0.75rem", top: "-5px", right: "50px", transform: "translate(50%, -50%)" }}>
                 {countProducts}
               </span>
             )}
@@ -78,7 +83,7 @@ function Header() {
       </div>
 
 
-      <nav className="navbar navbar-expand-lg navbar-light">
+      <nav className="navbar navbar-expand-md navbar-light" >
         <div className="container-fluid">
           <NavLink
             className="navbar-brand"
