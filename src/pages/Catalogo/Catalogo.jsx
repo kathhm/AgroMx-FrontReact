@@ -15,7 +15,7 @@ const Catalogo = () => {
     if (data && JSON.parse(data).length > 0) {
       setProductos(JSON.parse(data));
     } else {
-      fetch(`/data/data2.json`)
+      fetch(`/json/data2.json`)
         .then((response) => {
           if (!response.ok) {
             throw new Error("No se pudo cargar el archivo JSON");

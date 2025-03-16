@@ -4,14 +4,16 @@
   padding: 5px 10px;
   cursor: pointer;
   transition: all 0.3s;
-  margin: 2px;
+  flex:content;
 }
 
-.product-img {
+.productImg{
   width: 100%;
-  height: 180px;
-  object-fit: contain;
-}
+  height: 210px !important;
+  object-fit:fill !important;
+  padding: 10px 10px 10px 10px;
+  border-radius: 10%;
+  }
 
 .card {
   border: white;
