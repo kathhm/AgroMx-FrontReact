@@ -21,6 +21,8 @@
 
 header {
   font-family: 'Mako', serif;
+  width: 100%;
+  margin: 0%;
 }
 
 #sobre-nosotros {
@@ -34,10 +36,39 @@ h3 {
   font-family: 'Gabriela', serif;
 }
 
+#ancho {
+  margin: 0%;
+  padding: 0%;
+  width: 100%;
+}
+
+#anchoHA {
+  padding-right: 2%;
+  padding-top: 1%;
+  padding-left: 1%;
+}
+
+#email {
+  height: 5%;
+  margin: 0%;
+
+}
+
+.input-group {
+  margin-bottom: 2%;
+}
+
+.navbar-toggler {
+  margin-top: 0%;
+  margin-bottom: 0%;
+  margin-left: 2.8%;
+}
+
 .navbar {
   background-color: var(--greenPrimary);
   font-family: 'Mako', serif;
-  /* Color de fondo */
+  width: 100%;
+
 }
 
 footer {
@@ -152,4 +183,9 @@ footer p {
   /* Ajusta el tamaño */
   color: #000;
   /* Cambia el color del icono para verlo claramente */
+}
+
+
+.custom-tooltip {
+  --bs-tooltip-bg: var(--bs-primary);
 }

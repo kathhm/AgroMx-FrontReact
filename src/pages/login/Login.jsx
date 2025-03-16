@@ -68,7 +68,7 @@ function Login() {
 			{user ? (
 				<div className="container login-card my-5 p-5">
 					<h1 className="titulo text-center">
-						Bienvenido, {user.nombre || user.name}
+						Bienvenid@, {user.name}
 					</h1>
 				</div>
 			) : (
