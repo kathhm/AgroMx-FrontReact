@@ -15,8 +15,6 @@ const ProductList = ({
           key={producto.id}
           producto={producto}
           agregarAlCarrito={agregarAlCarrito}
-          eliminarProducto={eliminarProducto}
-          modificarProducto={modificarProducto}
           verDetalles={verDetalles}
         />
       ))}

@@ -4,8 +4,6 @@ import style from "./catalogo.module.css"; // Asegúrate de que la extensión se
 const ProductCard = ({
   producto,
   agregarAlCarrito,
-  eliminarProducto,
-  modificarProducto,
   verDetalles,
 }) => {
   return (
@@ -16,6 +14,7 @@ const ProductCard = ({
     >
       <div id="cardCatalogo" className="card h-100 d-flex flex-column">
         <img
+            //cambiar el atributo que viene de nuestro json del back
           src={producto.imagen}
           className={`card-img-top ${style.productImg}`} // Usando el estilo de módulo
           alt={producto.nombre}
