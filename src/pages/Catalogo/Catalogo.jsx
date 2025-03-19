@@ -1,14 +1,16 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import style from "./catalogo.module.css";
 import ProductList from "./ProductList";
-style
+import { CarritoContext } from "../carrito";
+
 
 const Catalogo = () => {
   const [productos, setProductos] = useState([]);
   const navigate = useNavigate();
-  const [carrito, setCarrito] = useState([]);
-  const [cantidadCarrito, setCantidadCarrito] = useState(0);
+  /*const [carrito, setCarrito] = useState([]);*/
+  const {agregarAlCarrito} = useContext(CarritoContext);
+  /*const [cantidadCarrito, setCantidadCarrito] = useState(0);*/
 
 /*
   useEffect(() => {
@@ -70,10 +72,6 @@ const Catalogo = () => {
     );
   };*/
 
-  const agregarAlCarrito = (producto) => {
-    setCarrito([...carrito, producto]);
-    setCantidadCarrito(cantidadCarrito + 1);
-  };
 
   return (
     <div className="container my-5 text-center">
@@ -81,11 +79,11 @@ const Catalogo = () => {
       <ProductList
         productos={productos}
         agregarAlCarrito={agregarAlCarrito}
-        /*eliminarProducto={eliminarProducto}
+       /* eliminarProducto={eliminarProducto}
         modificarProducto={modificarProducto}*/
         verDetalles={verDetalles}
       />
-      </div>
+     </div>
   );
 };
 

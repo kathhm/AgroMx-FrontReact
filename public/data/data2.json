@@ -183,14 +183,14 @@
     "imagen": "https://www.gastronomiavasca.net/uploads/image/file/3421/w700_pomelo_rosa.jpg"
   },
   {
-    "id": 50,
+    "id": 27,
     "nombre": "Chirimoya",
     "categoria": "Frutas",
     "precio": 72.00,
     "imagen": "https://mercadoacasa.mx/cdn/shop/products/chirimoya_1296x.jpg?v=1607364774"
   },
   {
-    "id": 27,
+    "id": 28,
     "nombre": "Chile guajillo seco",
     "categoria": "Chiles secos",
     "precio": 0.70,
@@ -198,7 +198,7 @@
     "imagen": "https://mercadoacasa.mx/cdn/shop/products/chile-guajillo-seco-100g-13654635479112_600x_274e3ad5-32ac-4a1b-ad77-78c14b1029cf_1080x.png?v=1587494783"
   },
   {
-    "id": 28,
+    "id": 29,
     "nombre": "Chile ancho seco",
     "categoria": "Chiles secos",
     "precio": 0.80,
@@ -206,7 +206,7 @@
     "imagen": "https://mercadoacasa.mx/cdn/shop/products/chile-ancho_piment_sec_1296x.jpg?v=1587489207"
   },
   {
-    "id": 29,
+    "id": 30,
     "nombre": "Chile pasilla seco",
     "categoria": "Chiles secos",
     "precio": 0.90,
@@ -214,7 +214,7 @@
     "imagen": "https://mercadoacasa.mx/cdn/shop/products/chile-pasilla_1296x.png?v=1587495625"
   },
   {
-    "id": 30,
+    "id": 31,
     "nombre": "Chile chipotle seco",
     "categoria": "Chiles secos",
     "precio": 1.00,
@@ -222,7 +222,7 @@
     "imagen": "https://mercadoacasa.mx/cdn/shop/products/chilechipotleseco_1296x.jpg?v=1616440406"
   },
   {
-    "id": 31,
+    "id": 32,
     "nombre": "Chile cascabel seco",
     "categoria": "Chiles secos",
     "precio": 0.90,
@@ -230,7 +230,7 @@
     "imagen": "https://mercadoacasa.mx/cdn/shop/products/chilecascabel_1296x.jpg?v=1602173310"
   },
   {
-    "id": 32,
+    "id": 33,
     "nombre": "Chile mulato seco",
     "categoria": "Chiles secos",
     "precio": 0.80,
@@ -238,7 +238,7 @@
     "imagen": "https://clickabasto.com/cdn/shop/products/chile-mulato2_500x500.jpg?v=1655677333"
   },
   {
-    "id": 33,
+    "id": 34,
     "nombre": "Chile de agua seco",
     "categoria": "Chiles secos",
     "precio": 0.70,
@@ -246,7 +246,7 @@
     "imagen": "https://www.mitiendita.fr/106-home_default/piment-de-guajillo-100g.jpg"
   },
   {
-    "id": 34,
+    "id": 35,
     "nombre": "Chile manzano",
     "categoria": "Chiles",
     "precio": 0.80,
@@ -254,7 +254,7 @@
     "imagen": "https://mercadoacasa.mx/cdn/shop/products/0000000004711L1_1296x.jpg?v=1591677446"
   },
   {
-    "id": 35,
+    "id": 36,
     "nombre": "Chile piquín seco",
     "categoria": "Chiles secos",
     "precio": 0.90,
@@ -262,7 +262,7 @@
     "imagen": "https://zaandeea.com/wp-content/uploads/2021/03/Chile-Piquin-Entero-Seco.jpeg"
   },
   {
-    "id": 36,
+    "id": 37,
     "nombre": "Aguacate",
     "categoria": "Frutas",
     "precio": 1.00,
@@ -270,7 +270,7 @@
     "imagen": "https://mercadoacasa.mx/cdn/shop/products/aguacate_1080x.jpg?v=1587667720"
   },
   {
-    "id": 37,
+    "id": 38,
     "nombre": "Chile de onza seco",
     "categoria": "Chiles secos",
     "precio": 0.90,
@@ -278,7 +278,7 @@
     "imagen": "https://http2.mlstatic.com/D_NQ_NP_718869-MLM74283523948_022024-O.webp"
   },
   {
-    "id": 38,
+    "id": 39,
     "nombre": "Semilla de girasol",
     "categoria": "Semillas",
     "precio": 1.50,
@@ -286,7 +286,7 @@
     "imagen": "https://mercadoacasa.mx/cdn/shop/products/alimentos_1296x.jpg?v=1587784127"
   },
   {
-    "id": 39,
+    "id": 40,
     "nombre": "Semilla de calabaza",
     "categoria": "Semillas",
     "precio": 1.80,
@@ -294,7 +294,7 @@
     "imagen": "https://hebmx.vtexassets.com/arquivos/ids/658114/69066_1136944627.jpg?v=638520867989130000"
   },
   {
-    "id": 40,
+    "id": 41,
     "nombre": "Semilla de chía",
     "categoria": "Semillas",
     "precio": 2.50,
@@ -302,7 +302,7 @@
     "imagen": "https://imag.bonviveur.com/semillas-de-chia-al-natural.jpg"
   },
   {
-    "id": 41,
+    "id": 42,
     "nombre": "Semilla de lino",
     "categoria": "Semillas",
     "precio": 2.00,
@@ -310,7 +310,7 @@
     "imagen": "https://m.media-amazon.com/images/I/A1irhFW9O8L.jpg"
   },
   {
-    "id": 42,
+    "id": 43,
     "nombre": "Semilla de sésamo",
     "categoria": "Semillas",
     "precio": 1.70,
@@ -318,7 +318,7 @@
     "imagen": "https://m.media-amazon.com/images/I/91nx40+NTAL.jpg"
   },
   {
-    "id": 43,
+    "id": 44,
     "nombre": "Semilla de amapola",
     "categoria": "Semillas",
     "precio": 2.20,
@@ -326,7 +326,7 @@
     "imagen": "https://static.wixstatic.com/media/9e6903_8a33fdcbf34a4db78991588d1992ae3a~mv2.png/v1/fill/w_420,h_407,al_c,lg_1,q_85,enc_auto/9e6903_8a33fdcbf34a4db78991588d1992ae3a~mv2.png"
   },
   {
-    "id": 44,
+    "id": 45,
     "nombre": "Semilla de quinoa",
     "categoria": "Semillas",
     "precio": 3.00,
@@ -334,11 +334,356 @@
     "imagen": "https://elbanquito.com.ar/wp-content/uploads/2020/09/semillas-de-quinoa-x-1-kg-el-banquito-market.jpg"
   },
   {
-    "id": 45,
+    "id": 46,
     "nombre": "Semilla de amaranto",
     "categoria": "Semillas",
     "precio": 2.80,
     "stock": 70,
     "imagen": "https://acdn.mitiendanube.com/stores/139/211/products/0092-semillas-de-amaranto-tienda-oeste-thumb-e3802a8fb1ed1043c815132810551546-640-0.jpg"
+  },
+  {
+    "id": 47,
+    "nombre": "Composta Orgánica",
+    "categoria": "Composta",
+    "precio": 150.00,
+    "imagen": "https://blog.homedepot.com.mx/wp-content/uploads/2022/03/Composta01.jpg",
+    "descripcion": "Mezcla de materia orgánica 100% natural, ideal para enriquecer el suelo y mejorar la fertilidad.",
+    "beneficios": "Aporta nutrientes esenciales a la tierra, mejora la retención de agua y fomenta la actividad microbiana beneficiosa.",
+    "produccion": "Elaborada en Jalisco por la cooperativa 'EcoSuelo', utilizando residuos agrícolas y lombricomposta.",
+    "detalles": {
+      "informacion": "Para la producción de esta composta se emplearon métodos sustentables como:",
+      "tecnicas": [
+        {
+          "nombre": "Lombricomposta",
+          "descripcion": "Proceso natural en el que lombrices transforman residuos orgánicos en abono rico en nutrientes."
+        },
+        {
+          "nombre": "Fermentación aeróbica",
+          "descripcion": "Favorece la descomposición de la materia orgánica sin generar olores desagradables ni metano."
+        }
+      ]
+    }
+  },
+  {
+    "id": 48,
+    "nombre": "Mermelada de Fresa Orgánica",
+    "categoria": "Conservas",
+    "precio": 85.00,
+    "imagen": "https://m.media-amazon.com/images/I/81p56G8wfpL.jpg",
+    "descripcion": "Mermelada artesanal elaborada con fresas orgánicas y endulzada con piloncillo.",
+    "beneficios": "Conserva el sabor y los nutrientes de la fruta sin conservadores artificiales. Rica en antioxidantes y vitamina C.",
+    "produccion": "Producida en Michoacán por 'Delicias Campesinas', una cooperativa que apoya el comercio justo.",
+    "detalles": {
+      "informacion": "Para su elaboración se utilizan técnicas tradicionales que garantizan su calidad:",
+      "tecnicas": [
+        {
+          "nombre": "Cocción a fuego lento",
+          "descripcion": "Permite concentrar el sabor y conservar los nutrientes de la fruta sin necesidad de conservadores artificiales."
+        },
+        {
+          "nombre": "Esterilización de frascos",
+          "descripcion": "Los frascos son hervidos antes de ser llenados para garantizar la inocuidad del producto."
+        }
+      ]
+    }
+  },
+  {
+    "id": 49,
+    "nombre": "Humus de Lombriz",
+    "categoria": "Composta",
+    "precio": 120.00,
+    "imagen": "https://www.deraizchile.cl/cdn/shop/articles/pexels-sippakorn-yamkasikorn-3696170.jpg?v=1677109327",
+    "descripcion": "Abono orgánico 100% natural obtenido a partir del proceso de lombricomposta, ideal para enriquecer la tierra.",
+    "beneficios": "Mejora la estructura del suelo, aumenta la retención de agua y promueve el crecimiento de microorganismos beneficiosos.",
+    "produccion": "Producido en Querétaro por 'EcoAgro', una cooperativa especializada en fertilizantes orgánicos.",
+    "detalles": {
+      "informacion": "Para la producción de este humus de lombriz se emplean procesos ecológicos como:",
+      "tecnicas": [
+        {
+          "nombre": "Lombricompostaje",
+          "descripcion": "Transformación de residuos orgánicos en abono mediante el uso de lombrices rojas californianas."
+        },
+        {
+          "nombre": "Maduración controlada",
+          "descripcion": "El humus es almacenado por varias semanas para potenciar su contenido nutricional antes de su comercialización."
+        }
+      ]
+    }
+  },
+  {
+    "id": 50,
+    "nombre": "Conserva de Chiles en Vinagre",
+    "categoria": "Conservas",
+    "precio": 95.00,
+    "imagen": "https://www.maricruzavalos.com/wp-content/uploads/2014/09/chiles-en-vinagre-envasado.jpg",
+    "descripcion": "Chiles jalapeños en conserva con zanahorias, cebolla y especias, preparados de manera artesanal.",
+    "beneficios": "Ricos en vitamina C y capsaicina, ideales para acompañar comidas y aportar un toque picante y ácido.",
+    "produccion": "Elaborado en Puebla por 'Sabores del Campo', utilizando ingredientes frescos de temporada.",
+    "detalles": {
+      "informacion": "Para su elaboración se siguen procesos tradicionales que garantizan calidad y sabor:",
+      "tecnicas": [
+        {
+          "nombre": "Fermentación en vinagre",
+          "descripcion": "Proceso natural que conserva los ingredientes y potencia su sabor sin necesidad de aditivos artificiales."
+        },
+        {
+          "nombre": "Envasado al vacío",
+          "descripcion": "Técnica que prolonga la vida útil del producto sin alterar su sabor ni propiedades."
+        }
+      ]
+    }
+  },
+  {
+    "id": 51,
+    "nombre": "Composta de Residuos de Café",
+    "categoria": "Composta",
+    "precio": 135.00,
+    "imagen": "https://latarderm.blob.core.windows.net/images/2021/01/28/entrale2021012901.jpg",
+    "descripcion": "Abono natural elaborado con residuos de café, ideal para mejorar la fertilidad del suelo y el crecimiento de las plantas.",
+    "beneficios": "Aporta nitrógeno, mejora la retención de humedad y fomenta la actividad microbiana beneficiosa en la tierra.",
+    "produccion": "Elaborada en Chiapas por 'EcoCafé', aprovechando residuos de cafetales locales.",
+    "detalles": {
+      "informacion": "Para la producción de esta composta se emplean métodos sustentables como:",
+      "tecnicas": [
+        {
+          "nombre": "Fermentación controlada",
+          "descripcion": "Los residuos de café se descomponen en un proceso aeróbico que mantiene su equilibrio nutricional."
+        },
+        {
+          "nombre": "Mezcla con materia orgánica",
+          "descripcion": "Se combina con otros residuos vegetales y estiércol para mejorar su composición nutricional."
+        }
+      ]
+    }
+  },
+  {
+    "id": 52,
+    "nombre": "Miel Orgánica Multifloral",
+    "categoria": "Conservas",
+    "precio": 180.00,
+    "imagen": "https://chefpatygarcia.com/cdn/shop/files/image00033.jpg?v=1709930928&width=1445",
+    "descripcion": "Miel pura y sin aditivos, obtenida de colmenas ubicadas en ecosistemas agroecológicos.",
+    "beneficios": "Rica en antioxidantes, enzimas naturales y propiedades antibacterianas.",
+    "produccion": "Recolectada en Oaxaca por 'Apicultores del Valle', promoviendo la biodiversidad y la apicultura sostenible.",
+    "detalles": {
+      "informacion": "Para su producción se siguen técnicas que garantizan la pureza del producto:",
+      "tecnicas": [
+        {
+          "nombre": "Extracción en frío",
+          "descripcion": "Método que preserva los nutrientes y enzimas naturales de la miel sin alteraciones químicas."
+        },
+        {
+          "nombre": "Filtrado natural",
+          "descripcion": "La miel se filtra de manera artesanal sin perder su polen y propiedades beneficiosas."
+        }
+      ]
+    }
+  },
+  {
+    "id": 53,
+    "nombre": "Bokashi Casero",
+    "categoria": "Composta",
+    "precio": 200.00,
+    "imagen": "https://cdn0.ecologiaverde.com/es/posts/2/0/1/bokashi_o_bocashi_compost_que_es_y_como_hacerlo_2102_orig.jpg",
+    "descripcion": "Abono fermentado elaborado con salvado de trigo, melaza y microorganismos benéficos.",
+    "beneficios": "Aporta microorganismos que mejoran la salud del suelo, favorece la descomposición de materia orgánica y aumenta la disponibilidad de nutrientes.",
+    "produccion": "Fabricado en Morelos por 'EcoSuelo', promoviendo el uso de técnicas de agricultura regenerativa.",
+    "detalles": {
+      "informacion": "Para su elaboración se emplean procesos naturales como:",
+      "tecnicas": [
+        {
+          "nombre": "Fermentación con microorganismos eficientes",
+          "descripcion": "Los microorganismos descomponen la materia orgánica y mejoran la estructura del suelo."
+        },
+        {
+          "nombre": "Mezcla con carbón vegetal",
+          "descripcion": "Se incorpora carbón vegetal para mejorar la retención de humedad y aumentar la fertilidad."
+        }
+      ]
+    }
+  },
+  {
+    "id": 54,
+    "nombre": "Conserva de Nopales en Salmuera",
+    "categoria": "Conservas",
+    "precio": 70.00,
+    "imagen": "https://i.ytimg.com/vi/dSoatFQWQro/maxresdefault.jpg",
+    "descripcion": "Nopales tiernos en conserva de agua y sal, listos para su consumo en ensaladas, guisados o como acompañamiento.",
+    "beneficios": "Ricos en fibra, antioxidantes y compuestos que regulan los niveles de glucosa en sangre.",
+    "produccion": "Producidos en Hidalgo por 'Nopalera Orgánica', con prácticas agroecológicas y sustentables.",
+    "detalles": {
+      "informacion": "Para su conservación se siguen métodos tradicionales que mantienen su frescura:",
+      "tecnicas": [
+        {
+          "nombre": "Cocción en agua con sal",
+          "descripcion": "Se blanquean en agua y sal para mantener su textura y sabor natural."
+        },
+        {
+          "nombre": "Envasado en vidrio",
+          "descripcion": "Los nopales son envasados en frascos esterilizados para preservar su calidad."
+        }
+      ]
+    }
+  },
+  {
+    "id": 55,
+    "nombre": "Composta de Residuos de Cacao",
+    "categoria": "Composta",
+    "precio": 145.00,
+    "imagen": "https://www.cdt.cl/wp-content/uploads/2022/02/Cacao-Eco-Village-un-lugar-hecho-con-residuos-de-cacao-impresos-en-3D-2-1024x683.jpg",
+    "descripcion": "Abono orgánico elaborado con cáscaras de cacao, ideal para enriquecer suelos y promover el crecimiento saludable de las plantas.",
+    "beneficios": "Aporta nutrientes esenciales como potasio, fósforo y calcio. Mejora la estructura del suelo y favorece la actividad microbiana.",
+    "produccion": "Elaborada en Tabasco por 'EcoCacao', reutilizando subproductos de la producción de chocolate.",
+    "detalles": {
+      "informacion": "Para su producción se emplean técnicas de reciclaje agroecológico:",
+      "tecnicas": [
+        {
+          "nombre": "Fermentación aeróbica",
+          "descripcion": "Las cáscaras de cacao se descomponen de manera controlada para liberar sus nutrientes sin generar olores desagradables."
+        },
+        {
+          "nombre": "Mezcla con estiércol compostado",
+          "descripcion": "Se combinan con estiércol maduro para potenciar el contenido orgánico y acelerar su descomposición."
+        }
+      ]
+    }
+  },
+  {
+    "id": 56,
+    "nombre": "Chutney de Mango Orgánico",
+    "categoria": "Conservas",
+    "precio": 130.00,
+    "imagen": "https://cloudinary.images-iherb.com/image/upload/f_auto,q_auto:eco/images/pif/pif61995/y/10.jpg",
+    "descripcion": "Chutney artesanal elaborado con mango de temporada, especias y vinagre natural.",
+    "beneficios": "Alto en antioxidantes, vitamina C y probióticos naturales debido a su proceso de fermentación.",
+    "produccion": "Producido en Veracruz por 'Sabores Tropicales', utilizando frutas cultivadas sin pesticidas.",
+    "detalles": {
+      "informacion": "Para su conservación se emplean métodos tradicionales:",
+      "tecnicas": [
+        {
+          "nombre": "Cocción lenta con especias",
+          "descripcion": "El chutney se cocina a fuego bajo para concentrar los sabores sin necesidad de conservadores artificiales."
+        },
+        {
+          "nombre": "Fermentación con vinagre de manzana",
+          "descripcion": "Proceso natural que ayuda a preservar el producto y potenciar su sabor."
+        }
+      ]
+    }
+  },
+  {
+    "id": 57,
+    "nombre": "Abono Orgánico con Residuos de Cítricos",
+    "categoria": "Composta",
+    "precio": 160.00,
+    "imagen": "https://a.storyblok.com/f/160385/b596fa5d64/residuos_frutas.jpg/m/?w=256&q=100",
+    "descripcion": "Fertilizante natural hecho a base de cáscaras de naranja y limón, ideal para suelos ácidos.",
+    "beneficios": "Aporta ácido cítrico natural, mejora la textura del suelo y repele plagas de manera ecológica.",
+    "produccion": "Producido en Yucatán por 'EcoAgrícola', aprovechando los residuos de la industria citrícola.",
+    "detalles": {
+      "informacion": "Para su producción se utilizan procesos ecológicos como:",
+      "tecnicas": [
+        {
+          "nombre": "Secado y triturado",
+          "descripcion": "Las cáscaras de cítricos se secan al sol y se muelen para facilitar su incorporación en el suelo."
+        },
+        {
+          "nombre": "Fermentación con microorganismos",
+          "descripcion": "Favorece la liberación de compuestos beneficiosos y la descomposición de materia orgánica."
+        }
+      ]
+    }
+  },
+  {
+    "id": 58,
+    "nombre": "Jitomates Deshidratados en Aceite de Oliva",
+    "categoria": "Conservas",
+    "precio": 155.00,
+    "imagen": "https://cdn.elcocinerocasero.com/imagen/receta/1000/2015-11-11-19-02-41/tomates-secos-en-aceite-de-oliva.jpeg",
+    "descripcion": "Jitomates deshidratados al sol y conservados en aceite de oliva con hierbas aromáticas.",
+    "beneficios": "Ricos en licopeno, vitamina A y antioxidantes naturales. Excelente fuente de sabor para ensaladas y platillos mediterráneos.",
+    "produccion": "Elaborado en Guanajuato por 'La Huerta Artesanal', con ingredientes de origen agroecológico.",
+    "detalles": {
+      "informacion": "Para su conservación se siguen técnicas tradicionales:",
+      "tecnicas": [
+        {
+          "nombre": "Deshidratación solar",
+          "descripcion": "Los jitomates son secados al sol de manera natural para concentrar su sabor y nutrientes."
+        },
+        {
+          "nombre": "Conservación en aceite de oliva",
+          "descripcion": "Se almacenan en aceite con hierbas frescas para potenciar su sabor y prolongar su vida útil."
+        }
+      ]
+    }
+  },
+  {
+    "id": 59,
+    "nombre": "Fertilizante Orgánico de Algas Marinas",
+    "categoria": "Composta",
+    "precio": 175.00,
+    "imagen": "https://royalbrinkman.com.mx/images/2021/08/algas-como-abonos.jpg",
+    "descripcion": "Abono líquido elaborado a partir de algas marinas, rico en minerales y hormonas naturales de crecimiento.",
+    "beneficios": "Mejora la absorción de nutrientes, estimula el crecimiento radicular y fortalece la resistencia de las plantas.",
+    "produccion": "Producido en Baja California por 'Mar Verde', utilizando algas recolectadas de manera sustentable.",
+    "detalles": {
+      "informacion": "Para su producción se emplean procesos ecológicos como:",
+      "tecnicas": [
+        {
+          "nombre": "Extracción en frío",
+          "descripcion": "Se obtiene el extracto de algas sin someterlo a altas temperaturas, preservando sus propiedades."
+        },
+        {
+          "nombre": "Fermentación biológica",
+          "descripcion": "El proceso de fermentación potencia los compuestos bioactivos presentes en las algas."
+        }
+      ]
+    }
+  },
+  {
+    "id": 60,
+    "nombre": "Pepinillos Orgánicos en Salmuera",
+    "categoria": "Conservas",
+    "precio": 90.00,
+    "imagen": "https://media.istockphoto.com/id/1308974020/es/foto/pepinillos-en-un-frasco-aislado-de-blanco.jpg?s=612x612&w=0&k=20&c=mu6XconkOAmA3TmddrvvrkQbRvUh9eMmueS42-bR5F0=",
+    "descripcion": "Pepinillos encurtidos en una mezcla de sal, vinagre de manzana y especias naturales.",
+    "beneficios": "Ricos en probióticos naturales, ideales para la digestión y la salud intestinal.",
+    "produccion": "Elaborado en Tlaxcala por 'Conservas del Campo', con ingredientes frescos de producción agroecológica.",
+    "detalles": {
+      "informacion": "Para su conservación se utilizan métodos naturales:",
+      "tecnicas": [
+        {
+          "nombre": "Fermentación en salmuera",
+          "descripcion": "Se sumergen en una mezcla de sal y agua para fermentar de manera natural sin conservadores."
+        },
+        {
+          "nombre": "Envasado en vidrio esterilizado",
+          "descripcion": "Los frascos son esterilizados previamente para garantizar la calidad y frescura del producto."
+        }
+      ]
+    }
+  },
+  {
+    "id": 61,
+    "nombre": "Biochar para Enriquecimiento del Suelo",
+    "categoria": "Composta",
+    "precio": 190.00,
+    "imagen": "https://i0.wp.com/www.bioeconomia.info/wp-content/uploads/2022/09/El-biocarbon-y-su-enorme-potencial-para-secuestrar-carbono.jpg?fit=1200%2C797&amp;ssl=1",
+    "descripcion": "Carbón vegetal activado para mejorar la retención de agua y nutrientes en el suelo.",
+    "beneficios": "Ayuda a reducir la erosión, mejora la fertilidad del suelo y captura carbono de la atmósfera.",
+    "produccion": "Elaborado en Michoacán por 'AgroSustentable', utilizando desechos agrícolas de manera responsable.",
+    "detalles": {
+      "informacion": "Para su producción se emplean métodos ecológicos como:",
+      "tecnicas": [
+        {
+          "nombre": "Pirólisis controlada",
+          "descripcion": "Se calientan residuos de madera en ausencia de oxígeno para generar carbón vegetal sin emisiones contaminantes."
+        },
+        {
+          "nombre": "Activación con microorganismos",
+          "descripcion": "El biochar se inocula con microorganismos benéficos para potenciar su efecto en el suelo."
+        }
+      ]
+    }
   }
 ]

@@ -5,11 +5,11 @@ import "./DetallesProductos.css";
 const ProductosDestacados = () => {
   const [productos, setProductos] = useState([]);
 
-  // Genera un arreglo de IDs aleatorios (1 a 45)
+  // Genera un arreglo de IDs aleatorios (1 a 61)
   const RandomArray = () => {
     let ArrayDestacados = [];
     for (let i = 0; i < 4; i++) {
-      ArrayDestacados.push(Math.floor(Math.random() * 45) + 1);
+      ArrayDestacados.push(Math.floor(Math.random() * 61) + 1);
     }
     return ArrayDestacados;
   };
