@@ -76,7 +76,7 @@ const Catalogo = () => {
 
   const productosFiltrados = categoriaSeleccionada === "Todas"
     ? productos
-    : productos.filter((producto) => producto.categoria === categoriaSeleccionada);
+    : productos.filter((producto) => producto.categoryId.categoryName === categoriaSeleccionada);
 
   return (
     <div className="container my-5 text-center">
