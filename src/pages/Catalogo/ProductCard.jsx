@@ -15,16 +15,16 @@ const ProductCard = ({
       <div id="cardCatalogo" className="card h-100 d-flex flex-column">
         <img
             //cambiar el atributo que viene de nuestro json del back
-          src={producto.imagen}
+          src={producto.urlImage}
           className={`card-img-top ${style.productImg}`} // Usando el estilo de módulo
-          alt={producto.nombre}
+          alt={producto.productName}
         />
         <div className="card-body flex-grow-1">
-          <h5 className="card-title text-truncate" title={producto.nombre}>
-            {producto.nombre}
+          <h5 className="card-title text-truncate" title={producto.productName}>
+            {producto.productName}
           </h5>
           <p className="card-text">
-            <strong>Precio: ${producto.precio}MXN</strong>
+            <strong>Precio: ${producto.price}MXN</strong>
           </p>
         </div>
         <div className="card-footer d-flex flex-column m-0 p-0">
@@ -37,7 +37,7 @@ const ProductCard = ({
           >
             Agregar al carrito
           </button>
-          <button
+          {/*<button
             className={`btn btn-primary w-100 ${style.modifyBtn}`} // Usando el estilo de módulo
             onClick={(e) => {
               e.stopPropagation();
@@ -54,7 +54,7 @@ const ProductCard = ({
             }}
           >
             Eliminar
-          </button>
+          </button>*/}
         </div>
       </div>
     </div>
@@ -65,13 +65,11 @@ const ProductCard = ({
 ProductCard.propTypes = {
   producto: PropTypes.shape({
     id: PropTypes.number.isRequired,
-    nombre: PropTypes.string.isRequired,
-    precio: PropTypes.number.isRequired,
-    imagen: PropTypes.string.isRequired,
+    productName: PropTypes.string.isRequired,
+    price: PropTypes.number.isRequired,
+    urlImage: PropTypes.string.isRequired,
   }).isRequired,
   agregarAlCarrito: PropTypes.func.isRequired,
-  eliminarProducto: PropTypes.func.isRequired,
-  modificarProducto: PropTypes.func.isRequired,
   verDetalles: PropTypes.func.isRequired,
 };
 

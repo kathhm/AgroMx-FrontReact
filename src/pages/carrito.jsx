@@ -10,7 +10,7 @@ const CarritoProvider = ({ children }) => {
 
   // Recalcular total y cantidad total cuando el carrito cambia
   useEffect(() => {
-    const nuevoTotal = carrito.reduce((acc, item) => acc + item.precio * item.cantidad, 0);
+    const nuevoTotal = carrito.reduce((acc, item) => acc + item.price * item.cantidad, 0);
     const nuevaCantidadTotal = carrito.reduce((acc, item) => acc + item.cantidad, 0);
 
     setTotal(nuevoTotal);
