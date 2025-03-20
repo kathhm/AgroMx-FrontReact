@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-
 import "./NuevosProductos.css";
 
 const NuevosProductos = () => {
@@ -11,29 +10,66 @@ const NuevosProductos = () => {
 	const [descripcion, setDescripcion] = useState("");
 	const [razonCompra, setRazonCompra] = useState("");
 	const [informacionProduccion, setInformacionProduccion] = useState("");
-	const [nombreTecnica, setNombreTecnica] = useState("");
+	const [nombreTecnica, setNombreTecnica] = useState([]);
 	const [imagenProducto, setImagenProducto] = useState("");
+	const [categoria, setCategoria] = useState("");
 	const [errors, setErrors] = useState({});
 
 	// Cargar los productos del localStorage
-	const loadItemsFromLocalStorage = () => {
+	/*const loadItemsFromLocalStorage = () => {
 		const itemsData = localStorage.getItem("productos");
 		return itemsData ? JSON.parse(itemsData) : [];
+	};*/
+
+	// Guardar los productos y enviar la solicitud POST
+	const saveItemsToDB = () => {
+		const productDTO = {
+			productName: producto,
+			price: parseFloat(precio),
+			unit: "kg",
+			stock: parseInt(stock),
+			description: descripcion,
+			benefits: razonCompra,
+			imagen: imagenProducto,
+			categoria: parseInt(categoria), // Convertir a número
+			producer: {
+				producerName: informacionProduccion,
+				active: true,
+				technique: nombreTecnica,
+			},
+		};
+
+		const options = {
+			method: 'POST',
+			headers: {
+				'Content-Type': 'application/json',
+			},
+			body: JSON.stringify(productDTO),
+		};
+
+		fetch("http://localhost:8080/products", options)
+			.then(response => response.json())
+			.then(data => {
+				console.log('Success:', data);
+			})
+			.catch((error) => {
+				console.error('Error:', error);
+			});
 	};
 
-	// Guardar los productos en localStorage
-	const saveItemsToLocalStorage = (items) => {
-		localStorage.setItem("productos", JSON.stringify(items));
-	};
-
-
-  //nombreTecnica
-  const handleTecnicaChange = (e) => {
+	//nombreTecnica
+	const handleTecnicaChange = (e) => {
 		const { value, checked } = e.target;
 		setNombreTecnica((prev) =>
 			checked ? [...prev, value] : prev.filter((t) => t !== value)
 		);
 	};
+
+	const handleCategoryChange = (e) => {
+		const { value, checked } = e.target;
+		setCategoria(value);
+
+	}
 
 	// Función de validación de URL de imagen
 	const isValidImageUrl = (url) => {
@@ -44,6 +80,7 @@ const NuevosProductos = () => {
 				objetoUrl.protocol === "https:"
 			);
 		} catch (error) {
+			console.log(error);
 			return false;
 		}
 	};
@@ -89,7 +126,6 @@ const NuevosProductos = () => {
 
 		if (Object.keys(validationErrors).length === 0) {
 			// Si es válido, agregar el producto
-			const items = loadItemsFromLocalStorage();
 			const newItem = {
 				producto,
 				descripcion,
@@ -97,11 +133,12 @@ const NuevosProductos = () => {
 				informacionProduccion,
 				precio: parseFloat(precio),
 				stock: parseInt(stock),
+				categoria,
 				imagenProducto,
 				nombreTecnica,
 			};
-			items.push(newItem);
-			saveItemsToLocalStorage(items);
+			console.log(newItem);
+			saveItemsToDB(newItem);
 
 			alert("Producto agregado");
 
@@ -112,7 +149,8 @@ const NuevosProductos = () => {
 			setDescripcion("");
 			setRazonCompra("");
 			setInformacionProduccion("");
-			setNombreTecnica("");
+			setCategoria("")
+			setNombreTecnica([]);
 			setImagenProducto("");
 			setErrors({});
 		} else {
@@ -249,63 +287,85 @@ const NuevosProductos = () => {
 
 					<div className="mb-3">
 						<label className="form-label">
-              Técnicas agroecológicas empleadas en su producción:
-            </label>
+							Técnicas agroecológicas empleadas en su producción:
+						</label>
 						<div>
 							<input
 								type="checkbox"
-        				id="tecnica1"
+								id="tecnica1"
 								value="Sistema de captación de agua"
 								checked={nombreTecnica.includes("Sistema de captación de agua")}
 								onChange={handleTecnicaChange}
 							/>
-              {"  "}
+							{"  "}
 							<label htmlFor="Sistema de captación de agua">Sistema de captación de agua</label>
 						</div>
 						<div>
 							<input
 								type="checkbox"
-        				id="tecnica2"
+								id="tecnica2"
 								value="Lombricomposta"
 								checked={nombreTecnica.includes("Lombricomposta")}
 								onChange={handleTecnicaChange}
 							/>
-              {"  "}
+							{"  "}
 							<label htmlFor="Lombricomposta">Lombricomposta</label>
 						</div>
 						<div>
 							<input
 								type="checkbox"
-        				id="tecnica3"
+								id="tecnica3"
 								value="Lixiviado"
 								checked={nombreTecnica.includes("Lixiviado")}
 								onChange={handleTecnicaChange}
 							/>
-              {"  "}
+							{"  "}
 							<label htmlFor="Lixiviado">Lixiviado</label>
 						</div>
-          <div>
+						<div>
 							<input
 								type="checkbox"
-        				id="tecnica4"
+								id="tecnica4"
 								value="Rotación de cultivos"
 								checked={nombreTecnica.includes("Rotación de cultivos")}
 								onChange={handleTecnicaChange}
 							/>
-              {"  "}
+							{"  "}
 							<label htmlFor="Rotación de cultivos">Rotación de cultivos</label>
 						</div>
-            <div>
+						<div>
 							<input
 								type="checkbox"
-        				id="tecnica5"
+								id="tecnica5"
 								value="Tratamiento de semilla"
 								checked={nombreTecnica.includes("Tratamiento de semilla")}
 								onChange={handleTecnicaChange}
 							/>
-              {"  "}
+							{"  "}
 							<label htmlFor="Tratamiento de semilla">Tratamiento de semilla</label>
 						</div>
+					</div>
+
+					<div className="mb-3 stock">
+						<label htmlFor="categoria" className="form-label">
+							Categoria
+						</label>
+
+						<select
+							name="categoria"
+							id="categoria"
+							className="form-control"
+							value={categoria} // Asigna el valor actual del estado
+							onChange={handleCategoryChange}
+						>
+							<option value="1">Frutas</option>
+							<option value="2">Verduras</option>
+							<option value="3">Legumbres</option>
+							<option value="4">Conservas</option>
+							<option value="5">Composta</option>
+						</select>
+
+						{errors.stock && <div className="invalid-feedback">{errors.stock}</div>}
 					</div>
 
 					<div className="mb-3">

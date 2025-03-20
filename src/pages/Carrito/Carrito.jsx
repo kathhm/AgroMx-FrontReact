@@ -99,7 +99,7 @@ const Carrito = () => {
 
             <div className="mt-3 text-center">
               <img src="/ruta/tarjetas.jpg" alt="Métodos de pago" style={{ width: "80%" }} />
-              //! TODO: meter los divs de paypal
+              <div id="paypal-container-HUJVR62LJ7YBN"></div>
             </div>
           </div>
         </div>
