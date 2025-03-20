@@ -5,17 +5,17 @@ import "./DetallesProductos.css";
 const ProductosDestacados = () => {
   const [productos, setProductos] = useState([]);
 
-  // Genera un arreglo de IDs aleatorios (1 a 45)
+  // Genera un arreglo de IDs aleatorios (1 a 61)
   const RandomArray = () => {
     let ArrayDestacados = [];
     for (let i = 0; i < 4; i++) {
-      ArrayDestacados.push(Math.floor(Math.random() * 45) + 1);
+      ArrayDestacados.push(Math.floor(Math.random() * 61) + 1);
     }
     return ArrayDestacados;
   };
 
   useEffect(() => {
-    fetch("/json/data2.json")
+    fetch("http://localhost:8080/products/all")
       .then((response) => response.json())
       .then((data) => {
         const destacados = (ids, data) => {
@@ -36,10 +36,10 @@ const ProductosDestacados = () => {
         {productos.map((producto) => (
           <div key={producto.id} className="col-6 col-sm-6 col-md-4 col-lg-3 text-center">
             <div id="cardDetalles" className="card">
-              <img src={producto.imagen} className="card-img-top" alt={producto.nombre} />
+              <img src={producto.urlImage} className="card-img-top" alt={producto.productName} />
               <div className="cardDetalles-body">
-                <h5 className="card-title">{producto.nombre}</h5>
-                <p className="card-text">${producto.precio.toFixed(2)} MXN</p>
+                <h5 className="card-title">{producto.productName}</h5>
+                <p className="card-text">${producto.price.toFixed(2)} MXN</p>
                 <button className="btn btn-primary mt-0 btnAgregar">Agregar</button>
               </div>
             </div>
@@ -59,7 +59,7 @@ const DetallesProducto = () => {
   const [producto, setProducto] = useState({}); // Inicializa como objeto vacío
 
   useEffect(() => {
-    fetch("/json/data2.json")
+    fetch("http://localhost:8080/products/all")
       .then((response) => response.json())
       .then((data) => {
         const productoEncontrado = data.find((item) => item.id === parseInt(id));
@@ -67,7 +67,7 @@ const DetallesProducto = () => {
       });
   }, [id]);
 
-  if (!producto || !producto.nombre) {
+  if (!producto || !producto.productName) {
     return <p>Cargando...</p>;
   }
 
@@ -75,17 +75,17 @@ const DetallesProducto = () => {
     <>
       <div className="row mt-5">
         <div className="col-8 col-md-8 mx-auto">
-          <h2 className="text-start">{producto.nombre}</h2>
+          <h2 className="text-start">{producto.productName}</h2>
           <div className="row">
             <div className="col-12 col-md-6" id="imagen">
-              <img className="img-fluid" src={producto.imagen} alt={producto.nombre} />
+              <img className="img-fluid" src={producto.urlImage} alt={producto.productName} />
             </div>
             <div className="col-12 col-md-6 mt-5" id="info">
               <div className="fs-2" id="precio">
-                <p><strong>${producto.precio?.toFixed(2)}</strong></p>
+                <p><strong>${producto.price?.toFixed(2)}</strong></p>
               </div>
               <div id="descripcion">
-                <p>{producto.descripcion}</p>
+                <p>{producto.description}</p>
               </div>
             </div>
           </div>
@@ -113,7 +113,7 @@ const DetallesProducto = () => {
             ¿Por qué comprar este producto?
           </h4>
           <div className="collapse" id="contenidoProducto">
-            <p>{producto.beneficios || "Sin información adicional"}</p>
+            <p>{producto.benefits || "Sin información adicional"}</p>
           </div>
         </div>
 
@@ -122,7 +122,7 @@ const DetallesProducto = () => {
             Más información sobre su producción
           </h4>
           <div className="collapse" id="contenidoProduccion">
-            <p>{producto.produccion || "No disponible"}</p>
+            <p>{producto.producer.producerName || "No disponible"}</p>
             <p>{producto.detalles?.informacion || "Sin detalles"}</p>
             <ul>
               {producto.detalles?.tecnicas?.map((tecnica, index) => (

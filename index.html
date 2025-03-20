@@ -10,5 +10,18 @@
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", (event) => {
+        paypal.HostedButtons({
+          hostedButtonId: "HUJVR62LJ7YBN"
+        })
+            .render("#paypal-container-HUJVR62LJ7YBN")
+      })
+    </script>
+    <script
+        src="https://www.paypal.com/sdk/js?client-id=BAAfEQ6XXOvUAmI6qASAfyke9Rf_NMBpqGmTIqw9g8WEgyAVdq3xS5x073hoMhi0LVMXDTT3kXyU3QSfX0&components=hosted-buttons&disable-funding=venmo&currency=MXN"
+        crossorigin="anonymous"
+        async>
+    </script>
   </body>
 </html>

@@ -1,12 +1,14 @@
 import "./Registro.css";
-import React, { useState, useRef, useEffect } from "react";  //importación de useState
+import React, { useState, useRef, useEffect } from "react";
+import { data } from "react-router-dom";
+import error from "eslint-plugin-react/lib/util/error.js";  //importación de useState
 
 function Registro() {
 
 	const [formData, setFormData] = useState({   // Se ocupó formData para recopilar los datos del formulario
-		usuario: "",
-		nombre: "",
-		apellidos: "",
+		userName: "",
+		firstName: "",
+		lastName: "",
 		email: "",
 		password: "",
 		confirmPassword: "",
@@ -39,7 +41,28 @@ function Registro() {
 		}
 	
 		// Guardar en localStorage
-		localStorage.setItem("userData", JSON.stringify(formData));
+		/*localStorage.setItem("userData", JSON.stringify(formData));*/
+		const userDTO = {
+			userName: formData.userName,
+			firstName: formData.firstName,
+			lastName: formData.lastName,
+			email: formData.email,
+			password: formData.password,
+			confirmPassword: formData.confirmPassword,
+		}
+		  const options = {
+			  method: 'POST',
+			  headers: {
+				  'Content-Type': 'application/json',
+			  },
+			  body: JSON.stringify(userDTO),
+		  };
+
+		fetch("http://localhost:8080/users", options).then(data => {
+			if(!data && !data.success) {
+				throw error("Hubo un problema con el servidor")
+			}
+		  }).catch(error => console.log(error));
 		setSuccessMessage(true);  
 	}
 
@@ -73,8 +96,8 @@ function Registro() {
 							type="text"
 							className="form-control usuario"
 							id="usuario"
-							name="usuario"
-            				value={formData.usuario}
+							name="userName"
+            				value={formData.userName}
             				onChange={handleChange}
 							placeholder="Ingresa tu usuario"
 							required
@@ -93,8 +116,8 @@ function Registro() {
 							type="text"
 							className="form-control nombre"
 							id="nombre"
-							name="nombre"
-            				value={formData.nombre}
+							name="firstName"
+            				value={formData.firstName}
             				onChange={handleChange}
 							placeholder="Ingresa tu nombre"
 							required
@@ -112,8 +135,8 @@ function Registro() {
 							type="text"
 							className="form-control apellidos"
 							id="apellidos"
-							name="apellidos"
-            				value={formData.apellidos}
+							name="lastName"
+            				value={formData.lastName}
             				onChange={handleChange}
 							placeholder="Ingresa tu apellido"
 							required
@@ -153,7 +176,7 @@ function Registro() {
 							<input
 								type={passwordVisible ? "text" : "password"}
 								required
-								minlength="6"
+								minLength={6}
 								className="form-control contraseña"
 								id="password"
 								name="password"
@@ -186,7 +209,7 @@ function Registro() {
 							<input
 								type={confirmPasswordVisible ? "text" : "password"}
 								required
-								minlength="6"
+								minLength={6}
 								className="form-control contraseña"
 								name="confirmPassword"
               					value={formData.confirmPassword}

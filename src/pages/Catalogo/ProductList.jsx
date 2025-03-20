@@ -4,8 +4,6 @@ import ProductCard from "./ProductCard";
 const ProductList = ({
   productos,
   agregarAlCarrito,
-  eliminarProducto,
-  modificarProducto,
   verDetalles,
 }) => {
   return (
@@ -15,8 +13,6 @@ const ProductList = ({
           key={producto.id}
           producto={producto}
           agregarAlCarrito={agregarAlCarrito}
-          eliminarProducto={eliminarProducto}
-          modificarProducto={modificarProducto}
           verDetalles={verDetalles}
         />
       ))}
@@ -35,8 +31,6 @@ ProductList.propTypes = {
     })
   ).isRequired,
   agregarAlCarrito: PropTypes.func.isRequired,
-  eliminarProducto: PropTypes.func.isRequired,
-  modificarProducto: PropTypes.func.isRequired,
   verDetalles: PropTypes.func.isRequired,
 };
 
