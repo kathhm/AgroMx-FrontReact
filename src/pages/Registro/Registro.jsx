@@ -4,9 +4,9 @@ import React, { useState, useRef, useEffect } from "react";  //importación de u
 function Registro() {
 
 	const [formData, setFormData] = useState({   // Se ocupó formData para recopilar los datos del formulario
-		usuario: "",
-		nombre: "",
-		apellidos: "",
+		userName: "",
+		firstName: "",
+		lastName: "",
 		email: "",
 		password: "",
 		confirmPassword: "",

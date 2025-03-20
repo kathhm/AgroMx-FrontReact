@@ -26,7 +26,7 @@ const Carrito = () => {
     setCarrito(carrito.filter((prod) => prod.id !== id));
   };
 
-  const subtotal = carrito.reduce((acc, prod) => acc + prod.precio * prod.cantidad, 0);
+  const subtotal = carrito.reduce((acc, prod) => acc + prod.price * prod.cantidad, 0);
   const descuentoAplicado = subtotal * descuento;
   const totalPagar = subtotal - descuentoAplicado + envio;
 
@@ -43,10 +43,10 @@ const Carrito = () => {
             ) : (
               carrito.map((prod) => (
                 <div key={prod.id} className="d-flex align-items-center border-bottom pb-2 mb-2">
-                  <img src={prod.imagen} alt={prod.nombre} className="me-3" style={{ width: "60px" }} />
+                  <img src={prod.urlImage} alt={prod.productName} className="me-3" style={{ width: "60px" }} />
                   <div className="flex-grow-1">
-                    <h5 className="mb-1">{prod.nombre}</h5>
-                    <p className="mb-0 fw-bold">${prod.precio}</p>
+                    <h5 className="mb-1">{prod.productName}</h5>
+                    <p className="mb-0 fw-bold">${prod.price}</p>
                   </div>
                   <div className="d-flex align-items-center">
                     <button
@@ -99,6 +99,7 @@ const Carrito = () => {
 
             <div className="mt-3 text-center">
               <img src="/ruta/tarjetas.jpg" alt="Métodos de pago" style={{ width: "80%" }} />
+              //! TODO: meter los divs de paypal
             </div>
           </div>
         </div>
