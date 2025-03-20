@@ -4,9 +4,9 @@ import style from "./catalogo.module.css";
 import ProductList from "./ProductList";
 import { CarritoContext } from "../carrito";
 
-
 const Catalogo = () => {
   const [productos, setProductos] = useState([]);
+  const [categoriaSeleccionada, setCategoriaSeleccionada] = useState("Todas");
   const navigate = useNavigate();
   /*const [carrito, setCarrito] = useState([]);*/
   const {agregarAlCarrito} = useContext(CarritoContext);
@@ -72,12 +72,33 @@ const Catalogo = () => {
     );
   };*/
 
+  const categorias = ["Todas", "Frutas", "Verduras", "Legumbres", "Conservas", "Composta"];
+
+  const productosFiltrados = categoriaSeleccionada === "Todas"
+    ? productos
+    : productos.filter((producto) => producto.categoria === categoriaSeleccionada);
 
   return (
     <div className="container my-5 text-center">
       <h1>Catálogo de Productos</h1>
+      
+      <div className="d-flex justify-content-center mb-4">
+        <div className="filtros">
+          <h3>Filtrar</h3>
+          {categorias.map((categoria) => (
+            <button
+              key={categoria}
+              className={`btn ${categoriaSeleccionada === categoria ? 'btn-success' : 'btn-outline-success'} m-1`}
+              onClick={() => setCategoriaSeleccionada(categoria)}
+            >
+              {categoria}
+            </button>
+          ))}
+        </div>
+      </div>
+
       <ProductList
-        productos={productos}
+        productos={productosFiltrados}
         agregarAlCarrito={agregarAlCarrito}
        /* eliminarProducto={eliminarProducto}
         modificarProducto={modificarProducto}*/
