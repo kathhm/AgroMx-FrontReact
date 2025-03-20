@@ -35,7 +35,7 @@ const Catalogo = () => {
 */
 
   useEffect(() => {
-    fetch("http://localhost:8080/product/all")
+    fetch("http://localhost:8080/products/all")
     .then(res => {
       if(res.status !== 200) {
         throw new Error("Error al hacer la peticion")
