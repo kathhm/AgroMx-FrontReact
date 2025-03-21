@@ -48,7 +48,7 @@ function Login() {
 	const handleLogin = () => {
 		const users = JSON.parse(localStorage.getItem("userData")) || [];
 
-		fetch("http://3.141.4.165:8080/users/"+`${email}`).then(data => {
+		fetch("http://3.141.4.165:8080/users/email/"+`${email}`).then(data => {
 			if(!data && !data.success) {
 				throw error("Hubo un problema con el servidor")
 			}
