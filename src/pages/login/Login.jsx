@@ -24,7 +24,7 @@ function Login() {
 			}
 
 			// Verificar si el usuario ya existe en la base de datos
-			const userResponse = await fetch(`http://3.141.4.165:8080/users/email/${decodedToken.email}`);
+			const userResponse = await fetch(`https://agromxecommerce.agromx.live/users/email/${decodedToken.email}`);
 			if (userResponse.ok) {
 				const userData = await userResponse.json();
 				/*console.log("User Data from DB:", userData);*/
@@ -53,7 +53,7 @@ function Login() {
 				};
 				console.log("New User:", newUser);
 
-				const createUserResponse = await fetch("http://3.141.4.165:8080/users", {
+				const createUserResponse = await fetch("https://agromxecommerce.agromx.live/users", {
 					method: "POST",
 					headers: {
 						"Content-Type": "application/json",
@@ -114,7 +114,7 @@ function Login() {
 	const handleLogin = async () => {
 		try {
 			// Verificar si el usuario existe
-			const userResponse = await fetch(`http://3.141.4.165:8080/users/email/${email}`);
+			const userResponse = await fetch(`https://agromxecommerce.agromx.live/users/email/${email}`);
 			if (!userResponse.ok) {
 				throw new Error("Usuario no encontrado");
 			}

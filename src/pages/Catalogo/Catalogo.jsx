@@ -35,7 +35,7 @@ const Catalogo = () => {
 */
 
   useEffect(() => {
-    fetch("http://3.141.4.165:8080/products/all")
+    fetch("https://agromxecommerce.agromx.live/products/all")
     .then(res => {
       if(res.status !== 200) {
         throw new Error("Error al hacer la peticion")

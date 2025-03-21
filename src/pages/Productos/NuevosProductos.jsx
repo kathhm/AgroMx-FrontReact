@@ -78,7 +78,7 @@ const NuevosProductos = () => {
 			body: JSON.stringify(productDTO),
 		};
 
-		fetch("http://3.141.4.165:8080/products", options)
+		fetch("https://agromxecommerce.agromx.live/products", options)
 			.then(response => response.json())
 			.then(data => {
 				console.log('Success:', data);
