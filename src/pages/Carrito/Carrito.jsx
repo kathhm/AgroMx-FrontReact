@@ -98,7 +98,6 @@ const Carrito = () => {
             <button className="btn btn-success">Pagar →</button>
 
             <div className="mt-3 text-center">
-              <img src="/ruta/tarjetas.jpg" alt="Métodos de pago" style={{ width: "80%" }} />
               <div id="paypal-container-HUJVR62LJ7YBN"></div>
             </div>
           </div>
