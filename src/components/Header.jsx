@@ -68,7 +68,7 @@ function Header() {
 
             {user ? (
               <img
-                src={user.picture || "/images/default-profile.png"}
+                src={user.profileImage || "/images/default-profile.png"}
                 alt="Foto de perfil"
                 className="rounded-circle ms-3"
                 width="40"
