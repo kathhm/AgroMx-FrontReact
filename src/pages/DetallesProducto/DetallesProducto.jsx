@@ -15,7 +15,7 @@ const ProductosDestacados = () => {
   };
 
   useEffect(() => {
-    fetch("http://localhost:8080/products/all")
+    fetch("http://3.141.4.165:8080/products/all")
       .then((response) => response.json())
       .then((data) => {
         const destacados = (ids, data) => {
@@ -59,7 +59,7 @@ const DetallesProducto = () => {
   const [producto, setProducto] = useState({}); // Inicializa como objeto vacío
 
   useEffect(() => {
-    fetch("http://localhost:8080/products/all")
+    fetch("http://3.141.4.165:8080/products/all")
       .then((response) => response.json())
       .then((data) => {
         const productoEncontrado = data.find((item) => item.id === parseInt(id));

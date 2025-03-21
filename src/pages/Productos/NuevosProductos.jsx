@@ -59,13 +59,14 @@ const NuevosProductos = () => {
 			stock: parseInt(stock),
 			description: descripcion,
 			benefits: razonCompra,
-			imagen: imagenProducto,
-			categoria: category.indexOf(categoria) + 1, // Convertir a número
-			producer: {
-				producerName: producers.indexOf(producer) + 1,
-				active: true,
-				technique: calculateTechnique,
+			urlImage: imagenProducto,
+			categoryId:{
+				id: category.indexOf(categoria) + 1
 			},
+			producer: {
+				id: producers.indexOf(producer) + 1,
+				active: true
+			}
 		};
 		console.log(productDTO);
 
@@ -77,7 +78,7 @@ const NuevosProductos = () => {
 			body: JSON.stringify(productDTO),
 		};
 
-		fetch("http://localhost:8080/products", options)
+		fetch("http://3.141.4.165:8080/products", options)
 			.then(response => response.json())
 			.then(data => {
 				console.log('Success:', data);
