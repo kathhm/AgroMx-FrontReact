@@ -18,6 +18,7 @@ import Registro from './pages/Registro/Registro'
 import { SobreNosotros } from './pages/SobreNosotros/SobreNosotros'
 import CarritoProvider from './pages/CarritoContexto'
 import Login from './pages/login/Login'
+import 'normalize.css'
 
 
 
