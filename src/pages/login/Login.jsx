@@ -1,5 +1,5 @@
 import "./login.css";
-import {jwtDecode} from "jwt-decode";
+import { jwtDecode } from "jwt-decode";
 import { useEffect, useContext, useState } from "react";
 import { UserContext } from "../../context/UserContext";
 import { useNavigate } from "react-router-dom";
@@ -11,25 +11,89 @@ function Login() {
 	const [error, setError] = useState("");
 	const navigate = useNavigate();
 
-	const handleGoogleResponse = (response) => {
+	// Manejar la respuesta de Google
+	const handleGoogleResponse = async (response) => {
 		const token = response.credential;
 		const decodedToken = jwtDecode(token);
-		console.log(decodedToken);
-		setUser(decodedToken);
-		localStorage.setItem("userData", JSON.stringify(decodedToken)); // Guardar en localStorage
-		setTimeout(() => {
+		/*console.log("Decoded Token:", decodedToken);*/
+
+		try {
+			// Guardar la imagen del perfil en localStorage usando el correo como clave
+			if (decodedToken.picture) {
+				localStorage.setItem(`profileImage_${decodedToken.email}`, decodedToken.picture);
+			}
+
+			// Verificar si el usuario ya existe en la base de datos
+			const userResponse = await fetch(`http://3.141.4.165:8080/users/email/${decodedToken.email}`);
+			if (userResponse.ok) {
+				const userData = await userResponse.json();
+				/*console.log("User Data from DB:", userData);*/
+
+				// Obtener la imagen del perfil desde localStorage usando el correo del usuario
+				const profileImage = localStorage.getItem(`profileImage_${decodedToken.email}`);
+
+				// Combinar los datos del usuario con la imagen del perfil
+				const userDataWithImage = {
+					...userData, // Copia todos los campos de userData
+					profileImage: profileImage || null, // Añade la imagen del perfil (o null si no existe)
+				};
+
+				// Guardar los datos del usuario (incluyendo la imagen) en el contexto
+				setUser(userDataWithImage);
+				/*console.log("User Data with Image:", userDataWithImage);*/
+			} else {
+				// Si el usuario no existe, registrarlo
+				const newUser = {
+					name: decodedToken.name,
+					email: decodedToken.email,
+					userName: decodedToken.family_name,
+					firstName: decodedToken.family_name,
+					lastName: decodedToken.given_name,
+					password: decodedToken.jti,
+				};
+				console.log("New User:", newUser);
+
+				const createUserResponse = await fetch("http://3.141.4.165:8080/users", {
+					method: "POST",
+					headers: {
+						"Content-Type": "application/json",
+					},
+					body: JSON.stringify(newUser),
+				});
+
+				if (createUserResponse.ok) {
+					const userData = await createUserResponse.json();
+					console.log("Created User Data:", userData);
+
+					// Obtener la imagen del perfil desde localStorage usando el correo del usuario
+					const profileImage = localStorage.getItem(`profileImage_${decodedToken.email}`);
+
+					// Combinar los datos del usuario con la imagen del perfil
+					const userDataWithImage = {
+						...userData, // Copia todos los campos de userData
+						profileImage: profileImage || null, // Añade la imagen del perfil (o null si no existe)
+					};
+
+					// Guardar los datos del usuario (incluyendo la imagen) en el contexto
+					setUser(userDataWithImage);
+				} else {
+					throw new Error("Error al registrar el usuario");
+				}
+			}
+
+			// Redirigir al usuario a la página de inicio
 			navigate("/Inicio");
-		}, 2000); // Retraso de 2 segundos antes de redirigir
+		} catch (error) {
+			console.error("Error:", error);
+			setError("Error al autenticar con Google");
+		}
 	};
 
 	useEffect(() => {
 		window.handleGoogleResponse = handleGoogleResponse;
-		const storedUser = JSON.parse(localStorage.getItem("userData"));
-		if (storedUser) {
-			setUser(storedUser);
-		}
 	}, []);
 
+	// Manejar cambios en el campo de correo electrónico
 	const handleEmailChange = (e) => {
 		const value = e.target.value;
 		const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -41,25 +105,37 @@ function Login() {
 		setEmail(value);
 	};
 
+	// Manejar cambios en el campo de contraseña
 	const handlePasswordChange = (e) => {
 		setPassword(e.target.value);
 	};
 
-	const handleLogin = () => {
-		const users = JSON.parse(localStorage.getItem("userData")) || [];
-		const user = users.find(
-			(u) => u.email === email && u.password === password
-		);
+	// Manejar el inicio de sesión con correo y contraseña
+	const handleLogin = async () => {
+		try {
+			// Verificar si el usuario existe
+			const userResponse = await fetch(`http://localhost:8080/users/email/${email}`);
+			if (!userResponse.ok) {
+				throw new Error("Usuario no encontrado");
+			}
 
-		if (user) {
-			setUser(user);
-			localStorage.setItem("userData", JSON.stringify(user)); // Guardar en localStorage
+			const userData = await userResponse.json();
+
+			// Verificar la contraseña (esto debería hacerse en el backend)
+			if (userData.password !== password) {
+				throw new Error("Contraseña incorrecta");
+			}
+
+			// Guardar los datos del usuario en el contexto
+			setUser(userData);
+
+			// Redirigir al usuario a la página de inicio
 			alert("Inicio de sesión exitoso");
 			setTimeout(() => {
 				navigate("/Inicio");
 			}, 2000);
-		} else {
-			setError("Correo electrónico o contraseña incorrectos");
+		} catch (error) {
+			setError(error.message);
 		}
 	};
 
@@ -68,7 +144,7 @@ function Login() {
 			{user ? (
 				<div className="container login-card my-5 p-5">
 					<h1 className="titulo text-center">
-						Bienvenid@, {user.name}
+						Bienvenid@, {user.userName}
 					</h1>
 				</div>
 			) : (
