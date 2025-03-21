@@ -82,7 +82,7 @@ const DetallesProducto = () => {
             </div>
             <div className="col-12 col-md-6 mt-5" id="info">
               <div className="fs-2" id="precio">
-                <p><strong>${producto.price?.toFixed(2)}</strong></p>
+                <p><strong>${producto.price?.toFixed(2)} MXN</strong></p>
               </div>
               <div id="descripcion">
                 <p>{producto.description}</p>
@@ -123,11 +123,10 @@ const DetallesProducto = () => {
           </h4>
           <div className="collapse" id="contenidoProduccion">
             <p>{producto.producer.producerName || "No disponible"}</p>
-            <p>{producto.detalles?.informacion || "Sin detalles"}</p>
             <ul>
-              {producto.detalles?.tecnicas?.map((tecnica, index) => (
+              {producto.producer.technique.map((tecnica, index) => (
                 <li key={index}>
-                  <strong>{tecnica.nombre}:</strong> {tecnica.descripcion}
+                  <strong>{tecnica.techniqueName}:</strong> {tecnica.techniqueDescription}
                 </li>
               ))}
             </ul>
