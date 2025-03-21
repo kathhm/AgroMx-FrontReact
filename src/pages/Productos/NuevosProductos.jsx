@@ -12,7 +12,7 @@ const NuevosProductos = () => {
 	const [informacionProduccion, setInformacionProduccion] = useState("");
 	const [nombreTecnica, setNombreTecnica] = useState([]);
 	const [imagenProducto, setImagenProducto] = useState("");
-	const [categoria, setCategoria] = useState("");
+	const [categoria, setCategoria] = useState("Frutas");
 	const [errors, setErrors] = useState({});
 
 	// Cargar los productos del localStorage
@@ -23,6 +23,32 @@ const NuevosProductos = () => {
 
 	// Guardar los productos y enviar la solicitud POST
 	const saveItemsToDB = () => {
+		const category = ["Frutas", "Verduras", "Legumbres", "Conservas", "Composta"];
+		const technique = [
+			"Sistema de captación de agua",
+			"Lombricomposta",
+			"Lixiviado",
+			"Rotación de cultivos",
+			"Tratamiento de semilla"];
+
+		const producers = [
+			"EcoRaíz Orgánica",
+			"Verde Vivo",
+			"El Huerto Natural",
+			"Sabores de la Tierra",
+			"Cultiva Vida",
+			"Manos Verdes",
+			"Raíces Sustentables",
+			"Tierra y Vida",
+			"Naturaleza Fresca",
+			"Cosecha Consciente"
+		];
+
+		const calculateTechnique = nombreTecnica.map((item) => {
+			return technique.indexOf(item) + 1;
+		})
+		console.log(calculateTechnique);
+
 		const productDTO = {
 			productName: producto,
 			price: parseFloat(precio),
@@ -31,13 +57,14 @@ const NuevosProductos = () => {
 			description: descripcion,
 			benefits: razonCompra,
 			imagen: imagenProducto,
-			categoria: parseInt(categoria), // Convertir a número
+			categoria: category.indexOf(categoria) + 1, // Convertir a número
 			producer: {
-				producerName: informacionProduccion,
+				producerName: producers.indexOf(productor) + 1,
 				active: true,
-				technique: nombreTecnica,
+				technique: calculateTechnique,
 			},
 		};
+		console.log(productDTO);
 
 		const options = {
 			method: 'POST',
@@ -137,7 +164,7 @@ const NuevosProductos = () => {
 				imagenProducto,
 				nombreTecnica,
 			};
-			console.log(newItem);
+			/*console.log(newItem);*/
 			saveItemsToDB(newItem);
 
 			alert("Producto agregado");
@@ -358,11 +385,11 @@ const NuevosProductos = () => {
 							value={categoria} // Asigna el valor actual del estado
 							onChange={handleCategoryChange}
 						>
-							<option value="1">Frutas</option>
-							<option value="2">Verduras</option>
-							<option value="3">Legumbres</option>
-							<option value="4">Conservas</option>
-							<option value="5">Composta</option>
+							<option value="Frutas">Frutas</option>
+							<option value="Verduras">Verduras</option>
+							<option value="Legumbres">Legumbres</option>
+							<option value="Conservas">Conservas</option>
+							<option value="Composta">Composta</option>
 						</select>
 
 						{errors.stock && <div className="invalid-feedback">{errors.stock}</div>}
@@ -412,8 +439,6 @@ const NuevosProductos = () => {
 					</Link>
 				</form>
 			</div>
-
-			<footer id="footer"></footer>
 		</>
 	);
 };
