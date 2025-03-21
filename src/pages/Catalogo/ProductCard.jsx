@@ -1,22 +1,41 @@
 import PropTypes from "prop-types";
-import style from "./catalogo.module.css"; // Asegúrate de que la extensión sea '.module.css'
+import { useEffect, useState } from "react";
+import style from "./catalogo.module.css";
 
-const ProductCard = ({
-  producto,
-  agregarAlCarrito,
-  verDetalles,
-}) => {
+const ProductCard = ({ producto, agregarAlCarrito, verDetalles }) => {
+  const [colWidth, setColWidth] = useState("20%");
+
+  useEffect(() => {
+    const handleResize = () => {
+      const width = window.innerWidth;
+      if (width >= 1200) {
+        setColWidth("20%");
+      } else if (width >= 768) {
+        setColWidth("33.33%");
+      } else {
+        setColWidth("50%");
+      }
+    };
+
+
+    handleResize();
+
+
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   return (
     <div
-      className="col-6 col-sm-4 col-md-3 col-lg-2 p-1"
+      className="p-1"
       onClick={() => verDetalles(producto.id)}
-      style={{ cursor: "pointer" }}
+      style={{ cursor: "pointer", flex: `0 0 ${colWidth}`, maxWidth: colWidth }}
     >
       <div id="cardCatalogo" className="card h-100 d-flex flex-column">
         <img
-            //cambiar el atributo que viene de nuestro json del back
           src={producto.urlImage}
-          className={`card-img-top ${style.productImg}`} // Usando el estilo de módulo
+          className={`card-img-top ${style.productImg}`}
           alt={producto.productName}
         />
         <div className="card-body flex-grow-1">
@@ -24,12 +43,13 @@ const ProductCard = ({
             {producto.productName}
           </h5>
           <p className="card-text">
-            <strong>Precio: ${producto.price}MXN</strong>
+            <strong>Precio: ${producto.price} MXN</strong>
           </p>
         </div>
         <div className="card-footer d-flex flex-column m-0 p-0">
-          <button id="botones"
-            className={`btn btn-primary w-100 ${style.addToCartBtn}`} // Usando el estilo de módulo
+          <button
+            id="botones"
+            className={`btn btn-primary w-100 ${style.addToCartBtn}`}
             onClick={(e) => {
               e.stopPropagation();
               agregarAlCarrito(producto);
@@ -37,31 +57,12 @@ const ProductCard = ({
           >
             Agregar al carrito
           </button>
-          {/*<button
-            className={`btn btn-primary w-100 ${style.modifyBtn}`} // Usando el estilo de módulo
-            onClick={(e) => {
-              e.stopPropagation();
-              modificarProducto(producto);
-            }}
-          >
-            Modificar
-          </button>
-          <button
-            className={`btn btn-primary w-100 ${style.deleteBtn}`} // Usando el estilo de módulo
-            onClick={(e) => {
-              e.stopPropagation();
-              eliminarProducto(producto.id);
-            }}
-          >
-            Eliminar
-          </button>*/}
         </div>
       </div>
     </div>
   );
 };
 
-// Agregar validación de props
 ProductCard.propTypes = {
   producto: PropTypes.shape({
     id: PropTypes.number.isRequired,
