@@ -114,7 +114,7 @@ function Login() {
 	const handleLogin = async () => {
 		try {
 			// Verificar si el usuario existe
-			const userResponse = await fetch(`http://localhost:8080/users/email/${email}`);
+			const userResponse = await fetch(`http://3.141.4.165:8080/users/email/${email}`);
 			if (!userResponse.ok) {
 				throw new Error("Usuario no encontrado");
 			}
