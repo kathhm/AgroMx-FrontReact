@@ -14,12 +14,26 @@ const NuevosProductos = () => {
 	const [imagenProducto, setImagenProducto] = useState("");
 	const [categoria, setCategoria] = useState("Frutas");
 	const [errors, setErrors] = useState({});
+	const [producer, setProducer] = useState('');
 
 	// Cargar los productos del localStorage
 	/*const loadItemsFromLocalStorage = () => {
 		const itemsData = localStorage.getItem("productos");
 		return itemsData ? JSON.parse(itemsData) : [];
 	};*/
+
+	const producers = [
+		"EcoRaíz Orgánica",
+		"Verde Vivo",
+		"El Huerto Natural",
+		"Sabores de la Tierra",
+		"Cultiva Vida",
+		"Manos Verdes",
+		"Raíces Sustentables",
+		"Tierra y Vida",
+		"Naturaleza Fresca",
+		"Cosecha Consciente"
+	];
 
 	// Guardar los productos y enviar la solicitud POST
 	const saveItemsToDB = () => {
@@ -31,18 +45,7 @@ const NuevosProductos = () => {
 			"Rotación de cultivos",
 			"Tratamiento de semilla"];
 
-		const producers = [
-			"EcoRaíz Orgánica",
-			"Verde Vivo",
-			"El Huerto Natural",
-			"Sabores de la Tierra",
-			"Cultiva Vida",
-			"Manos Verdes",
-			"Raíces Sustentables",
-			"Tierra y Vida",
-			"Naturaleza Fresca",
-			"Cosecha Consciente"
-		];
+
 
 		const calculateTechnique = nombreTecnica.map((item) => {
 			return technique.indexOf(item) + 1;
@@ -59,7 +62,7 @@ const NuevosProductos = () => {
 			imagen: imagenProducto,
 			categoria: category.indexOf(categoria) + 1, // Convertir a número
 			producer: {
-				producerName: producers.indexOf(productor) + 1,
+				producerName: producers.indexOf(producer) + 1,
 				active: true,
 				technique: calculateTechnique,
 			},
@@ -82,6 +85,10 @@ const NuevosProductos = () => {
 			.catch((error) => {
 				console.error('Error:', error);
 			});
+	};
+
+	const handleProducerChange = (event) => {
+		setProducer(event.target.value);
 	};
 
 	//nombreTecnica
@@ -300,16 +307,20 @@ const NuevosProductos = () => {
 						>
 							Nombre del productor o la productora:
 						</label>
-						<textarea
-							id="informacion_produccion"
+						<select
+							name="producer"
+							id="producer"
 							className="form-control"
-							value={informacionProduccion}
-							onChange={(e) =>
-								setInformacionProduccion(e.target.value)
-							}
-							rows="3"
-							required
-						></textarea>
+							value={producer} // Asigna el valor actual del estado
+							onChange={handleProducerChange}
+						>
+							<option value="">Selecciona un productor</option>
+							{producers.map((producer, index) => (
+								<option key={index} value={producer}>
+									{producer}
+								</option>
+							))}
+						</select>
 					</div>
 
 					<div className="mb-3">
