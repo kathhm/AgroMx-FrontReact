@@ -16,7 +16,7 @@ import Inicio from './pages/Inicio'
 import NuevosProductos from './pages/Productos/NuevosProductos'
 import Registro from './pages/Registro/Registro'
 import { SobreNosotros } from './pages/SobreNosotros/SobreNosotros'
-import CarritoProvider from './pages/carrito'
+import CarritoProvider from './pages/CarritoContexto'
 import Login from './pages/login/Login'
 
 

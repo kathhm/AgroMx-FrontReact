@@ -2,7 +2,7 @@ import { useEffect, useState, useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import style from "./catalogo.module.css";
 import ProductList from "./ProductList";
-import { CarritoContext } from "../carrito";
+import { CarritoContext } from "../CarritoContexto";
 
 const Catalogo = () => {
   const [productos, setProductos] = useState([]);
