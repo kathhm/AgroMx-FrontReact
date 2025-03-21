@@ -58,7 +58,7 @@ function Registro() {
 			  body: JSON.stringify(userDTO),
 		  };
 
-		fetch("http://3.141.4.165:8080/users", options).then(data => {
+		fetch("/users", options).then(data => {
 			if(!data && !data.success) {
 				throw error("Hubo un problema con el servidor")
 			}
