@@ -12,8 +12,9 @@ const NuevosProductos = () => {
 	const [informacionProduccion, setInformacionProduccion] = useState("");
 	const [nombreTecnica, setNombreTecnica] = useState([]);
 	const [imagenProducto, setImagenProducto] = useState("");
-	const [categoria, setCategoria] = useState("");
+	const [categoria, setCategoria] = useState("Frutas");
 	const [errors, setErrors] = useState({});
+	const [producer, setProducer] = useState('');
 
 	// Cargar los productos del localStorage
 	/*const loadItemsFromLocalStorage = () => {
@@ -21,8 +22,36 @@ const NuevosProductos = () => {
 		return itemsData ? JSON.parse(itemsData) : [];
 	};*/
 
+	const producers = [
+		"EcoRaíz Orgánica",
+		"Verde Vivo",
+		"El Huerto Natural",
+		"Sabores de la Tierra",
+		"Cultiva Vida",
+		"Manos Verdes",
+		"Raíces Sustentables",
+		"Tierra y Vida",
+		"Naturaleza Fresca",
+		"Cosecha Consciente"
+	];
+
 	// Guardar los productos y enviar la solicitud POST
 	const saveItemsToDB = () => {
+		const category = ["Frutas", "Verduras", "Legumbres", "Conservas", "Composta"];
+		const technique = [
+			"Sistema de captación de agua",
+			"Lombricomposta",
+			"Lixiviado",
+			"Rotación de cultivos",
+			"Tratamiento de semilla"];
+
+
+
+		const calculateTechnique = nombreTecnica.map((item) => {
+			return technique.indexOf(item) + 1;
+		})
+		console.log(calculateTechnique);
+
 		const productDTO = {
 			productName: producto,
 			price: parseFloat(precio),
@@ -30,14 +59,16 @@ const NuevosProductos = () => {
 			stock: parseInt(stock),
 			description: descripcion,
 			benefits: razonCompra,
-			imagen: imagenProducto,
-			categoria: parseInt(categoria), // Convertir a número
-			producer: {
-				producerName: informacionProduccion,
-				active: true,
-				technique: nombreTecnica,
+			urlImage: imagenProducto,
+			categoryId:{
+				id: category.indexOf(categoria) + 1
 			},
+			producer: {
+				id: producers.indexOf(producer) + 1,
+				active: true
+			}
 		};
+		console.log(productDTO);
 
 		const options = {
 			method: 'POST',
@@ -47,7 +78,7 @@ const NuevosProductos = () => {
 			body: JSON.stringify(productDTO),
 		};
 
-		fetch("http://localhost:8080/products", options)
+		fetch("http://3.141.4.165:8080/products", options)
 			.then(response => response.json())
 			.then(data => {
 				console.log('Success:', data);
@@ -55,6 +86,10 @@ const NuevosProductos = () => {
 			.catch((error) => {
 				console.error('Error:', error);
 			});
+	};
+
+	const handleProducerChange = (event) => {
+		setProducer(event.target.value);
 	};
 
 	//nombreTecnica
@@ -137,7 +172,7 @@ const NuevosProductos = () => {
 				imagenProducto,
 				nombreTecnica,
 			};
-			console.log(newItem);
+			/*console.log(newItem);*/
 			saveItemsToDB(newItem);
 
 			alert("Producto agregado");
@@ -273,16 +308,20 @@ const NuevosProductos = () => {
 						>
 							Nombre del productor o la productora:
 						</label>
-						<textarea
-							id="informacion_produccion"
+						<select
+							name="producer"
+							id="producer"
 							className="form-control"
-							value={informacionProduccion}
-							onChange={(e) =>
-								setInformacionProduccion(e.target.value)
-							}
-							rows="3"
-							required
-						></textarea>
+							value={producer} // Asigna el valor actual del estado
+							onChange={handleProducerChange}
+						>
+							<option value="">Selecciona un productor</option>
+							{producers.map((producer, index) => (
+								<option key={index} value={producer}>
+									{producer}
+								</option>
+							))}
+						</select>
 					</div>
 
 					<div className="mb-3">
@@ -358,11 +397,11 @@ const NuevosProductos = () => {
 							value={categoria} // Asigna el valor actual del estado
 							onChange={handleCategoryChange}
 						>
-							<option value="1">Frutas</option>
-							<option value="2">Verduras</option>
-							<option value="3">Legumbres</option>
-							<option value="4">Conservas</option>
-							<option value="5">Composta</option>
+							<option value="Frutas">Frutas</option>
+							<option value="Verduras">Verduras</option>
+							<option value="Legumbres">Legumbres</option>
+							<option value="Conservas">Conservas</option>
+							<option value="Composta">Composta</option>
 						</select>
 
 						{errors.stock && <div className="invalid-feedback">{errors.stock}</div>}
@@ -412,8 +451,6 @@ const NuevosProductos = () => {
 					</Link>
 				</form>
 			</div>
-
-			<footer id="footer"></footer>
 		</>
 	);
 };

@@ -2,7 +2,7 @@ import { useEffect, useState, useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import style from "./catalogo.module.css";
 import ProductList from "./ProductList";
-import { CarritoContext } from "../carrito";
+import { CarritoContext } from "../CarritoContexto";
 
 const Catalogo = () => {
   const [productos, setProductos] = useState([]);
@@ -35,7 +35,7 @@ const Catalogo = () => {
 */
 
   useEffect(() => {
-    fetch("http://localhost:8080/products/all")
+    fetch("http://3.141.4.165:8080/products/all")
     .then(res => {
       if(res.status !== 200) {
         throw new Error("Error al hacer la peticion")

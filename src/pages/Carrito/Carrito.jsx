@@ -1,8 +1,8 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import { useContext } from "react";
 import { UserContext } from "../../context/UserContext";
-import { CarritoContext } from "../carrito";
-import style from "./carrito.module.css";
+import { CarritoContext } from "../CarritoContexto";
+import style from "./Carrito.module.css";
 UserContext
 style
 
