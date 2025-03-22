@@ -2,7 +2,7 @@
 
 AgroMX es una aplicación ecommerce, enfocada en la venta de productos agroecológicos, que pretende conectar a productores locales de toda la República Mexicana con consumidores interesados en productos nutritivos y producidos sosteniblemente.
 
-La plataforma tiene diversas funcionalidades propias de las plataformas de comercio en línea como un catálogo con filtros que redirige a una página de productos, registro de usuario, inicio de sesión, registro de nuevos productos y un carrito, además de una página de comunidad donde los usuarios pueden interactuar. Incluimos una base de datos con un catálogo de productos provenientes de distintos productores dummy, con descripciones y ejemplos de técnicas de producción aroecológica.
+La plataforma tiene diversas funcionalidades propias de las plataformas de comercio en línea como un catálogo con filtros que redirige a una página de productos, registro de usuario, inicio de sesión, registro de nuevos productos y un carrito, además de una página de comunidad donde los usuarios pueden interactuar.
 
 Esta plataforma no solo facilita la compra y venta de productos agroecológicos, sino que además busca estimular la economía local y promover el consumo responsable. En AgroMX, creemos en un modelo de comercio electrónico que beneficia tanto a los pequeños productores como a los consumidores finales.
 
