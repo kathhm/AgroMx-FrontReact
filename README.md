@@ -6,17 +6,64 @@ La plataforma tiene diversas funcionalidades propias de las plataformas de comer
 
 Esta plataforma no solo facilita la compra y venta de productos agroecológicos, sino que además busca estimular la economía local y promover el consumo responsable. En AgroMX, creemos en un modelo de comercio electrónico que beneficia tanto a los pequeños productores como a los consumidores finales.
 
-|  Páginas del proyecto   | Interactividad |
-| ----------------------- | ---------------|
-| Registro de usuario     |        ✔      |
-| Inicio de sesión        |        ✔      |
-| Agregar un producto     |        ✔      |
-| Catálogo                |        ✔      |
-| Página de producto      |        ✔      |
-| Carrito                 |        ✔      |
-| Sobre Nosotros          |               |
-| Comunidad               |               |
-| Developer team          |               |
+## Páginas del proyecto y features
+
+**Landing page**
+|  Features                           | Coded? |
+| ----------------------------------- | ------ |
+| Categorías que redirigen a filtros  |   ✔   |
+
+**Registro de usuario**
+|  Features                    | Coded? |
+| ---------------------------- | ------ |
+| Petición de registro POST    |   ✔   |
+| Validación de datos          |   ✔   |
+| Ojo para ocultar contraseña  |   ✔   |
+
+**Inicio de sesión**
+|  Features                        |  Coded? |
+| -------------------------------- | ------- |
+| Inicio de sesión con Google      |    ✔    |
+| Petición GET para iniciar sesión |    ✔    |
+| Validación de e-mail             |    ✔    |
+
+**Agregar un producto**
+|  Features                           |  Coded? |
+| ----------------------------------- | ------- |
+| Validación de datos                 |    ✔    |
+| Petición POST para agregar producto |    ✔    |
+| Ver catálogo                        |    ✔    |
+
+**Catálogo**
+|  Features                               |  Coded? |
+| --------------------------------------- | ------- |
+| Filtros por categoría                   |    ✔    |
+| Petición GET para tarjetas de producto  |    ✔    |
+| Botón para agregar a carrito            |    ✔    |
+| Redirección a página de producto        |    ✔    |
+
+**Producto**
+|  Features                               |  Coded? |
+| --------------------------------------- | ------- |
+| Contador                                |    ✔    |
+| Agregar a carrito                       |         |
+| Petición GET para datos de producto     |    ✔    |
+
+**Sobre Nosotros**
+|  Features                               |  Coded? |
+| --------------------------------------- | ------- |
+
+**Comunidad**
+|  Features                               |  Coded? |
+| --------------------------------------- | ------- |
+| Carrusel con información de productores |    ✔    |
+| Carrusel con recetas                    |         |
+| Petición GET para datos de producto     |    ✔    |
+
+**Developer team**
+|  Features                               |  Coded? |
+| --------------------------------------- | ------- |
+| Tarjetas con info de desarrolladores    |    ✔    |
 
 ## Tecnologías utilizadas
 
