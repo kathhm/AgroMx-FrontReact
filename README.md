@@ -22,11 +22,8 @@ Esta plataforma no solo facilita la compra y venta de productos agroecológicos,
 
 El frontend de AgroMX ha sido desarrollado con las siguientes tecnologías:
 
-- **HTML5**: Para la estructura del contenido.
+- **JSX**: Para la estructura del contenido y la interactividad, usando eficientemente código y mejorar el rendimiento.
 - **CSS3**: Para manejar los estilos de las páginas.
-- **JavaScript (ES6+)**: Para la interactividad y la manipulación del DOM.
-- **Bootstrap**: Para un diseño responsivo y atractivo.
-- **React.js**: Para el desarrollo de una aplicación dinámica, usando eficientemente código, mantenimiento y mejora del rendimiento.
 
 ## Instalación y configuración
 
@@ -96,15 +93,6 @@ Esto ejecutará la aplicación en `http://localhost:3000/`.
 │── vercel.json      # Configuración para despliegue en Vercel
 │── vite.config.js   # Configuración de Vite para React
 ```
-
-## Funcionalidades principales
-
-- **Exploración de productos** 
-- **Detalle de productos** con descripciones.
-- **Registro e inicio de sesión** con validación de datos.
-- **Carrito de compras** con edición de cantidades y opciones de pago.
-- **Sección comunitaria** con recetas, consejos agroecológicos y noticias.
-- **Interfaz responsiva y accesible** optimizada para dispositivos móviles.
 
 ## Deployment
 
