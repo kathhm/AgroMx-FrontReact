@@ -71,6 +71,8 @@ El frontend de AgroMX ha sido desarrollado con las siguientes tecnologías:
 
 - **JSX**: Para la estructura del contenido y la interactividad, usando eficientemente código y mejorar el rendimiento.
 - **CSS3**: Para manejar los estilos de las páginas.
+- **Node.js**
+- **Bootstrap**
 
 ## Instalación y configuración
 
