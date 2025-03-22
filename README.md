@@ -1,20 +1,32 @@
-# AgroMX - Ecommerce Agroecológico
+# AgroMX - Ecommerce de productos agroecológicos
 
-AgroMX es una plataforma de comercio electrónico enfocada en la venta de productos agroecológicos. Su principal objetivo es conectar a productores locales de toda la República Mexicana con consumidores interesados en productos frescos, saludables y sostenibles. A través de esta plataforma, se impulsa el comercio justo, promoviendo la economía local y el consumo responsable.
+AgroMX es una aplicación ecommerce, enfocada en la venta de productos agroecológicos, que pretende conectar a productores locales de toda la República Mexicana con consumidores interesados en productos nutritivos y producidos sosteniblemente.
 
-El ecommerce de AgroMX ofrece un amplio catálogo de productos provenientes de distintos productores agroecológicos del país, asegurando que los clientes puedan acceder a alimentos de alta calidad, libres de químicos dañinos y cultivados de manera sustentable. Además, la plataforma incluye herramientas interactivas como filtros avanzados de búsqueda, descripciones detalladas de los productos, información sobre el origen de los alimentos y una comunidad donde los usuarios pueden compartir recetas y consejos agroecológicos.
+La plataforma tiene diversas funcionalidades propias de las plataformas de comercio en línea como un catálogo con filtros que redirige a una página de productos, registro de usuario, inicio de sesión, registro de nuevos productos y un carrito, además de una página de comunidad donde los usuarios pueden interactuar. Incluimos una base de datos con un catálogo de productos provenientes de distintos productores dummy, con descripciones y ejemplos de técnicas de producción aroecológica.
 
-Esta plataforma no solo facilita la compra y venta de productos agroecológicos, sino que también busca educar y concientizar a los consumidores sobre la importancia de adoptar un estilo de vida más saludable y sostenible. En AgroMX, creemos en un modelo de comercio electrónico que beneficia tanto a los pequeños productores como a los consumidores finales, garantizando transparencia, trazabilidad y confianza en cada transacción.
+Esta plataforma no solo facilita la compra y venta de productos agroecológicos, sino que además busca estimular la economía local y promover el consumo responsable. En AgroMX, creemos en un modelo de comercio electrónico que beneficia tanto a los pequeños productores como a los consumidores finales.
+
+|  Páginas del proyecto   | Interactividad |
+| ----------------------- | ---------------|
+| Registro de usuario     |        ✔      |
+| Inicio de sesión        |        ✔      |
+| Agregar un producto     |        ✔      |
+| Catálogo                |        ✔      |
+| Página de producto      |        ✔      |
+| Carrito                 |        ✔      |
+| Sobre Nosotros          |               |
+| Comunidad               |               |
+| Developer team          |               |
 
 ## Tecnologías utilizadas
 
 El frontend de AgroMX ha sido desarrollado con las siguientes tecnologías:
 
 - **HTML5**: Para la estructura del contenido.
-- **CSS3**: Para el diseño y la presentación visual.
+- **CSS3**: Para manejar los estilos de las páginas.
 - **JavaScript (ES6+)**: Para la interactividad y la manipulación del DOM.
-- **Bootstrap**: Para un diseño responsivo y una interfaz atractiva.
-- **React.js**: Para el desarrollo de una aplicación web moderna, modular y eficiente.
+- **Bootstrap**: Para un diseño responsivo y atractivo.
+- **React.js**: Para el desarrollo de una aplicación dinámica, usando eficientemente código, mantenimiento y mejora del rendimiento.
 
 ## Instalación y configuración
 
